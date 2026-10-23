@@ -222,157 +222,124 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4 — Studio Location & Contact (Col 10-12) */}
-          <div className="lg:col-span-3 space-y-3">
+          {/* Column 4 — Studio Location (Col 10-12) */}
+          <div className="lg:col-span-3 space-y-4">
             <h3 className="text-xs font-bold uppercase tracking-wider text-[#291817]">
               Studio Location
             </h3>
 
-            {/* Address & Maps Micro-Card */}
-            <div className="p-3.5 bg-white border border-[#F2CECA] rounded-2xl shadow-2xs hover:border-[#DE1B54]/40 transition-colors">
-              <div className="flex items-start gap-2.5">
-                <span className="w-8 h-8 rounded-xl bg-[#FCEAE7] text-[#DE1B54] flex items-center justify-center shrink-0 mt-0.5 shadow-2xs">
-                  <svg
-                    width={15}
-                    height={15}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                </span>
-                <div className="min-w-0 flex-1">
-                  <div className="flex items-center justify-between">
-                    <p className="text-xs font-bold text-[#291817] leading-tight">
-                      Gurugram Salon
-                    </p>
-                    <span className="text-[10px] font-bold text-[#DE1B54] bg-[#FCEAE7] px-1.5 py-0.5 rounded-md">
-                      Sector 54
-                    </span>
-                  </div>
-                  <p className="text-[11px] text-[#806F6C] mt-1 leading-snug">
-                    Sector 54, Golf Course Road, Gurugram, Haryana 122011
-                  </p>
+            {/* Address */}
+            <div className="space-y-1.5 text-xs sm:text-sm">
+              <p className="font-bold text-[#291817]">
+                Gurugram Salon:
+              </p>
+              <p className="text-[#806F6C] leading-relaxed">
+                Sector 54, Golf Course Road, Gurugram,
+                <br className="hidden sm:inline" /> Haryana 122011
+              </p>
+              <div className="pt-0.5">
+                <a
+                  href={siteContent.business.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-bold text-[#DE1B54] hover:underline inline-flex items-center gap-1 group"
+                >
+                  <span>Open in Google Maps</span>
+                  <span className="transition-transform group-hover:translate-x-0.5" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Hours */}
+            <div className="pt-2 border-t border-[#F2CECA]/60 space-y-1.5 text-xs sm:text-sm">
+              <p className="font-bold text-[#291817]">
+                Hours (By Appointment):
+              </p>
+              <div className="space-y-1 text-xs">
+                <div className="flex justify-between items-center text-[#291817]">
+                  <span className="text-[#806F6C]">Tuesday to Sunday:</span>
+                  <span className="font-semibold text-[#291817]">10:00 AM – 7:30 PM</span>
+                </div>
+                <div className="flex justify-between items-center text-[#806F6C]">
+                  <span>Monday:</span>
+                  <span className="italic text-[11px]">Closed (Weekly studio sanitization day)</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Direct Lines */}
+            <div className="pt-2 border-t border-[#F2CECA]/60 space-y-2 text-xs sm:text-sm">
+              <p className="font-bold text-[#291817]">
+                Direct Lines:
+              </p>
+              <ul className="space-y-2 text-xs">
+                <li>
                   <a
-                    href={siteContent.business.googleMapsUrl}
+                    href={`tel:${siteContent.business.phoneRaw}`}
+                    className="hover:text-[#DE1B54] text-[#291817] font-medium transition-colors inline-flex items-center gap-2 group"
+                  >
+                    <svg
+                      width={13}
+                      height={13}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="text-[#DE1B54] shrink-0"
+                    >
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                    <span>Call: {siteContent.business.phoneDisplay}</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={whatsappHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[11px] font-bold text-[#DE1B54] hover:underline inline-flex items-center gap-1 mt-1.5 group"
+                    className="text-[#DE1B54] font-semibold hover:underline inline-flex items-center gap-2 group"
                   >
-                    <span>Open in Google Maps</span>
-                    <span className="transition-transform group-hover:translate-x-0.5" aria-hidden="true">→</span>
+                    <svg
+                      width={13}
+                      height={13}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="text-[#DE1B54] shrink-0"
+                    >
+                      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                    </svg>
+                    <span>WhatsApp: {siteContent.business.phoneDisplay}</span>
                   </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Operating Hours Micro-Card */}
-            <div className="p-3 bg-white border border-[#F2CECA] rounded-2xl shadow-2xs">
-              <div className="flex items-center justify-between mb-1.5">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-[#806F6C]">
-                  Hours (By Appointment)
-                </span>
-                <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                  <span>Open Now</span>
-                </span>
-              </div>
-              <div className="space-y-1 text-[11px]">
-                <div className="flex justify-between items-center text-[#291817]">
-                  <span className="font-semibold text-[#806F6C]">Tue – Sun:</span>
-                  <span className="font-bold text-[#291817]">10:00 AM – 7:30 PM</span>
-                </div>
-                <div className="flex justify-between items-center text-[#806F6C] pt-1 border-t border-[#F2CECA]/40">
-                  <span>Monday:</span>
-                  <span className="text-[10px] italic">Weekly Sanitization (Closed)</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Direct Lines Micro-Card */}
-            <div className="p-3 bg-white border border-[#F2CECA] rounded-2xl shadow-2xs space-y-2">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-[#806F6C]">
-                  Direct Lines
-                </span>
-                <span className="text-[10px] font-semibold text-[#DE1B54]">
-                  Prompt Response
-                </span>
-              </div>
-
-              {/* Primary WhatsApp Action */}
-              <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-2 px-2.5 bg-[#DE1B54] hover:bg-[#C21545] text-white rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-xs group"
-              >
-                <svg
-                  width={14}
-                  height={14}
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="shrink-0"
-                >
-                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-                </svg>
-                <span>WhatsApp: {siteContent.business.phoneDisplay}</span>
-              </a>
-
-              {/* Call and Email Grid */}
-              <div className="grid grid-cols-2 gap-1.5 pt-0.5">
-                <a
-                  href={`tel:${siteContent.business.phoneRaw}`}
-                  className="flex items-center justify-center gap-1.5 py-1.5 px-2 bg-[#FFF8F6] border border-[#F2CECA] hover:border-[#DE1B54] hover:bg-[#FCEAE7] rounded-lg text-[11px] font-semibold text-[#291817] transition-all group"
-                  title={`Call ${siteContent.business.phoneDisplay}`}
-                >
-                  <svg
-                    width={11}
-                    height={11}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-[#DE1B54] shrink-0"
+                </li>
+                <li>
+                  <a
+                    href={`mailto:${siteContent.business.email}`}
+                    className="hover:text-[#DE1B54] text-[#806F6C] transition-colors inline-flex items-center gap-2 group"
                   >
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                  </svg>
-                  <span>Call Us</span>
-                </a>
-
-                <a
-                  href={`mailto:${siteContent.business.email}`}
-                  className="flex items-center justify-center gap-1.5 py-1.5 px-2 bg-[#FFF8F6] border border-[#F2CECA] hover:border-[#DE1B54] hover:bg-[#FCEAE7] rounded-lg text-[11px] font-semibold text-[#291817] transition-all group truncate"
-                  title={siteContent.business.email}
-                >
-                  <svg
-                    width={11}
-                    height={11}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-[#806F6C] group-hover:text-[#DE1B54] transition-colors shrink-0"
-                  >
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                    <polyline points="22,6 12,13 2,6" />
-                  </svg>
-                  <span>Email Studio</span>
-                </a>
-              </div>
+                    <svg
+                      width={13}
+                      height={13}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="text-[#806F6C] group-hover:text-[#DE1B54] transition-colors shrink-0"
+                    >
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                      <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                    <span>{siteContent.business.email}</span>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

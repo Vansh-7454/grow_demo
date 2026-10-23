@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -8,10 +9,15 @@ import { siteContent } from "@/data/siteContent";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const drawerRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const openButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Esc key and focus trapping
   useEffect(() => {
@@ -49,16 +55,19 @@ export default function Header() {
 
     if (isOpen) {
       document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
       window.addEventListener("keydown", handleKeyDown);
       setTimeout(() => {
         closeButtonRef.current?.focus();
       }, 50);
     } else {
       document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
     }
 
     return () => {
       document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isOpen]);
@@ -191,115 +200,129 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Drawer (Instant/Subtle fade, no heavy animation) */}
-      {isOpen && (
-        <div
-          id="mobile-drawer"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Site Navigation"
-          className="fixed inset-0 z-50 lg:hidden flex flex-col bg-[#FFF8F6]"
-        >
-          {/* Drawer Top Header */}
-          <div className="flex items-center justify-between h-20 px-5 border-b border-[#F2CECA]">
-            <div className="flex items-center">
-              <Image
-                src="/images/logo.svg"
-                alt="Paws & Claws Brand Logo"
-                width={150}
-                height={34}
-                className="h-7 w-auto object-contain"
-              />
-            </div>
-
-            <button
-              ref={closeButtonRef}
-              onClick={() => setIsOpen(false)}
-              aria-label="Close navigation menu"
-              className="min-h-[44px] min-w-[44px] p-2 flex items-center justify-center text-[#291817] rounded-xl hover:bg-[#FCEAE7] focus-visible:outline-2 focus-visible:outline-[#DE1B54]"
-            >
-              <svg
-                width={24}
-                height={24}
-                className="w-6 h-6 shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2.2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-
-          {/* Drawer Navigation Links */}
+      {/* Mobile Drawer portalled to document.body so backdrop-blur on header never traps position:fixed */}
+      {mounted &&
+        isOpen &&
+        typeof document !== "undefined" &&
+        createPortal(
           <div
-            ref={drawerRef}
-            className="flex-1 overflow-y-auto px-5 py-6 flex flex-col justify-between"
+            id="mobile-drawer"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Site Navigation"
+            className="fixed inset-0 z-[99999] lg:hidden flex flex-col bg-[#FFF8F6] w-full h-[100dvh] overflow-hidden"
           >
-            <nav className="flex flex-col space-y-2" aria-label="Mobile Navigation">
-              {siteContent.navigation.map((item) => {
-                const isActive = pathname === item.href;
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setIsOpen(false)}
-                    className={`min-h-[48px] flex items-center px-4 py-3 text-base rounded-2xl transition-colors ${
-                      isActive
-                        ? "text-[#DE1B54] bg-[#FCEAE7] font-bold"
-                        : "text-[#291817] hover:bg-[#FCEAE7]/50 font-semibold"
-                    }`}
-                    aria-current={isActive ? "page" : undefined}
-                  >
-                    {item.label}
-                  </Link>
-                );
-              })}
-            </nav>
-
-            {/* Quick Mobile Action Buttons inside drawer */}
-            <div className="pt-6 border-t border-[#F2CECA] space-y-3">
-              <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="min-h-[48px] w-full flex items-center justify-center gap-2 px-5 py-3.5 bg-[#DE1B54] text-white font-bold rounded-[14px] text-base shadow-[0_4px_14px_rgba(255,59,64,0.25)] hover:bg-[#E52E33]"
+            {/* Drawer Top Header */}
+            <div className="flex items-center justify-between h-20 px-5 border-b border-[#F2CECA] shrink-0 bg-[#FFF8F6]">
+              <Link
+                href="/"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center"
               >
-                <span>Book a Grooming on WhatsApp</span>
-                <span>→</span>
-              </a>
+                <Image
+                  src="/images/logo.svg"
+                  alt="Paws & Claws Brand Logo"
+                  width={150}
+                  height={34}
+                  className="h-8 w-auto object-contain"
+                  priority
+                />
+              </Link>
 
-              <a
-                href={`tel:${siteContent.business.phoneRaw}`}
-                className="min-h-[48px] w-full flex items-center justify-center gap-2 px-4 py-3 bg-white border border-[#F2CECA] text-[#291817] font-semibold rounded-[14px] text-base hover:bg-[#FCEAE7]"
+              <button
+                ref={closeButtonRef}
+                onClick={() => setIsOpen(false)}
+                aria-label="Close navigation menu"
+                className="min-h-[44px] min-w-[44px] p-2 flex items-center justify-center text-[#291817] rounded-xl hover:bg-[#FCEAE7] focus-visible:outline-2 focus-visible:outline-[#DE1B54] cursor-pointer"
               >
                 <svg
-                  width={18}
-                  height={18}
-                  className="w-4 h-4 text-[#DE1B54] shrink-0"
+                  width={24}
+                  height={24}
+                  className="w-6 h-6 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    strokeWidth="2.2"
+                    d="M6 18L18 6M6 6l12 12"
                   />
                 </svg>
-                <span>Call {siteContent.business.phoneDisplay}</span>
-              </a>
+              </button>
             </div>
-          </div>
-        </div>
-      )}
+
+            {/* Drawer Navigation Links */}
+            <div
+              ref={drawerRef}
+              className="flex-1 overflow-y-auto px-5 py-6 flex flex-col justify-between bg-[#FFF8F6]"
+            >
+              <nav className="flex flex-col space-y-2.5" aria-label="Mobile Navigation">
+                {siteContent.navigation.map((item) => {
+                  const isActive = pathname === item.href;
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                      className={`min-h-[50px] flex items-center justify-between px-4 py-3 text-base rounded-2xl transition-colors ${
+                        isActive
+                          ? "text-[#DE1B54] bg-[#FCEAE7] font-bold border border-[#DE1B54]/30"
+                          : "text-[#291817] hover:bg-[#FCEAE7]/50 font-semibold"
+                      }`}
+                      aria-current={isActive ? "page" : undefined}
+                    >
+                      <span>{item.label}</span>
+                      <span className="text-sm opacity-60">→</span>
+                    </Link>
+                  );
+                })}
+              </nav>
+
+              {/* Quick Mobile Action Buttons inside drawer */}
+              <div className="pt-6 border-t border-[#F2CECA] space-y-3 shrink-0 pb-6">
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="min-h-[50px] w-full flex items-center justify-center gap-2 px-5 py-3.5 bg-[#DE1B54] text-white font-bold rounded-2xl text-base shadow-[0_4px_14px_rgba(222,27,84,0.28)] hover:bg-[#C21345]"
+                >
+                  <span>Book a Grooming on WhatsApp</span>
+                  <span>→</span>
+                </a>
+
+                <a
+                  href={`tel:${siteContent.business.phoneRaw}`}
+                  className="min-h-[50px] w-full flex items-center justify-center gap-2 px-4 py-3 bg-white border border-[#F2CECA] text-[#291817] font-semibold rounded-2xl text-base hover:bg-[#FCEAE7]"
+                >
+                  <svg
+                    width={18}
+                    height={18}
+                    className="w-4 h-4 text-[#DE1B54] shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
+                  </svg>
+                  <span>Call {siteContent.business.phoneDisplay}</span>
+                </a>
+
+                <div className="pt-2 text-center text-xs text-[#806F6C]">
+                  <span>📍 Sector 54 Studio · Golf Course Road, Gurugram</span>
+                </div>
+              </div>
+            </div>
+          </div>,
+          document.body
+        )}
     </header>
   );
 }

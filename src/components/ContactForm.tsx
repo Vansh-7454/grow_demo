@@ -153,9 +153,9 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
   };
 
   return (
-    <div className="bg-white border border-[#F2CECA] rounded-[28px] p-6 sm:p-8 md:p-10 shadow-[0_12px_36px_rgba(41,24,23,0.05)] w-full">
+    <div className="bg-white border border-[#F2CECA] rounded-[24px] sm:rounded-[28px] p-5 sm:p-8 md:p-10 shadow-[0_12px_36px_rgba(41,24,23,0.05)] w-full">
       {/* Header */}
-      <div className="mb-8 pb-6 border-b border-[#F2CECA]/60">
+      <div className="mb-6 sm:mb-8 pb-5 sm:pb-6 border-b border-[#F2CECA]/60">
         <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#DE1B54] mb-2">
           <span>✦</span>
           <span>Fast WhatsApp Confirmation</span>
@@ -163,18 +163,18 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
         <h2 className="text-2xl sm:text-3xl font-extrabold text-[#291817] tracking-tight">
           Request a Grooming Appointment
         </h2>
-        <p className="text-sm text-[#806F6C] mt-2 leading-relaxed">
+        <p className="text-xs sm:text-sm text-[#806F6C] mt-2 leading-relaxed">
           Share your pet&apos;s details below. Our Gurugram concierge will confirm your 1-on-1 slot and pricing on WhatsApp.
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} noValidate className="space-y-6">
+      <form onSubmit={handleSubmit} noValidate className="space-y-5 sm:space-y-6">
         {/* Interactive Pet Selection Pills */}
         <div>
           <label className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-2.5">
             Who are we pampering? <span className="text-[#DE1B54]">*</span>
           </label>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-3 gap-2 sm:gap-3">
             {[
               { type: "Dog", icon: "🐶", label: "Dog", sub: "Canine suite" },
               { type: "Cat", icon: "🐱", label: "Cat", sub: "Quiet suite" },
@@ -193,17 +193,19 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
                     if (errors.petType)
                       setErrors({ ...errors, petType: undefined });
                   }}
-                  className={`py-3.5 px-3 rounded-2xl border text-center transition-all duration-200 cursor-pointer flex flex-col items-center justify-center gap-1 ${
+                  className={`py-3 sm:py-3.5 px-1 sm:px-3 rounded-2xl border text-center transition-all duration-200 cursor-pointer flex flex-col items-center justify-center gap-1 min-h-[68px] sm:min-h-[76px] ${
                     isSelected
                       ? "bg-[#FCEAE7] border-2 border-[#DE1B54] text-[#291817] shadow-sm"
                       : "bg-[#FFF8F6] border-[#F2CECA] text-[#806F6C] hover:border-[#DE1B54]/40 hover:bg-white"
                   }`}
                 >
-                  <span className="text-2xl">{p.icon}</span>
+                  <span className="text-xl sm:text-2xl">{p.icon}</span>
                   <span className="text-xs font-extrabold text-[#291817]">
                     {p.label}
                   </span>
-                  <span className="text-[10px] text-[#806F6C]">{p.sub}</span>
+                  <span className="text-[10px] text-[#806F6C] hidden min-[360px]:inline-block">
+                    {p.sub}
+                  </span>
                 </button>
               );
             })}
@@ -216,7 +218,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
         </div>
 
         {/* Name & Phone Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
           {/* Full Name */}
           <div>
             <label
@@ -237,7 +239,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
                 if (errors.fullName)
                   setErrors({ ...errors, fullName: undefined });
               }}
-              className={`w-full min-h-[48px] px-4 py-3 text-sm bg-white border rounded-2xl text-[#291817] placeholder:text-[#9E8E8C] transition-all focus:outline-none focus:ring-2 focus:ring-[#DE1B54]/20 ${
+              className={`w-full min-h-[48px] px-4 py-3 text-base sm:text-sm bg-white border rounded-2xl text-[#291817] placeholder:text-[#9E8E8C] transition-all focus:outline-none focus:ring-2 focus:ring-[#DE1B54]/20 ${
                 errors.fullName
                   ? "border-red-500 focus:border-red-500"
                   : "border-[#F2CECA] focus:border-[#DE1B54]"
@@ -275,7 +277,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
                   setFormData({ ...formData, phone: e.target.value });
                   if (errors.phone) setErrors({ ...errors, phone: undefined });
                 }}
-                className={`w-full min-h-[48px] pl-16 pr-4 py-3 text-sm bg-white border rounded-2xl text-[#291817] font-mono placeholder:text-[#9E8E8C] transition-all focus:outline-none focus:ring-2 focus:ring-[#DE1B54]/20 ${
+                className={`w-full min-h-[48px] pl-16 pr-4 py-3 text-base sm:text-sm bg-white border rounded-2xl text-[#291817] font-mono placeholder:text-[#9E8E8C] transition-all focus:outline-none focus:ring-2 focus:ring-[#DE1B54]/20 ${
                   errors.phone
                     ? "border-red-500 focus:border-red-500"
                     : "border-[#F2CECA] focus:border-[#DE1B54]"
@@ -296,7 +298,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
         </div>
 
         {/* Email & Desired Service Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
           {/* Email Address (Optional) */}
           <div>
             <label
@@ -314,7 +316,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
                 setFormData({ ...formData, email: e.target.value });
                 if (errors.email) setErrors({ ...errors, email: undefined });
               }}
-              className={`w-full min-h-[48px] px-4 py-3 text-sm bg-white border rounded-2xl text-[#291817] placeholder:text-[#9E8E8C] transition-all focus:outline-none focus:ring-2 focus:ring-[#DE1B54]/20 ${
+              className={`w-full min-h-[48px] px-4 py-3 text-base sm:text-sm bg-white border rounded-2xl text-[#291817] placeholder:text-[#9E8E8C] transition-all focus:outline-none focus:ring-2 focus:ring-[#DE1B54]/20 ${
                 errors.email
                   ? "border-red-500 focus:border-red-500"
                   : "border-[#F2CECA] focus:border-[#DE1B54]"
@@ -342,7 +344,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
               onChange={(e) =>
                 setFormData({ ...formData, service: e.target.value })
               }
-              className="w-full min-h-[48px] px-4 py-3 text-sm bg-white border border-[#F2CECA] rounded-2xl text-[#291817] focus:outline-none focus:border-[#DE1B54] focus:ring-2 focus:ring-[#DE1B54]/20 transition-all cursor-pointer"
+              className="w-full min-h-[48px] px-4 py-3 text-base sm:text-sm bg-white border border-[#F2CECA] rounded-2xl text-[#291817] focus:outline-none focus:border-[#DE1B54] focus:ring-2 focus:ring-[#DE1B54]/20 transition-all cursor-pointer"
             >
               <option value="Basic Bath & Hygiene">Basic Bath &amp; Hygiene (From ₹999)</option>
               <option value="Full Breed Styling & Groom">
@@ -379,7 +381,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
             onChange={(e) =>
               setFormData({ ...formData, message: e.target.value })
             }
-            className="w-full px-4 py-3 text-sm bg-white border border-[#F2CECA] rounded-2xl text-[#291817] placeholder:text-[#9E8E8C] focus:outline-none focus:border-[#DE1B54] focus:ring-2 focus:ring-[#DE1B54]/20 transition-all resize-y"
+            className="w-full px-4 py-3 text-base sm:text-sm bg-white border border-[#F2CECA] rounded-2xl text-[#291817] placeholder:text-[#9E8E8C] focus:outline-none focus:border-[#DE1B54] focus:ring-2 focus:ring-[#DE1B54]/20 transition-all resize-y"
             placeholder="e.g. 2-year-old Golden Retriever, sensitive ears, friendly temperament, needs gentle blow dry..."
           />
           {errors.message && (

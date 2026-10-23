@@ -69,7 +69,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
             {/* Left Column: Consolidated Boutique Studio Visit Card (Col 1-5) */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="bg-white border border-[#F2CECA] rounded-[28px] overflow-hidden shadow-[0_12px_36px_rgba(41,24,23,0.05)]">
+              <div className="bg-white border border-[#F2CECA] rounded-[24px] sm:rounded-[28px] overflow-hidden shadow-[0_12px_36px_rgba(41,24,23,0.05)]">
                 {/* Studio Showcase Photography */}
                 <div className="relative aspect-[16/10] bg-[#FCEAE7]">
                   <Image
@@ -80,20 +80,22 @@ export default function ContactPage() {
                     className="object-cover"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/25" />
 
-                  {/* Badges on image */}
-                  <div className="absolute top-3.5 left-3.5 bg-white/95 backdrop-blur-xs text-[#291817] text-[11px] font-extrabold px-3 py-1.5 rounded-full border border-white/60 shadow-xs flex items-center gap-1.5">
-                    <span className="text-[#DE1B54]">📍</span>
-                    <span>Sector 54 Studio</span>
+                  {/* Responsive Badges on image */}
+                  <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 pointer-events-none">
+                    <div className="bg-white/95 backdrop-blur-xs text-[#291817] text-[10px] sm:text-[11px] font-extrabold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full border border-white/60 shadow-xs flex items-center gap-1.5 shrink-0 pointer-events-auto">
+                      <span className="text-[#DE1B54]">📍</span>
+                      <span>Sector 54 Studio</span>
+                    </div>
+
+                    <div className="bg-[#291817]/90 backdrop-blur-xs text-white text-[10px] sm:text-[11px] font-bold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full border border-white/20 shadow-xs flex items-center gap-1.5 shrink-0 pointer-events-auto">
+                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                      <span>Open Tue – Sun</span>
+                    </div>
                   </div>
 
-                  <div className="absolute top-3.5 right-3.5 bg-[#291817]/90 backdrop-blur-xs text-white text-[11px] font-bold px-3 py-1.5 rounded-full border border-white/20 shadow-xs flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                    <span>Open Tue – Sun</span>
-                  </div>
-
-                  <div className="absolute bottom-3.5 left-3.5 right-3.5 text-white">
+                  <div className="absolute bottom-3 inset-x-3 text-white">
                     <p className="text-xs font-bold drop-shadow-sm">
                       Paws &amp; Claws Boutique Studio
                     </p>
@@ -104,7 +106,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Card Content Body */}
-                <div className="p-6 sm:p-7 space-y-6">
+                <div className="p-5 sm:p-7 space-y-5 sm:space-y-6">
                   {/* Location & Directions */}
                   <div>
                     <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#DE1B54] mb-1.5">
@@ -119,12 +121,12 @@ export default function ContactPage() {
                     </p>
 
                     {/* Quick Direction & Call Buttons */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-3.5">
+                    <div className="grid grid-cols-1 min-[420px]:grid-cols-2 gap-2.5 mt-3.5">
                       <a
                         href={siteContent.business.googleMapsUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-secondary text-xs py-2.5 px-3 flex items-center justify-center gap-1.5 text-center font-bold"
+                        className="btn-secondary text-xs py-2.5 px-3 min-h-[44px] flex items-center justify-center gap-1.5 text-center font-bold"
                       >
                         <svg
                           width={14}
@@ -152,7 +154,7 @@ export default function ContactPage() {
 
                       <a
                         href={`tel:${siteContent.business.phoneRaw}`}
-                        className="btn-secondary text-xs py-2.5 px-3 flex items-center justify-center gap-1.5 text-center font-bold"
+                        className="btn-secondary text-xs py-2.5 px-3 min-h-[44px] flex items-center justify-center gap-1.5 text-center font-bold"
                       >
                         <svg
                           width={14}
@@ -175,7 +177,7 @@ export default function ContactPage() {
                   </div>
 
                   {/* Operating Hours Table */}
-                  <div className="bg-[#FFF8F6] p-4.5 rounded-2xl border border-[#F2CECA]/70">
+                  <div className="bg-[#FFF8F6] p-4 sm:p-4.5 rounded-2xl border border-[#F2CECA]/70">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-xs font-bold uppercase tracking-wider text-[#291817]">
                         Operating Hours
@@ -216,7 +218,7 @@ export default function ContactPage() {
                       href={whatsappHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-primary text-xs py-2 px-3.5 font-bold shrink-0 text-center gap-1.5"
+                      className="btn-primary text-xs py-2.5 px-4 font-bold shrink-0 text-center gap-1.5 min-h-[44px]"
                     >
                       <span>Chat on WhatsApp</span>
                       <span aria-hidden="true">→</span>
@@ -228,7 +230,7 @@ export default function ContactPage() {
                     <p className="text-xs font-bold uppercase tracking-wider text-[#291817] mb-3">
                       Our Studio Standards
                     </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#806F6C]">
+                    <div className="grid grid-cols-1 min-[420px]:grid-cols-2 gap-2 text-xs text-[#806F6C]">
                       <div className="flex items-center gap-2">
                         <span className="w-4 h-4 rounded-full bg-[#FCEAE7] text-[#DE1B54] flex items-center justify-center font-bold text-[10px] shrink-0">
                           ✓

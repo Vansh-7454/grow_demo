@@ -27,7 +27,7 @@ export default function ContactForm() {
     fullName: "",
     phone: "",
     email: "",
-    petType: "",
+    petType: "Dog",
     service: "Basic Bath & Hygiene",
     message: "",
   });
@@ -42,19 +42,15 @@ export default function ContactForm() {
     isValid: boolean;
     error?: string;
   } {
-    // Strip spaces, dashes, brackets, plus
     let digits = input.replace(/[\s\-\(\)\+]/g, "");
 
-    // Strip leading country code +91 or 91 if 12 digits
     if (digits.startsWith("91") && digits.length === 12) {
       digits = digits.slice(2);
     }
-    // Strip leading 0 if 11 digits
     if (digits.startsWith("0") && digits.length === 11) {
       digits = digits.slice(1);
     }
 
-    // Check if only digits
     if (!/^\d+$/.test(digits)) {
       return {
         normalized: digits,
@@ -63,7 +59,6 @@ export default function ContactForm() {
       };
     }
 
-    // Check exact 10 digits
     if (digits.length !== 10) {
       return {
         normalized: digits,
@@ -72,7 +67,6 @@ export default function ContactForm() {
       };
     }
 
-    // Check India mobile starting digit: 6, 7, 8, 9
     const firstDigit = digits.charAt(0);
     if (!["6", "7", "8", "9"].includes(firstDigit)) {
       return {
@@ -82,7 +76,6 @@ export default function ContactForm() {
       };
     }
 
-    // Reject junk numbers like all identical digits (0000000000, 9999999999) or sequential (1234567890)
     const isAllSame = new Set(digits.split("")).size === 1;
     const isSequential = digits === "1234567890" || digits === "0123456789";
 
@@ -100,7 +93,6 @@ export default function ContactForm() {
   function validate(): boolean {
     const newErrors: FormErrors = {};
 
-    // Name validation: 2 to 60 characters trimmed
     const trimmedName = formData.fullName.trim();
     if (trimmedName.length < 2) {
       newErrors.fullName = "Please enter your name (at least 2 characters).";
@@ -108,13 +100,11 @@ export default function ContactForm() {
       newErrors.fullName = "Name must not exceed 60 characters.";
     }
 
-    // Phone validation
     const phoneCheck = normalizePhone(formData.phone);
     if (!phoneCheck.isValid) {
       newErrors.phone = phoneCheck.error;
     }
 
-    // Email validation (optional, but if provided, must be valid)
     const trimmedEmail = formData.email.trim();
     if (trimmedEmail.length > 0) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -123,12 +113,10 @@ export default function ContactForm() {
       }
     }
 
-    // Pet Type validation
     if (!formData.petType) {
       newErrors.petType = "Please select whether you have a Dog or Cat.";
     }
 
-    // Message length: up to 1000 characters
     if (formData.message.trim().length > 1000) {
       newErrors.message = "Message must not exceed 1000 characters.";
     }
@@ -149,10 +137,9 @@ export default function ContactForm() {
     const sanitizedEmail = formData.email.trim();
     const sanitizedMessage = formData.message.trim();
 
-    // Construct direct WhatsApp message for the studio
-    const msg = `*New Grooming Inquiry via Website*
+    const msg = `*New Grooming Appointment Request*
 Name: ${sanitizedName}
-Phone: +91 ${phoneCheck.normalized}
+WhatsApp: +91 ${phoneCheck.normalized}
 ${sanitizedEmail ? `Email: ${sanitizedEmail}\n` : ""}Pet: ${formData.petType}
 Service: ${formData.service}
 ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
@@ -162,170 +149,192 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
     )}`;
 
     setPreparedWhatsAppUrl(waLink);
-
-    // Open WhatsApp in a new window/tab
     window.open(waLink, "_blank", "noopener,noreferrer");
   };
 
   return (
-    <div className="bg-white border border-[#F2CECA] rounded-[24px] p-5 sm:p-7 md:p-9 shadow-[0_12px_36px_rgba(41,24,23,0.05)] w-full">
-      <div className="mb-6">
-        <h3 className="text-xl md:text-2xl font-extrabold text-[#291817] tracking-tight">
+    <div className="bg-white border border-[#F2CECA] rounded-[28px] p-6 sm:p-8 md:p-10 shadow-[0_12px_36px_rgba(41,24,23,0.05)] w-full">
+      {/* Header */}
+      <div className="mb-8 pb-6 border-b border-[#F2CECA]/60">
+        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#DE1B54] mb-2">
+          <span>✦</span>
+          <span>Fast WhatsApp Confirmation</span>
+        </div>
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-[#291817] tracking-tight">
           Request a Grooming Appointment
-        </h3>
-        <p className="text-xs sm:text-sm text-[#806F6C] mt-1.5 leading-relaxed">
-          Fill in your pet&apos;s details below to initiate a direct appointment inquiry on WhatsApp.
+        </h2>
+        <p className="text-sm text-[#806F6C] mt-2 leading-relaxed">
+          Share your pet&apos;s details below. Our Gurugram concierge will confirm your 1-on-1 slot and pricing on WhatsApp.
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} noValidate className="space-y-4 sm:space-y-5">
-        {/* Full Name */}
+      <form onSubmit={handleSubmit} noValidate className="space-y-6">
+        {/* Interactive Pet Selection Pills */}
         <div>
-          <label
-            htmlFor={`${formId}-name`}
-            className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-1.5"
-          >
-            Pet Parent Full Name <span className="text-[#DE1B54]">*</span>
+          <label className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-2.5">
+            Who are we pampering? <span className="text-[#DE1B54]">*</span>
           </label>
-          <input
-            id={`${formId}-name`}
-            type="text"
-            required
-            autoComplete="name"
-            maxLength={60}
-            value={formData.fullName}
-            onChange={(e) =>
-              setFormData({ ...formData, fullName: e.target.value })
-            }
-            className={`w-full min-h-[46px] px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border rounded-xl text-[#291817] focus-visible:outline-2 ${
-              errors.fullName
-                ? "border-red-600 focus-visible:outline-red-600"
-                : "border-[#F2CECA] focus-visible:outline-[#DE1B54]"
-            }`}
-            placeholder="e.g. Priya Sharma"
-          />
-          {errors.fullName && (
-            <p className="text-xs text-red-600 mt-1 font-medium">
-              {errors.fullName}
-            </p>
-          )}
-        </div>
-
-        {/* Mobile Number */}
-        <div>
-          <label
-            htmlFor={`${formId}-phone`}
-            className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-1.5"
-          >
-            Mobile Number (10 Digits) <span className="text-[#DE1B54]">*</span>
-          </label>
-          <div className="relative">
-            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xs font-bold text-[#806F6C]">
-              +91
-            </span>
-            <input
-              id={`${formId}-phone`}
-              type="tel"
-              required
-              inputMode="numeric"
-              autoComplete="tel-national"
-              maxLength={14}
-              value={formData.phone}
-              onChange={(e) =>
-                setFormData({ ...formData, phone: e.target.value })
-              }
-              className={`w-full min-h-[46px] pl-13 pr-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border rounded-xl text-[#291817] font-mono focus-visible:outline-2 ${
-                errors.phone
-                  ? "border-red-600 focus-visible:outline-red-600"
-                  : "border-[#F2CECA] focus-visible:outline-[#DE1B54]"
-              }`}
-              placeholder="9812345678"
-            />
+          <div className="grid grid-cols-3 gap-3">
+            {[
+              { type: "Dog", icon: "🐶", label: "Dog", sub: "Canine suite" },
+              { type: "Cat", icon: "🐱", label: "Cat", sub: "Quiet suite" },
+              { type: "Both", icon: "🐾", label: "Both", sub: "Dog & Cat" },
+            ].map((p) => {
+              const isSelected = formData.petType === p.type;
+              return (
+                <button
+                  key={p.type}
+                  type="button"
+                  onClick={() => {
+                    setFormData({
+                      ...formData,
+                      petType: p.type as FormState["petType"],
+                    });
+                    if (errors.petType)
+                      setErrors({ ...errors, petType: undefined });
+                  }}
+                  className={`py-3.5 px-3 rounded-2xl border text-center transition-all duration-200 cursor-pointer flex flex-col items-center justify-center gap-1 ${
+                    isSelected
+                      ? "bg-[#FCEAE7] border-2 border-[#DE1B54] text-[#291817] shadow-sm"
+                      : "bg-[#FFF8F6] border-[#F2CECA] text-[#806F6C] hover:border-[#DE1B54]/40 hover:bg-white"
+                  }`}
+                >
+                  <span className="text-2xl">{p.icon}</span>
+                  <span className="text-xs font-extrabold text-[#291817]">
+                    {p.label}
+                  </span>
+                  <span className="text-[10px] text-[#806F6C]">{p.sub}</span>
+                </button>
+              );
+            })}
           </div>
-          {errors.phone ? (
-            <p className="text-xs text-red-600 mt-1 font-medium">
-              {errors.phone}
-            </p>
-          ) : (
-            <p className="text-[11px] text-[#9E8E8C] mt-1">
-              Required for appointment coordination and pickup alerts.
+          {errors.petType && (
+            <p className="text-xs text-red-600 mt-1.5 font-medium">
+              {errors.petType}
             </p>
           )}
         </div>
 
-        {/* Email Address (Optional) */}
-        <div>
-          <label
-            htmlFor={`${formId}-email`}
-            className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-1.5"
-          >
-            Email Address (Optional)
-          </label>
-          <input
-            id={`${formId}-email`}
-            type="email"
-            autoComplete="email"
-            value={formData.email}
-            onChange={(e) =>
-              setFormData({ ...formData, email: e.target.value })
-            }
-            className={`w-full min-h-[46px] px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border rounded-xl text-[#291817] focus-visible:outline-2 ${
-              errors.email
-                ? "border-red-600 focus-visible:outline-red-600"
-                : "border-[#F2CECA] focus-visible:outline-[#DE1B54]"
-            }`}
-            placeholder="priya@example.com"
-          />
-          {errors.email && (
-            <p className="text-xs text-red-600 mt-1 font-medium">
-              {errors.email}
-            </p>
-          )}
-        </div>
-
-        {/* Pet Type & Service Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {/* Name & Phone Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          {/* Full Name */}
           <div>
             <label
-              htmlFor={`${formId}-petType`}
-              className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-1.5"
+              htmlFor={`${formId}-name`}
+              className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-2"
             >
-              Pet Type <span className="text-[#DE1B54]">*</span>
+              Your Name <span className="text-[#DE1B54]">*</span>
             </label>
-            <select
-              id={`${formId}-petType`}
+            <input
+              id={`${formId}-name`}
+              type="text"
               required
-              value={formData.petType}
-              onChange={(e) =>
-                setFormData({
-                  ...formData,
-                  petType: e.target.value as FormState["petType"],
-                })
-              }
-              className={`w-full min-h-[46px] px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border rounded-xl text-[#291817] focus-visible:outline-2 ${
-                errors.petType
-                  ? "border-red-600 focus-visible:outline-red-600"
-                  : "border-[#F2CECA] focus-visible:outline-[#DE1B54]"
+              autoComplete="name"
+              maxLength={60}
+              value={formData.fullName}
+              onChange={(e) => {
+                setFormData({ ...formData, fullName: e.target.value });
+                if (errors.fullName)
+                  setErrors({ ...errors, fullName: undefined });
+              }}
+              className={`w-full min-h-[48px] px-4 py-3 text-sm bg-white border rounded-2xl text-[#291817] placeholder:text-[#9E8E8C] transition-all focus:outline-none focus:ring-2 focus:ring-[#DE1B54]/20 ${
+                errors.fullName
+                  ? "border-red-500 focus:border-red-500"
+                  : "border-[#F2CECA] focus:border-[#DE1B54]"
               }`}
-            >
-              <option value="">Select Pet...</option>
-              <option value="Dog">Dog</option>
-              <option value="Cat">Cat</option>
-              <option value="Both">Both Dog &amp; Cat</option>
-            </select>
-            {errors.petType && (
-              <p className="text-xs text-red-600 mt-1 font-medium">
-                {errors.petType}
+              placeholder="e.g. Priya Sharma"
+            />
+            {errors.fullName && (
+              <p className="text-xs text-red-600 mt-1.5 font-medium">
+                {errors.fullName}
               </p>
             )}
           </div>
 
+          {/* Mobile Number */}
+          <div>
+            <label
+              htmlFor={`${formId}-phone`}
+              className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-2"
+            >
+              WhatsApp Mobile <span className="text-[#DE1B54]">*</span>
+            </label>
+            <div className="relative">
+              <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-xs font-bold text-[#806F6C] bg-[#FFF8F6] px-2 py-1 rounded-lg border border-[#F2CECA]">
+                +91
+              </span>
+              <input
+                id={`${formId}-phone`}
+                type="tel"
+                required
+                inputMode="numeric"
+                autoComplete="tel-national"
+                maxLength={14}
+                value={formData.phone}
+                onChange={(e) => {
+                  setFormData({ ...formData, phone: e.target.value });
+                  if (errors.phone) setErrors({ ...errors, phone: undefined });
+                }}
+                className={`w-full min-h-[48px] pl-16 pr-4 py-3 text-sm bg-white border rounded-2xl text-[#291817] font-mono placeholder:text-[#9E8E8C] transition-all focus:outline-none focus:ring-2 focus:ring-[#DE1B54]/20 ${
+                  errors.phone
+                    ? "border-red-500 focus:border-red-500"
+                    : "border-[#F2CECA] focus:border-[#DE1B54]"
+                }`}
+                placeholder="98123 45678"
+              />
+            </div>
+            {errors.phone ? (
+              <p className="text-xs text-red-600 mt-1.5 font-medium">
+                {errors.phone}
+              </p>
+            ) : (
+              <p className="text-[11px] text-[#806F6C] mt-1.5">
+                We will send pickup alerts and photo updates here.
+              </p>
+            )}
+          </div>
+        </div>
+
+        {/* Email & Desired Service Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          {/* Email Address (Optional) */}
+          <div>
+            <label
+              htmlFor={`${formId}-email`}
+              className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-2"
+            >
+              Email Address <span className="text-[#806F6C] font-normal normal-case">(Optional)</span>
+            </label>
+            <input
+              id={`${formId}-email`}
+              type="email"
+              autoComplete="email"
+              value={formData.email}
+              onChange={(e) => {
+                setFormData({ ...formData, email: e.target.value });
+                if (errors.email) setErrors({ ...errors, email: undefined });
+              }}
+              className={`w-full min-h-[48px] px-4 py-3 text-sm bg-white border rounded-2xl text-[#291817] placeholder:text-[#9E8E8C] transition-all focus:outline-none focus:ring-2 focus:ring-[#DE1B54]/20 ${
+                errors.email
+                  ? "border-red-500 focus:border-red-500"
+                  : "border-[#F2CECA] focus:border-[#DE1B54]"
+              }`}
+              placeholder="priya@example.com"
+            />
+            {errors.email && (
+              <p className="text-xs text-red-600 mt-1.5 font-medium">
+                {errors.email}
+              </p>
+            )}
+          </div>
+
+          {/* Desired Service Package */}
           <div>
             <label
               htmlFor={`${formId}-service`}
-              className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-1.5"
+              className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-2"
             >
-              Desired Service Package
+              Desired Service
             </label>
             <select
               id={`${formId}-service`}
@@ -333,21 +342,21 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
               onChange={(e) =>
                 setFormData({ ...formData, service: e.target.value })
               }
-              className="w-full min-h-[46px] px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border border-[#F2CECA] rounded-xl text-[#291817] focus-visible:outline-2 focus-visible:outline-[#DE1B54]"
+              className="w-full min-h-[48px] px-4 py-3 text-sm bg-white border border-[#F2CECA] rounded-2xl text-[#291817] focus:outline-none focus:border-[#DE1B54] focus:ring-2 focus:ring-[#DE1B54]/20 transition-all cursor-pointer"
             >
-              <option value="Basic Bath & Hygiene">Basic Bath &amp; Hygiene</option>
+              <option value="Basic Bath & Hygiene">Basic Bath &amp; Hygiene (From ₹999)</option>
               <option value="Full Breed Styling & Groom">
-                Full Breed Styling &amp; Groom
+                Full Breed Styling &amp; Groom (From ₹1,599)
               </option>
               <option value="Medicated Tick & Flea Spa">
-                Medicated Tick &amp; Flea Spa
+                Medicated Tick &amp; Flea Spa (From ₹1,899)
               </option>
-              <option value="Feline Comfort Bath">Feline Comfort Bath</option>
+              <option value="Feline Comfort Bath">Feline Comfort Bath (From ₹1,499)</option>
               <option value="Persian Cat De-Shedding & Groom">
-                Persian Cat De-Shedding &amp; Groom
+                Persian Cat De-Matting &amp; Groom (From ₹2,199)
               </option>
               <option value="Cat Lion Cut / Summer Trim">
-                Cat Lion Cut / Summer Trim
+                Cat Lion Cut / Summer Trim (From ₹2,699)
               </option>
               <option value="Custom Consultation">Other / Custom Inquiry</option>
             </select>
@@ -358,9 +367,9 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
         <div>
           <label
             htmlFor={`${formId}-notes`}
-            className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-1.5"
+            className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-2"
           >
-            Pet Breed, Age, or Special Care Notes (Max 1000 characters)
+            Pet Breed, Age, or Care Notes <span className="text-[#806F6C] font-normal normal-case">(Optional)</span>
           </label>
           <textarea
             id={`${formId}-notes`}
@@ -370,39 +379,44 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
             onChange={(e) =>
               setFormData({ ...formData, message: e.target.value })
             }
-            className="w-full px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border border-[#F2CECA] rounded-xl text-[#291817] focus-visible:outline-2 focus-visible:outline-[#DE1B54]"
-            placeholder="e.g. 2-year-old Golden Retriever, sensitive ears, friendly temperament..."
+            className="w-full px-4 py-3 text-sm bg-white border border-[#F2CECA] rounded-2xl text-[#291817] placeholder:text-[#9E8E8C] focus:outline-none focus:border-[#DE1B54] focus:ring-2 focus:ring-[#DE1B54]/20 transition-all resize-y"
+            placeholder="e.g. 2-year-old Golden Retriever, sensitive ears, friendly temperament, needs gentle blow dry..."
           />
           {errors.message && (
-            <p className="text-xs text-red-600 mt-1 font-medium">
+            <p className="text-xs text-red-600 mt-1.5 font-medium">
               {errors.message}
             </p>
           )}
         </div>
 
-        {/* Transparency note as strictly mandated by Rule 16 */}
-        <div className="p-3.5 bg-[#FCEAE7]/50 border border-[#F2CECA] rounded-xl text-xs text-[#806F6C] leading-relaxed">
-          <p className="font-bold text-[#291817] mb-0.5">
-            Privacy &amp; Transmission Transparency:
-          </p>
-          <p>
-            This website does not transmit or store personal data in a remote database or cloud service. Submitting this form prepares your details directly into a WhatsApp chat with our Gurugram studio for immediate coordination.
-          </p>
+        {/* Transparency & Security Note */}
+        <div className="p-4 bg-[#FFF8F6] border border-[#F2CECA] rounded-2xl text-xs text-[#806F6C] leading-relaxed flex items-start gap-3">
+          <span className="text-lg text-[#DE1B54] shrink-0" aria-hidden="true">
+            🔒
+          </span>
+          <div>
+            <p className="font-bold text-[#291817] mb-0.5">
+              Instant 1-on-1 Studio Coordination
+            </p>
+            <p>
+              Submitting opens a direct WhatsApp chat with our Gurugram studio concierge. Your details are never stored on third-party servers.
+            </p>
+          </div>
         </div>
 
         {/* Submit Button */}
         <div>
           <button
             type="submit"
-            className="btn-primary w-full py-3.5 text-base font-bold shadow-md cursor-pointer flex items-center justify-center gap-2"
+            className="btn-primary w-full py-4 text-base font-bold shadow-md cursor-pointer flex items-center justify-center gap-2.5"
           >
-            <span>Continue to WhatsApp Booking</span>
-            <span aria-hidden="true">→</span>
+            <span>Continue on WhatsApp</span>
+            <span aria-hidden="true" className="text-lg">→</span>
           </button>
         </div>
 
         {preparedWhatsAppUrl && (
-          <div className="mt-4 p-3.5 bg-[#FCEAE7] border border-[#DE1B54]/40 rounded-xl text-xs text-[#291817] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <div className="p-3.5 bg-[#FCEAE7] border border-[#DE1B54]/40 rounded-xl text-xs text-[#291817] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
             <span>
               If WhatsApp did not automatically open, tap the link:
             </span>
@@ -421,3 +435,4 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
     </div>
   );
 }
+

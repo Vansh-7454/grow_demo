@@ -7,9 +7,9 @@ export default function PhotoPlaceholder({
   item: PhotoPlaceholderItem;
 }) {
   return (
-    <div className="group border border-[#CBD3CC] bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_-2px_rgba(30,58,52,0.05)] hover:border-[#1E3A34] transition-colors flex flex-col h-full">
+    <div className="group border border-[#F0C9C5] bg-white rounded-[24px] overflow-hidden shadow-[0_6px_24px_rgba(41,24,23,0.04)] hover:border-[#FF3B40] hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
       {/* 4:3 Aspect Ratio Frame */}
-      <div className="relative aspect-[4/3] bg-[#EAF1ED] overflow-hidden border-b border-[#CBD3CC]">
+      <div className="relative aspect-[4/3] bg-[#FFF8F6] overflow-hidden border-b border-[#F0C9C5]">
         {item.imageUrl ? (
           <>
             <Image
@@ -17,22 +17,22 @@ export default function PhotoPlaceholder({
               alt={item.altText}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 380px"
-              className="object-cover"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
             />
-            <div className="absolute top-3 left-3 bg-[#1E3A34]/90 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-md shadow-xs">
+            <div className="absolute top-3 left-3 bg-[#FF3B40] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">
               {item.category} Care
             </div>
-            <div className="absolute bottom-3 right-3 bg-black/60 backdrop-blur-xs text-white text-[10px] font-mono px-2 py-0.5 rounded">
+            <div className="absolute bottom-3 right-3 bg-[#291817]/70 backdrop-blur-xs text-white text-[10px] font-mono px-2 py-0.5 rounded-full">
               Studio Result
             </div>
           </>
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center">
-            <div className="w-12 h-12 rounded-full bg-white border border-[#CBD3CC] flex items-center justify-center text-[#1E3A34] mb-3 shadow-xs">
+            <div className="w-12 h-12 rounded-full bg-white border border-[#F0C9C5] flex items-center justify-center text-[#FF3B40] mb-3 shadow-xs">
               <svg
                 width={24}
                 height={24}
-                className="w-6 h-6 text-[#1E3A34] shrink-0"
+                className="w-6 h-6 text-[#FF3B40] shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -53,14 +53,14 @@ export default function PhotoPlaceholder({
               </svg>
             </div>
 
-            <span className="inline-block px-2.5 py-0.5 rounded bg-white text-[11px] font-mono font-medium text-[#1E3A34] border border-[#CBD3CC] mb-2">
+            <span className="inline-block px-2.5 py-0.5 rounded-full bg-white text-[11px] font-mono font-bold text-[#FF3B40] border border-[#F0C9C5] mb-2">
               {item.recommendedSize} · {item.aspectRatio}
             </span>
 
-            <p className="text-xs font-semibold text-[#1E3A34] max-w-[240px]">
+            <p className="text-xs font-bold text-[#291817] max-w-[240px]">
               {item.filename}
             </p>
-            <span className="text-[11px] text-[#57635E] mt-1">
+            <span className="text-[11px] text-[#796B69] mt-1">
               Awaiting Client Real Pet Photo
             </span>
           </div>
@@ -68,25 +68,25 @@ export default function PhotoPlaceholder({
       </div>
 
       {/* Description metadata block */}
-      <div className="p-5 flex-1 flex flex-col justify-between bg-white">
+      <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between bg-white">
         <div>
           <div className="flex items-center justify-between mb-1.5">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-[#D97706]">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#FF3B40]">
               {item.category} Grooming
             </span>
-            <span className="text-[11px] text-[#7B8882]">Gurugram Studio</span>
+            <span className="text-[11px] text-[#9E8E8C]">Gurugram Studio</span>
           </div>
-          <h4 className="text-base font-bold text-[#1A201E] tracking-tight mb-1">
+          <h4 className="text-base font-bold text-[#291817] tracking-tight mb-1">
             {item.title}
           </h4>
-          <p className="text-xs text-[#57635E] leading-relaxed">
+          <p className="text-xs text-[#796B69] leading-relaxed">
             {item.description}
           </p>
         </div>
 
-        <div className="mt-4 pt-3 border-t border-[#F2F4F0] flex items-center justify-between text-[11px] text-[#7B8882]">
+        <div className="mt-4 pt-3 border-t border-[#F0C9C5]/50 flex items-center justify-between text-[11px] text-[#9E8E8C]">
           <span>Alt: {item.altText.slice(0, 32)}...</span>
-          <span className="font-mono text-[#1E3A34] font-semibold">1-on-1 Care</span>
+          <span className="font-mono text-[#FF3B40] font-bold">1-on-1 Care</span>
         </div>
       </div>
     </div>

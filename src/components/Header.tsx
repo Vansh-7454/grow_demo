@@ -68,39 +68,30 @@ export default function Header() {
   )}`;
 
   return (
-    <header className="sticky top-0 z-40 bg-[#FBFBF9]/95 backdrop-blur-sm border-b border-[#E2E6E2]">
+    <header className="sticky top-0 z-40 bg-[#FFF8F6]/90 backdrop-blur-md border-b border-[#F0C9C5]/70 transition-colors">
       <div className="site-container">
         <div className="flex items-center justify-between h-20">
           {/* Logo & Tagline */}
           <Link
             href="/"
-            className="flex items-center gap-2.5 sm:gap-3.5 group min-h-[44px] focus-visible:outline-2 focus-visible:outline-[#1E3A34] rounded-lg py-1 max-w-[calc(100%-60px)] sm:max-w-none"
+            className="flex items-center gap-3 group min-h-[44px] focus-visible:outline-2 focus-visible:outline-[#FF3B40] rounded-xl py-1"
           >
-            <div className="w-10 h-10 sm:w-12 sm:h-12 shrink-0 rounded-xl sm:rounded-2xl overflow-hidden shadow-xs group-hover:scale-[1.02] transition-transform">
+            <div className="flex items-center">
               <Image
                 src="/images/logo.svg"
                 alt="Paws & Claws Brand Logo"
-                width={48}
-                height={48}
-                className="w-full h-full object-contain"
+                width={160}
+                height={38}
+                className="h-8 sm:h-9 w-auto object-contain"
                 priority
               />
-            </div>
-            <div className="flex flex-col justify-center min-w-0">
-              <span className="text-lg sm:text-2xl font-bold tracking-tight text-[#1E3A34] leading-tight group-hover:text-[#142723] transition-colors truncate">
-                {siteContent.business.name}
-              </span>
-              <span className="text-[10px] sm:text-xs text-[#57635E] font-medium tracking-wide flex items-center gap-1.5 leading-none mt-0.5 sm:mt-1 truncate">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#D97706] shrink-0" aria-hidden="true" />
-                <span className="truncate">Pet Grooming Studio · Gurugram</span>
-              </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
           <nav
             aria-label="Main Navigation"
-            className="hidden lg:flex items-center space-x-1 xl:space-x-2"
+            className="hidden lg:flex items-center space-x-1"
           >
             {siteContent.navigation.map((item) => {
               const isActive = pathname === item.href;
@@ -108,10 +99,10 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`min-h-[44px] flex items-center px-2.5 xl:px-3.5 py-2 text-sm font-medium rounded-lg transition-colors duration-150 ${
+                  className={`min-h-[44px] flex items-center px-4 py-2 text-sm font-semibold rounded-full transition-all duration-150 ${
                     isActive
-                      ? "text-[#1E3A34] bg-[#EAF1ED] font-semibold"
-                      : "text-[#57635E] hover:text-[#1E3A34] hover:bg-[#F2F4F0]"
+                      ? "text-[#FF3B40] bg-[#FCEAE7]"
+                      : "text-[#291817] hover:text-[#FF3B40] hover:bg-[#FCEAE7]/50"
                   }`}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -122,16 +113,16 @@ export default function Header() {
           </nav>
 
           {/* Desktop Right CTAs */}
-          <div className="hidden lg:flex items-center space-x-2 xl:space-x-3 shrink-0">
+          <div className="hidden lg:flex items-center space-x-3 shrink-0">
             <a
               href={`tel:${siteContent.business.phoneRaw}`}
-              className="min-h-[44px] px-3 xl:px-3.5 py-2.5 text-xs xl:text-sm font-semibold text-[#1E3A34] border border-[#CBD3CC] rounded-lg hover:bg-[#EAF1ED] transition-colors duration-150 flex items-center gap-1.5 xl:gap-2 whitespace-nowrap"
+              className="min-h-[44px] px-4 py-2.5 text-sm font-semibold text-[#291817] hover:text-[#FF3B40] transition-colors flex items-center gap-2"
               title="Call studio directly"
             >
               <svg
                 width={16}
                 height={16}
-                className="w-4 h-4 text-[#1E3A34] shrink-0"
+                className="w-4 h-4 text-[#FF3B40] shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -144,52 +135,31 @@ export default function Header() {
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              <span>Call us</span>
+              <span>{siteContent.business.phoneDisplay}</span>
             </a>
 
             <a
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="min-h-[44px] px-3.5 xl:px-4 py-2.5 text-xs xl:text-sm font-semibold text-white bg-[#1E3A34] hover:bg-[#142723] rounded-lg transition-colors duration-150 flex items-center gap-1.5 xl:gap-2 shadow-sm whitespace-nowrap"
-              title="Chat on WhatsApp to book slot"
+              className="min-h-[44px] px-6 py-2.5 text-sm font-bold text-white bg-[#FF3B40] hover:bg-[#E52E33] active:bg-[#CC2226] rounded-full transition-all duration-150 flex items-center gap-2 shadow-[0_4px_14px_rgba(255,59,64,0.25)] hover:shadow-[0_6px_18px_rgba(255,59,64,0.35)] hover:-translate-y-0.5"
+              title="Book grooming session on WhatsApp"
             >
-              <svg
-                width={16}
-                height={16}
-                className="w-4 h-4 fill-current text-white shrink-0"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path d="M17.472 14.382c-.301-.15-1.782-.879-2.058-.98-.276-.1-.477-.15-.678.15-.2.301-.778.98-.954 1.18-.175.2-.351.226-.652.075-.301-.151-1.27-.468-2.42-1.494-.894-.797-1.498-1.782-1.674-2.083-.175-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.2-.301.301-.501.1-.2.05-.376-.025-.526-.075-.151-.678-1.632-.929-2.235-.245-.588-.493-.508-.678-.518l-.578-.01c-.2 0-.527.075-.803.376s-1.054 1.03-1.054 2.511c0 1.48 1.079 2.91 1.23 3.111.15.201 2.124 3.243 5.146 4.548.719.311 1.28.497 1.718.636.723.23 1.38.197 1.901.12.58-.088 1.782-.728 2.033-1.431.25-.703.25-1.305.175-1.431-.075-.126-.276-.201-.577-.352zM12 2C6.486 2 2 6.486 2 12c0 1.954.565 3.78 1.542 5.328L2 22l4.825-1.509A9.948 9.948 0 0012 22c5.514 0 10-4.486 10-10S17.514 2 12 2zm0 18.2c-1.688 0-3.26-.525-4.566-1.42l-.328-.225-3.327 1.04 1.066-3.208-.247-.358A8.17 8.17 0 013.8 12c0-4.521 3.679-8.2 8.2-8.2 4.522 0 8.2 3.679 8.2 8.2 0 4.522-3.678 8.2-8.2 8.2z" />
-              </svg>
-              <span>WhatsApp</span>
+              <span>Book a Grooming</span>
+              <span aria-hidden="true">→</span>
             </a>
           </div>
 
           {/* Mobile Actions: Quick Call + Hamburger */}
-          <div className="flex lg:hidden items-center space-x-1.5 sm:space-x-2 shrink-0">
+          <div className="flex lg:hidden items-center space-x-2 shrink-0">
             <a
-              href={`tel:${siteContent.business.phoneRaw}`}
-              className="hidden sm:inline-flex min-h-[40px] px-2.5 py-1.5 text-xs font-semibold text-[#1E3A34] border border-[#CBD3CC] rounded-lg hover:bg-[#F2F4F0] items-center gap-1.5"
-              title="Call studio directly"
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="min-h-[40px] px-3.5 py-1.5 text-xs font-bold text-white bg-[#FF3B40] rounded-full shadow-xs flex items-center gap-1"
             >
-              <svg
-                width={14}
-                height={14}
-                className="w-3.5 h-3.5 text-[#1E3A34] shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                />
-              </svg>
-              <span>Call</span>
+              <span>Book</span>
+              <span aria-hidden="true">→</span>
             </a>
 
             <button
@@ -198,7 +168,7 @@ export default function Header() {
               aria-label="Open navigation menu"
               aria-expanded={isOpen}
               aria-controls="mobile-drawer"
-              className="min-h-[44px] min-w-[44px] p-2 flex items-center justify-center text-[#1E3A34] rounded-lg hover:bg-[#F2F4F0] focus-visible:outline-2 focus-visible:outline-[#1E3A34]"
+              className="min-h-[44px] min-w-[44px] p-2 flex items-center justify-center text-[#291817] rounded-xl hover:bg-[#FCEAE7] focus-visible:outline-2 focus-visible:outline-[#FF3B40]"
             >
               <svg
                 width={24}
@@ -212,7 +182,7 @@ export default function Header() {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth="2"
+                  strokeWidth="2.2"
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
@@ -221,43 +191,32 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Drawer (Instant/Subtle 150ms fade, no heavy animation) */}
+      {/* Mobile Drawer (Instant/Subtle fade, no heavy animation) */}
       {isOpen && (
         <div
           id="mobile-drawer"
           role="dialog"
           aria-modal="true"
           aria-label="Site Navigation"
-          className="fixed inset-0 z-50 lg:hidden flex flex-col bg-[#FBFBF9]"
+          className="fixed inset-0 z-50 lg:hidden flex flex-col bg-[#FFF8F6]"
         >
           {/* Drawer Top Header */}
-          <div className="flex items-center justify-between h-20 px-5 border-b border-[#E2E6E2]">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl overflow-hidden shadow-xs shrink-0">
-                <Image
-                  src="/images/logo.svg"
-                  alt="Paws & Claws Brand Logo"
-                  width={40}
-                  height={40}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-base font-bold text-[#1E3A34] leading-tight">
-                  {siteContent.business.name}
-                </span>
-                <span className="text-[11px] text-[#57635E] font-medium flex items-center gap-1.5 mt-0.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#D97706] shrink-0" aria-hidden="true" />
-                  <span>{siteContent.business.city} · Studio Menu</span>
-                </span>
-              </div>
+          <div className="flex items-center justify-between h-20 px-5 border-b border-[#F0C9C5]">
+            <div className="flex items-center">
+              <Image
+                src="/images/logo.svg"
+                alt="Paws & Claws Brand Logo"
+                width={150}
+                height={34}
+                className="h-7 w-auto object-contain"
+              />
             </div>
 
             <button
               ref={closeButtonRef}
               onClick={() => setIsOpen(false)}
               aria-label="Close navigation menu"
-              className="min-h-[44px] min-w-[44px] p-2 flex items-center justify-center text-[#1E3A34] rounded-lg hover:bg-[#F2F4F0] focus-visible:outline-2 focus-visible:outline-[#1E3A34]"
+              className="min-h-[44px] min-w-[44px] p-2 flex items-center justify-center text-[#291817] rounded-xl hover:bg-[#FCEAE7] focus-visible:outline-2 focus-visible:outline-[#FF3B40]"
             >
               <svg
                 width={24}
@@ -271,7 +230,7 @@ export default function Header() {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth="2"
+                  strokeWidth="2.2"
                   d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
@@ -291,10 +250,10 @@ export default function Header() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className={`min-h-[44px] flex items-center px-4 py-3 text-base rounded-lg transition-colors ${
+                    className={`min-h-[48px] flex items-center px-4 py-3 text-base rounded-2xl transition-colors ${
                       isActive
-                        ? "text-[#1E3A34] bg-[#EAF1ED] font-semibold"
-                        : "text-[#1A201E] hover:bg-[#F2F4F0] font-medium"
+                        ? "text-[#FF3B40] bg-[#FCEAE7] font-bold"
+                        : "text-[#291817] hover:bg-[#FCEAE7]/50 font-semibold"
                     }`}
                     aria-current={isActive ? "page" : undefined}
                   >
@@ -305,37 +264,28 @@ export default function Header() {
             </nav>
 
             {/* Quick Mobile Action Buttons inside drawer */}
-            <div className="pt-6 border-t border-[#E2E6E2] space-y-3">
+            <div className="pt-6 border-t border-[#F0C9C5] space-y-3">
               <a
                 href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="min-h-[48px] w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#1E3A34] text-white font-semibold rounded-lg text-base"
+                className="min-h-[48px] w-full flex items-center justify-center gap-2 px-5 py-3.5 bg-[#FF3B40] text-white font-bold rounded-full text-base shadow-[0_4px_14px_rgba(255,59,64,0.25)] hover:bg-[#E52E33]"
               >
-                <svg
-                  width={20}
-                  height={20}
-                  className="w-5 h-5 fill-current text-white shrink-0"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M17.472 14.382c-.301-.15-1.782-.879-2.058-.98-.276-.1-.477-.15-.678.15-.2.301-.778.98-.954 1.18-.175.2-.351.226-.652.075-.301-.151-1.27-.468-2.42-1.494-.894-.797-1.498-1.782-1.674-2.083-.175-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.2-.301.301-.501.1-.2.05-.376-.025-.526-.075-.151-.678-1.632-.929-2.235-.245-.588-.493-.508-.678-.518l-.578-.01c-.2 0-.527.075-.803.376s-1.054 1.03-1.054 2.511c0 1.48 1.079 2.91 1.23 3.111.15.201 2.124 3.243 5.146 4.548.719.311 1.28.497 1.718.636.723.23 1.38.197 1.901.12.58-.088 1.782-.728 2.033-1.431.25-.703.25-1.305.175-1.431-.075-.126-.276-.201-.577-.352zM12 2C6.486 2 2 6.486 2 12c0 1.954.565 3.78 1.542 5.328L2 22l4.825-1.509A9.948 9.948 0 0012 22c5.514 0 10-4.486 10-10S17.514 2 12 2zm0 18.2c-1.688 0-3.26-.525-4.566-1.42l-.328-.225-3.327 1.04 1.066-3.208-.247-.358A8.17 8.17 0 013.8 12c0-4.521 3.679-8.2 8.2-8.2 4.522 0 8.2 3.679 8.2 8.2 0 4.522-3.678 8.2-8.2 8.2z" />
-                </svg>
-                <span>Chat on WhatsApp</span>
+                <span>Book a Grooming on WhatsApp</span>
+                <span>→</span>
               </a>
 
               <a
                 href={`tel:${siteContent.business.phoneRaw}`}
-                className="min-h-[48px] w-full flex items-center justify-center gap-2 px-4 py-3 bg-white border border-[#CBD3CC] text-[#1E3A34] font-semibold rounded-lg text-base"
+                className="min-h-[48px] w-full flex items-center justify-center gap-2 px-4 py-3 bg-white border border-[#F0C9C5] text-[#291817] font-semibold rounded-full text-base hover:bg-[#FCEAE7]"
               >
                 <svg
-                  width={20}
-                  height={20}
-                  className="w-5 h-5 text-[#1E3A34] shrink-0"
+                  width={18}
+                  height={18}
+                  className="w-4 h-4 text-[#FF3B40] shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
-                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
@@ -344,7 +294,7 @@ export default function Header() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span>Call us now</span>
+                <span>Call {siteContent.business.phoneDisplay}</span>
               </a>
             </div>
           </div>

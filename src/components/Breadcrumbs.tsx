@@ -8,11 +8,11 @@ interface Crumb {
 export default function Breadcrumbs({ items }: { items: Crumb[] }) {
   return (
     <nav aria-label="Breadcrumb" className="py-4">
-      <ol className="flex items-center space-x-2 text-xs md:text-sm text-[#57635E]">
+      <ol className="flex items-center space-x-2 text-xs md:text-sm text-[#796B69]">
         <li>
           <Link
             href="/"
-            className="hover:text-[#1E3A34] hover:underline focus-visible:outline-[#1E3A34]"
+            className="hover:text-[#FF3B40] hover:underline focus-visible:outline-[#FF3B40]"
           >
             Home
           </Link>
@@ -21,12 +21,12 @@ export default function Breadcrumbs({ items }: { items: Crumb[] }) {
           const isLast = index === items.length - 1;
           return (
             <li key={index} className="flex items-center space-x-2">
-              <span className="text-[#CBD3CC]" aria-hidden="true">
+              <span className="text-[#F0C9C5]" aria-hidden="true">
                 /
               </span>
               {isLast || !item.href ? (
                 <span
-                  className="text-[#1E3A34] font-semibold"
+                  className="text-[#291817] font-bold"
                   aria-current="page"
                 >
                   {item.label}
@@ -34,7 +34,7 @@ export default function Breadcrumbs({ items }: { items: Crumb[] }) {
               ) : (
                 <Link
                   href={item.href}
-                  className="hover:text-[#1E3A34] hover:underline focus-visible:outline-[#1E3A34]"
+                  className="hover:text-[#FF3B40] hover:underline focus-visible:outline-[#FF3B40]"
                 >
                   {item.label}
                 </Link>

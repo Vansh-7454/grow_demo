@@ -1,34 +1,11 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Outer Badge / Shield Container with Rounded Corners -->
-  <rect x="2" y="2" width="60" height="60" rx="16" fill="#1E3A34" stroke="#D97706" stroke-width="2"/>
-  
-  <!-- Subtle Inner Golden Accent Ring -->
-  <rect x="6" y="6" width="52" height="52" rx="12" fill="none" stroke="#D97706" stroke-opacity="0.3" stroke-width="1" stroke-dasharray="2 2"/>
-
-  <!-- Grooming Scissor Loop Silhouette (Left) -->
-  <circle cx="21" cy="46" r="3.5" stroke="#D97706" stroke-width="1.8" fill="none"/>
-  <!-- Grooming Scissor Loop Silhouette (Right) -->
-  <circle cx="43" cy="46" r="3.5" stroke="#D97706" stroke-width="1.8" fill="none"/>
-  
-  <!-- Scissor Blades crossing gracefully -->
-  <path d="M23 44L32 35M41 44L32 35" stroke="#D97706" stroke-width="1.8" stroke-linecap="round"/>
-  <circle cx="32" cy="35" r="1.5" fill="#D97706"/>
-
-  <!-- Dog Silhouette Profile (Left Side) -->
-  <path d="M20 28C19 24 21 20 24 19C25 18.7 26 19.3 26 20.5C26 21.8 25 23 26 25C26.7 26.5 28 27 30 27" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  
-  <!-- Cat Silhouette Profile with Pointed Ear (Right Side) -->
-  <path d="M44 28C44.5 24 43 20 40 18.5L38 21.5C37 21 35.5 21.5 35 23C34.5 24.5 35.5 26 34 27" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- Central Paw Emblem -->
-  <!-- Main Pad -->
-  <path d="M32 31C29.2 31 27 28.8 27 26.5C27 25 28.2 23.8 29.8 23.8C30.6 23.8 31.4 24.2 32 24.2C32.6 24.2 33.4 23.8 34.2 23.8C35.8 23.8 37 25 37 26.5C37 28.8 34.8 31 32 31Z" fill="#D97706"/>
-  <!-- Paw Toes -->
-  <ellipse cx="26" cy="20.5" rx="2" ry="2.8" fill="#FFFFFF"/>
-  <ellipse cx="30" cy="17.5" rx="2" ry="3.2" fill="#D97706"/>
-  <ellipse cx="34" cy="17.5" rx="2" ry="3.2" fill="#D97706"/>
-  <ellipse cx="38" cy="20.5" rx="2" ry="2.8" fill="#FFFFFF"/>
-
-  <!-- Sparkle Accent (Clean Studio Hygiene) -->
-  <path d="M48 12L49 14.5L51.5 15.5L49 16.5L48 19L47 16.5L44.5 15.5L47 14.5L48 12Z" fill="#FEF3C7"/>
+<svg width="180" height="42" viewBox="0 0 180 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Friendly modern bold wordmark: paws & claws in coral red -->
+  <text x="0" y="30" font-family="Plus Jakarta Sans, Manrope, sans-serif" font-size="26" font-weight="800" letter-spacing="-0.04em" fill="#FF3B40">
+    paws<tspan fill="#291817">&amp;</tspan>claws
+  </text>
+  <!-- Mini playful paw / heart sparkle above the ampersand -->
+  <circle cx="86" cy="7" r="2.2" fill="#FF3B40"/>
+  <circle cx="82" cy="10" r="1.8" fill="#FF3B40"/>
+  <circle cx="90" cy="10" r="1.8" fill="#FF3B40"/>
+  <ellipse cx="86" cy="14" rx="3.2" ry="2.2" fill="#FF3B40"/>
 </svg>

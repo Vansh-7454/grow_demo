@@ -13,17 +13,18 @@ export default function ContactPage() {
   )}`;
 
   return (
-    <div className="bg-[#FBFBF9]">
+    <div className="bg-[#FFF8F6] text-[#291817]">
       {/* Header Band */}
-      <section className="bg-white border-b border-[#E2E6E2] pt-12 pb-14">
+      <section className="bg-white border-b border-[#F0C9C5] pt-12 pb-14">
         <div className="site-container text-center max-w-[800px] mx-auto">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#D97706] block mb-2">
-            Visit or Book Online
+          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-2.5">
+            <span aria-hidden="true">✦</span>
+            <span>Visit or Book Online</span>
           </span>
-          <h1 className="heading-h1 text-[#1E3A34] mb-4">
-            Contact our Gurugram grooming studio.
+          <h1 className="heading-h1 mb-4">
+            Contact our Gurugram <span className="text-[#FF3B40]">grooming studio.</span>
           </h1>
-          <p className="body-large text-[#57635E]">
+          <p className="body-large">
             We operate strictly by appointment to ensure every dog and cat receives dedicated, unhurried attention. Get directions, call us directly, or book your slot on WhatsApp.
           </p>
         </div>
@@ -32,20 +33,21 @@ export default function ContactPage() {
       {/* Main Contact Grid: Studio Info + Contact Form */}
       <section className="section-pad">
         <div className="site-container">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
             {/* Left: Studio Info, Hours & Direct Conversion (Col 1-5) */}
-            <div className="lg:col-span-5 space-y-8">
+            <div className="lg:col-span-5 space-y-6">
               {/* Direct Quick Action Buttons */}
-              <div className="p-4 sm:p-6 bg-white border border-[#CBD3CC] rounded-2xl shadow-[0_4px_20px_-2px_rgba(30,58,52,0.05)] space-y-3">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#1E3A34] block">
-                  Instant Contact
+              <div className="p-6 bg-white border border-[#F0C9C5] rounded-[28px] shadow-[0_8px_30px_rgba(41,24,23,0.04)] space-y-3">
+                <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] block mb-1">
+                  <span aria-hidden="true">✦</span>
+                  <span>Instant Studio Contact</span>
                 </span>
 
                 <a
                   href={whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full min-h-[48px] flex items-center justify-center gap-2 px-4 py-3 bg-[#1E3A34] text-white font-semibold rounded-lg text-sm hover:bg-[#142723] transition-colors shadow-sm"
+                  className="btn-primary w-full text-sm gap-2"
                 >
                   <svg
                     width={16}
@@ -61,12 +63,12 @@ export default function ContactPage() {
 
                 <a
                   href={`tel:${siteContent.business.phoneRaw}`}
-                  className="w-full min-h-[48px] flex items-center justify-center gap-2 px-4 py-3 bg-white border border-[#CBD3CC] text-[#1E3A34] font-semibold rounded-lg text-sm hover:bg-[#F2F4F0] transition-colors"
+                  className="btn-secondary w-full text-sm gap-2"
                 >
                   <svg
                     width={16}
                     height={16}
-                    className="w-4 h-4 text-[#1E3A34] shrink-0"
+                    className="w-4 h-4 text-[#FF3B40] shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -78,19 +80,19 @@ export default function ContactPage() {
                       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                     />
                   </svg>
-                  <span>Call {siteContent.business.phoneDisplay}</span>
+                  <span>Call: {siteContent.business.phoneDisplay}</span>
                 </a>
 
                 <a
                   href={siteContent.business.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full min-h-[48px] flex items-center justify-center gap-2 px-4 py-3 bg-white border border-[#CBD3CC] text-[#1E3A34] font-semibold rounded-lg text-sm hover:bg-[#F2F4F0] transition-colors"
+                  className="btn-secondary w-full text-sm gap-2"
                 >
                   <svg
                     width={16}
                     height={16}
-                    className="w-4 h-4 text-[#1E3A34] shrink-0"
+                    className="w-4 h-4 text-[#FF3B40] shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -113,29 +115,29 @@ export default function ContactPage() {
               </div>
 
               {/* Studio Details Card */}
-              <div className="p-4 sm:p-6 bg-white border border-[#CBD3CC] rounded-2xl shadow-[0_4px_20px_-2px_rgba(30,58,52,0.05)] space-y-5 text-sm text-[#1A201E]">
+              <div className="p-6 bg-white border border-[#F0C9C5] rounded-[28px] shadow-[0_8px_30px_rgba(41,24,23,0.04)] space-y-4 text-sm text-[#291817]">
                 <div>
-                  <h3 className="font-bold text-[#1E3A34] text-base mb-1">
+                  <h3 className="font-extrabold text-[#291817] text-base mb-1">
                     Studio Location
                   </h3>
-                  <p className="text-[#57635E] leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#796B69] leading-relaxed">
                     {siteContent.business.address}
                   </p>
-                  <p className="text-xs text-[#B45309] font-medium bg-[#FEF3C7] p-2 rounded mt-2">
-                    Placeholder Note: {siteContent.business.addressPlaceholderNote}
+                  <p className="text-xs text-[#FF3B40] font-semibold bg-[#FFF8F6] border border-[#F0C9C5] p-2.5 rounded-xl mt-2">
+                    Note: {siteContent.business.addressPlaceholderNote}
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-[#E2E6E2]">
-                  <h3 className="font-bold text-[#1E3A34] text-base mb-1">
+                <div className="pt-3 border-t border-[#F0C9C5]/50">
+                  <h3 className="font-extrabold text-[#291817] text-base mb-1.5">
                     Operating Hours
                   </h3>
                   {siteContent.business.hours.map((h, i) => (
                     <div
                       key={i}
-                      className="flex justify-between text-xs py-1 text-[#57635E]"
+                      className="flex justify-between text-xs py-1 text-[#796B69]"
                     >
-                      <span className="font-medium text-[#1A201E]">
+                      <span className="font-bold text-[#291817]">
                         {h.days}:
                       </span>
                       <span>{h.time}</span>
@@ -143,19 +145,19 @@ export default function ContactPage() {
                   ))}
                 </div>
 
-                <div className="pt-3 border-t border-[#E2E6E2]">
-                  <h3 className="font-bold text-[#1E3A34] text-base mb-1">
+                <div className="pt-3 border-t border-[#F0C9C5]/50">
+                  <h3 className="font-extrabold text-[#291817] text-base mb-1">
                     Studio Policy
                   </h3>
-                  <p className="text-xs text-[#57635E] leading-relaxed">
+                  <p className="text-xs text-[#796B69] leading-relaxed">
                     Vaccination records (Rabies & DHPPi/Tricat) must be presented or sent via WhatsApp before service. Appointments are allocated exclusively to your pet.
                   </p>
                 </div>
               </div>
 
               {/* Studio Photography & Map Reference */}
-              <div className="border border-[#CBD3CC] rounded-2xl overflow-hidden bg-white shadow-xs">
-                <div className="relative aspect-[16/10] bg-[#EAF1ED]">
+              <div className="border border-[#F0C9C5] rounded-[28px] overflow-hidden bg-white shadow-xs">
+                <div className="relative aspect-[16/10] bg-[#FCEAE7]">
                   <Image
                     src="/images/studio-hero.jpg"
                     alt="Paws & Claws Pet Grooming Studio in Gurugram"
@@ -163,22 +165,22 @@ export default function ContactPage() {
                     sizes="(max-width: 1024px) 100vw, 440px"
                     className="object-cover"
                   />
-                  <div className="absolute top-3 left-3 bg-[#1E3A34]/90 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-md shadow-xs">
+                  <div className="absolute top-3 left-3 bg-[#FF3B40] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
                     📍 Sector 54 Studio
                   </div>
                 </div>
-                <div className="p-4 bg-[#FBFBF9] text-center border-t border-[#E2E6E2]">
-                  <p className="text-xs font-semibold text-[#1E3A34]">
+                <div className="p-5 bg-[#FFF8F6] text-center border-t border-[#F0C9C5]/60">
+                  <p className="text-xs font-bold text-[#291817]">
                     Dedicated 1-on-1 Grooming & Reception
                   </p>
-                  <p className="text-[11px] text-[#57635E] mt-0.5">
+                  <p className="text-[11px] text-[#796B69] mt-0.5">
                     Sector 54 · Golf Course Road · Gurugram
                   </p>
                   <a
                     href={siteContent.business.googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block mt-3 px-4 py-2 bg-white border border-[#CBD3CC] rounded-lg text-xs font-semibold text-[#1E3A34] hover:bg-[#F2F4F0] shadow-xs"
+                    className="btn-secondary text-xs mt-3 inline-flex"
                   >
                     Open Live Interactive Map →
                   </a>

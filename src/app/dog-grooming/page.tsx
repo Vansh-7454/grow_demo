@@ -17,40 +17,41 @@ export default function DogGroomingPage() {
   );
 
   return (
-    <div className="bg-[#FBFBF9]">
+    <div className="bg-[#FFF8F6] text-[#291817]">
       <FaqSchema faqs={dogFaqs} />
 
       {/* Header & Breadcrumb Band with Real Photography Showcase */}
-      <section className="border-b border-[#E2E6E2] bg-white pt-6 pb-12">
+      <section className="border-b border-[#F0C9C5] bg-white pt-6 pb-12 sm:pb-16">
         <div className="site-container">
           <Breadcrumbs items={[{ label: "Dog Grooming" }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mt-6">
-            <div className="lg:col-span-7">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#D97706] block mb-2">
-                Canine Grooming Studio · Gurugram
+            <div className="lg:col-span-7 space-y-4">
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40]">
+                <span aria-hidden="true">✦</span>
+                <span>Canine Grooming Studio · Gurugram</span>
               </span>
-              <h1 className="heading-h1 text-[#1E3A34] mb-4">
-                Gentle, breed-specific dog grooming in Gurugram.
+              <h1 className="heading-h1">
+                Gentle, breed-specific <span className="text-[#FF3B40]">dog grooming</span> in Gurugram.
               </h1>
-              <p className="body-large text-[#57635E] max-readable mb-6">
+              <p className="body-large max-readable">
                 From everyday warm hydro-baths to specialized breed styling and anti-tick treatments. Every dog receives 1-on-1 care with pet-friendly organic products and zero holding cages.
               </p>
-              <div className="flex flex-wrap gap-2 text-xs">
-                <span className="px-3 py-1.5 bg-[#EAF1ED] text-[#1E3A34] font-semibold rounded-lg border border-[#CBD3CC]">
+              <div className="flex flex-wrap gap-2.5 pt-2 text-xs">
+                <span className="px-3.5 py-1.5 bg-[#FFF8F6] text-[#291817] font-bold rounded-full border border-[#F0C9C5]">
                   ✓ Zero Holding Cages
                 </span>
-                <span className="px-3 py-1.5 bg-[#EAF1ED] text-[#1E3A34] font-semibold rounded-lg border border-[#CBD3CC]">
+                <span className="px-3.5 py-1.5 bg-[#FFF8F6] text-[#291817] font-bold rounded-full border border-[#F0C9C5]">
                   ✓ Organic Herbal Shampoos
                 </span>
-                <span className="px-3 py-1.5 bg-[#EAF1ED] text-[#1E3A34] font-semibold rounded-lg border border-[#CBD3CC]">
-                  ✓ Sector 54 Observation Window
+                <span className="px-3.5 py-1.5 bg-[#FFF8F6] text-[#291817] font-bold rounded-full border border-[#F0C9C5]">
+                  ✓ Observation Window
                 </span>
               </div>
             </div>
 
             <div className="lg:col-span-5">
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#CBD3CC] shadow-md bg-[#EAF1ED]">
+              <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden border border-[#F0C9C5] shadow-[0_12px_36px_rgba(41,24,23,0.08)] bg-[#FCEAE7]">
                 <Image
                   src="/images/shih-tzu-cut.jpg"
                   alt="Shih Tzu teddy bear scissor haircut at Paws & Claws Gurugram"
@@ -59,10 +60,10 @@ export default function DogGroomingPage() {
                   priority
                   className="object-cover"
                 />
-                <div className="absolute top-3 left-3 bg-[#1E3A34]/90 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-md shadow-xs">
+                <div className="absolute top-3 left-3 bg-[#FF3B40] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
                   📍 Gurugram Canine Suite
                 </div>
-                <div className="absolute bottom-3 right-3 bg-black/60 backdrop-blur-xs text-white text-[10px] font-mono px-2 py-0.5 rounded">
+                <div className="absolute bottom-3 right-3 bg-[#291817]/70 backdrop-blur-xs text-white text-[10px] font-mono px-2.5 py-0.5 rounded-full">
                   Breed Scissor Cut
                 </div>
               </div>
@@ -74,14 +75,15 @@ export default function DogGroomingPage() {
       {/* Package Comparison Grid */}
       <section className="section-pad">
         <div className="site-container">
-          <div className="text-center max-w-[700px] mx-auto mb-12 lg:mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#1E3A34] block mb-2">
-              Transparent Packages
+          <div className="text-center max-w-[700px] mx-auto mb-12 sm:mb-16">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-2.5">
+              <span aria-hidden="true">✦</span>
+              <span>Transparent Packages</span>
             </span>
-            <h2 className="heading-h2 text-[#1E3A34] mb-3">
-              Compare our dog grooming packages.
+            <h2 className="heading-h2">
+              Compare our <span className="text-[#FF3B40]">dog grooming packages.</span>
             </h2>
-            <p className="body-large text-[#57635E]">
+            <p className="body-large mt-3">
               Prices vary strictly by coat length and breed size. Choose the package that matches your dog&apos;s current needs.
             </p>
           </div>
@@ -95,53 +97,54 @@ export default function DogGroomingPage() {
       </section>
 
       {/* How It Works Section (Uniform Service Structure) */}
-      <section className="bg-[#F2F4F0] border-y border-[#E2E6E2] section-pad">
+      <section className="bg-white border-y border-[#F0C9C5] section-pad">
         <div className="site-container">
-          <div className="text-center max-w-[700px] mx-auto mb-12">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#D97706] block mb-2">
-              Our 3-Step Process
+          <div className="text-center max-w-[700px] mx-auto mb-12 sm:mb-16">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-2.5">
+              <span aria-hidden="true">✦</span>
+              <span>Our 3-Step Process</span>
             </span>
-            <h2 className="heading-h2 text-[#1E3A34] mb-3">
+            <h2 className="heading-h2">
               How dog grooming works at our studio.
             </h2>
-            <p className="body-large text-[#57635E]">
+            <p className="body-large mt-3">
               We adhere to strict hygiene and gentle pacing so your dog feels secure throughout their stay.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1050px] mx-auto">
-            <div className="p-6 bg-white border border-[#CBD3CC] rounded-2xl">
-              <span className="w-8 h-8 rounded-full bg-[#1E3A34] text-white flex items-center justify-center font-bold text-xs mb-4">
-                1
+            <div className="p-6 sm:p-7 bg-[#FFF8F6] border border-[#F0C9C5] rounded-[24px] shadow-[0_4px_20px_rgba(41,24,23,0.03)]">
+              <span className="w-9 h-9 rounded-full border-1.5 border-[#FF3B40] text-[#FF3B40] bg-white flex items-center justify-center font-bold text-xs mb-4">
+                01
               </span>
-              <h3 className="text-lg font-bold text-[#1E3A34] mb-2">
+              <h3 className="text-lg font-extrabold text-[#291817] mb-2">
                 Drop-off & Health Check
               </h3>
-              <p className="text-sm text-[#57635E] leading-relaxed">
+              <p className="text-sm text-[#796B69] leading-relaxed">
                 We inspect coat condition, skin sensitivity, and check for ticks or ear irritation with you before beginning.
               </p>
             </div>
 
-            <div className="p-6 bg-white border border-[#CBD3CC] rounded-2xl">
-              <span className="w-8 h-8 rounded-full bg-[#1E3A34] text-white flex items-center justify-center font-bold text-xs mb-4">
-                2
+            <div className="p-6 sm:p-7 bg-[#FFF8F6] border border-[#F0C9C5] rounded-[24px] shadow-[0_4px_20px_rgba(41,24,23,0.03)]">
+              <span className="w-9 h-9 rounded-full border-1.5 border-[#FF3B40] text-[#FF3B40] bg-white flex items-center justify-center font-bold text-xs mb-4">
+                02
               </span>
-              <h3 className="text-lg font-bold text-[#1E3A34] mb-2">
+              <h3 className="text-lg font-extrabold text-[#291817] mb-2">
                 1-on-1 Gentle Hydro-Bath & Groom
               </h3>
-              <p className="text-sm text-[#57635E] leading-relaxed">
+              <p className="text-sm text-[#796B69] leading-relaxed">
                 Warm water hydro-bath, organic shampoo, quiet high-velocity drying, and careful breed scissor work without cage delays.
               </p>
             </div>
 
-            <div className="p-6 bg-white border border-[#CBD3CC] rounded-2xl">
-              <span className="w-8 h-8 rounded-full bg-[#1E3A34] text-white flex items-center justify-center font-bold text-xs mb-4">
-                3
+            <div className="p-6 sm:p-7 bg-[#FFF8F6] border border-[#F0C9C5] rounded-[24px] shadow-[0_4px_20px_rgba(41,24,23,0.03)]">
+              <span className="w-9 h-9 rounded-full border-1.5 border-[#FF3B40] text-[#FF3B40] bg-white flex items-center justify-center font-bold text-xs mb-4">
+                03
               </span>
-              <h3 className="text-lg font-bold text-[#1E3A34] mb-2">
-                Paw Balm & WhatsApp Pickup Alert
+              <h3 className="text-lg font-extrabold text-[#291817] mb-2">
+                Paw Balm & WhatsApp Alert
               </h3>
-              <p className="text-sm text-[#57635E] leading-relaxed">
+              <p className="text-sm text-[#796B69] leading-relaxed">
                 Nails clipped, paw pads conditioned, and a WhatsApp message sent to you 15 minutes before the session wraps up.
               </p>
             </div>
@@ -152,12 +155,13 @@ export default function DogGroomingPage() {
       {/* Relevant FAQs for Dogs */}
       <section className="section-pad">
         <div className="site-container">
-          <div className="text-center max-w-[700px] mx-auto mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#D97706] block mb-2">
-              Dog Grooming FAQs
+          <div className="text-center max-w-[700px] mx-auto mb-10 sm:mb-12">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-2.5">
+              <span aria-hidden="true">✦</span>
+              <span>Dog Care Inquiries</span>
             </span>
-            <h2 className="heading-h2 text-[#1E3A34] mb-3">
-              Frequently asked dog care questions.
+            <h2 className="heading-h2">
+              Frequently asked <span className="text-[#FF3B40]">dog care questions.</span>
             </h2>
           </div>
 
@@ -166,25 +170,25 @@ export default function DogGroomingPage() {
       </section>
 
       {/* Related Services & Cross Links */}
-      <section className="bg-white border-t border-[#E2E6E2] py-16">
+      <section className="bg-white border-t border-[#F0C9C5] py-16">
         <div className="site-container">
-          <div className="p-8 bg-[#FBFBF9] border border-[#CBD3CC] rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="p-8 sm:p-10 bg-[#FCEAE7]/60 border border-[#F0C9C5] rounded-[32px] flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#D97706] block mb-1">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#FF3B40] block mb-1">
                 Also have a cat?
               </span>
-              <h3 className="text-xl font-bold text-[#1E3A34]">
+              <h3 className="text-xl sm:text-2xl font-extrabold text-[#291817]">
                 Explore our dedicated quiet Cat Grooming Suite
               </h3>
-              <p className="text-xs md:text-sm text-[#57635E] mt-1">
+              <p className="text-xs md:text-sm text-[#796B69] mt-1.5 max-w-[50ch]">
                 Separate quiet room with zero dogs, specialized feline de-matting, and waterless comfort baths.
               </p>
             </div>
             <Link
               href="/cat-grooming"
-              className="min-h-[44px] px-6 py-2.5 bg-[#1E3A34] text-white text-sm font-semibold rounded-lg hover:bg-[#142723] transition-colors whitespace-nowrap"
+              className="btn-primary text-sm whitespace-nowrap"
             >
-              View Cat Packages →
+              <span>View Cat Packages →</span>
             </Link>
           </div>
         </div>

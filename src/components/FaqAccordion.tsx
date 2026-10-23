@@ -32,7 +32,11 @@ export default function FaqAccordion({
         return (
           <div
             key={faq.id}
-            className="border border-[#CBD3CC] bg-white rounded-xl overflow-hidden transition-colors"
+            className={`border rounded-2xl overflow-hidden transition-all duration-200 ${
+              isOpen
+                ? "border-[#FF3B40]/50 bg-white shadow-[0_8px_24px_rgba(41,24,23,0.06)]"
+                : "border-[#F0C9C5] bg-white hover:border-[#FF3B40]/40 shadow-[0_4px_14px_rgba(41,24,23,0.03)]"
+            }`}
           >
             <h3>
               <button
@@ -41,18 +45,20 @@ export default function FaqAccordion({
                 onClick={() => toggleItem(faq.id)}
                 aria-expanded={isOpen}
                 aria-controls={contentId}
-                className="w-full min-h-[56px] px-5 py-4 text-left flex items-center justify-between gap-4 font-semibold text-base md:text-lg text-[#1A201E] hover:text-[#1E3A34] focus-visible:outline-2 focus-visible:outline-[#1E3A34] transition-colors"
+                className="w-full min-h-[56px] px-6 py-4.5 text-left flex items-center justify-between gap-4 font-bold text-base md:text-lg text-[#291817] hover:text-[#FF3B40] focus-visible:outline-2 focus-visible:outline-[#FF3B40] transition-colors"
               >
                 <span>{faq.question}</span>
                 <span
-                  className="flex-shrink-0 w-6 h-6 flex items-center justify-center text-[#1E3A34]"
+                  className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
+                    isOpen ? "bg-[#FF3B40] text-white" : "bg-[#FCEAE7] text-[#FF3B40]"
+                  }`}
                   aria-hidden="true"
                 >
                   {isOpen ? (
                     <svg
-                      width={20}
-                      height={20}
-                      className="w-5 h-5 shrink-0"
+                      width={16}
+                      height={16}
+                      className="w-4 h-4 shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -60,15 +66,15 @@ export default function FaqAccordion({
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth="2"
+                        strokeWidth="2.5"
                         d="M20 12H4"
                       />
                     </svg>
                   ) : (
                     <svg
-                      width={20}
-                      height={20}
-                      className="w-5 h-5 shrink-0"
+                      width={16}
+                      height={16}
+                      className="w-4 h-4 shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -76,7 +82,7 @@ export default function FaqAccordion({
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth="2"
+                        strokeWidth="2.5"
                         d="M12 4v16m8-8H4"
                       />
                     </svg>
@@ -90,12 +96,12 @@ export default function FaqAccordion({
                 id={contentId}
                 role="region"
                 aria-labelledby={buttonId}
-                className="px-5 pb-5 pt-1 text-sm md:text-base text-[#57635E] leading-relaxed border-t border-[#F2F4F0]"
+                className="px-6 pb-6 pt-1 text-sm md:text-base text-[#796B69] leading-relaxed border-t border-[#FCEAE7]"
               >
                 <p>{faq.answer}</p>
                 {!faq.isConfirmed && (
-                  <p className="mt-2 text-xs text-[#B45309] font-medium bg-[#FEF3C7] p-2 rounded">
-                    Placeholder Note: {faq.confirmationNote || "Studio confirmation pending"}
+                  <p className="mt-3 text-xs text-[#291817] font-semibold bg-[#FCEAE7] p-2.5 rounded-xl border border-[#F0C9C5]">
+                    Note: {faq.confirmationNote || "Studio confirmation pending"}
                   </p>
                 )}
               </div>

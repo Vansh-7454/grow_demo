@@ -168,12 +168,12 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
   };
 
   return (
-    <div className="bg-white border border-[#CBD3CC] rounded-2xl p-4 sm:p-6 md:p-8 shadow-[0_4px_20px_-2px_rgba(30,58,52,0.05)] w-full">
+    <div className="bg-white border border-[#F0C9C5] rounded-[28px] p-5 sm:p-7 md:p-9 shadow-[0_12px_36px_rgba(41,24,23,0.05)] w-full">
       <div className="mb-6">
-        <h3 className="text-xl md:text-2xl font-bold text-[#1E3A34] tracking-tight">
+        <h3 className="text-xl md:text-2xl font-extrabold text-[#291817] tracking-tight">
           Request a Grooming Appointment
         </h3>
-        <p className="text-xs sm:text-sm text-[#57635E] mt-1 leading-relaxed">
+        <p className="text-xs sm:text-sm text-[#796B69] mt-1.5 leading-relaxed">
           Fill in your pet&apos;s details below to initiate a direct appointment inquiry on WhatsApp.
         </p>
       </div>
@@ -183,9 +183,9 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
         <div>
           <label
             htmlFor={`${formId}-name`}
-            className="block text-xs font-semibold uppercase tracking-wider text-[#1A201E] mb-1.5"
+            className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-1.5"
           >
-            Pet Parent Full Name <span className="text-[#D97706]">*</span>
+            Pet Parent Full Name <span className="text-[#FF3B40]">*</span>
           </label>
           <input
             id={`${formId}-name`}
@@ -197,10 +197,10 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
             onChange={(e) =>
               setFormData({ ...formData, fullName: e.target.value })
             }
-            className={`w-full min-h-[44px] px-3.5 py-2.5 text-base sm:text-sm bg-[#FBFBF9] border rounded-lg text-[#1A201E] focus-visible:outline-2 ${
+            className={`w-full min-h-[46px] px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border rounded-xl text-[#291817] focus-visible:outline-2 ${
               errors.fullName
                 ? "border-red-600 focus-visible:outline-red-600"
-                : "border-[#CBD3CC] focus-visible:outline-[#1E3A34]"
+                : "border-[#F0C9C5] focus-visible:outline-[#FF3B40]"
             }`}
             placeholder="e.g. Priya Sharma"
           />
@@ -215,12 +215,12 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
         <div>
           <label
             htmlFor={`${formId}-phone`}
-            className="block text-xs font-semibold uppercase tracking-wider text-[#1A201E] mb-1.5"
+            className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-1.5"
           >
-            Mobile Number (10 Digits) <span className="text-[#D97706]">*</span>
+            Mobile Number (10 Digits) <span className="text-[#FF3B40]">*</span>
           </label>
           <div className="relative">
-            <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-xs font-semibold text-[#57635E]">
+            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xs font-bold text-[#796B69]">
               +91
             </span>
             <input
@@ -234,10 +234,10 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
               onChange={(e) =>
                 setFormData({ ...formData, phone: e.target.value })
               }
-              className={`w-full min-h-[44px] pl-12 pr-3.5 py-2.5 text-base sm:text-sm bg-[#FBFBF9] border rounded-lg text-[#1A201E] font-mono focus-visible:outline-2 ${
+              className={`w-full min-h-[46px] pl-13 pr-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border rounded-xl text-[#291817] font-mono focus-visible:outline-2 ${
                 errors.phone
                   ? "border-red-600 focus-visible:outline-red-600"
-                  : "border-[#CBD3CC] focus-visible:outline-[#1E3A34]"
+                  : "border-[#F0C9C5] focus-visible:outline-[#FF3B40]"
               }`}
               placeholder="9812345678"
             />
@@ -247,7 +247,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
               {errors.phone}
             </p>
           ) : (
-            <p className="text-[11px] text-[#7B8882] mt-1">
+            <p className="text-[11px] text-[#9E8E8C] mt-1">
               Required for appointment coordination and pickup alerts.
             </p>
           )}
@@ -257,7 +257,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
         <div>
           <label
             htmlFor={`${formId}-email`}
-            className="block text-xs font-semibold uppercase tracking-wider text-[#1A201E] mb-1.5"
+            className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-1.5"
           >
             Email Address (Optional)
           </label>
@@ -269,10 +269,10 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
             }
-            className={`w-full min-h-[44px] px-3.5 py-2.5 text-base sm:text-sm bg-[#FBFBF9] border rounded-lg text-[#1A201E] focus-visible:outline-2 ${
+            className={`w-full min-h-[46px] px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border rounded-xl text-[#291817] focus-visible:outline-2 ${
               errors.email
                 ? "border-red-600 focus-visible:outline-red-600"
-                : "border-[#CBD3CC] focus-visible:outline-[#1E3A34]"
+                : "border-[#F0C9C5] focus-visible:outline-[#FF3B40]"
             }`}
             placeholder="priya@example.com"
           />
@@ -288,9 +288,9 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
           <div>
             <label
               htmlFor={`${formId}-petType`}
-              className="block text-xs font-semibold uppercase tracking-wider text-[#1A201E] mb-1.5"
+              className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-1.5"
             >
-              Pet Type <span className="text-[#D97706]">*</span>
+              Pet Type <span className="text-[#FF3B40]">*</span>
             </label>
             <select
               id={`${formId}-petType`}
@@ -302,10 +302,10 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
                   petType: e.target.value as FormState["petType"],
                 })
               }
-              className={`w-full min-h-[44px] px-3.5 py-2.5 text-base sm:text-sm bg-[#FBFBF9] border rounded-lg text-[#1A201E] focus-visible:outline-2 ${
+              className={`w-full min-h-[46px] px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border rounded-xl text-[#291817] focus-visible:outline-2 ${
                 errors.petType
                   ? "border-red-600 focus-visible:outline-red-600"
-                  : "border-[#CBD3CC] focus-visible:outline-[#1E3A34]"
+                  : "border-[#F0C9C5] focus-visible:outline-[#FF3B40]"
               }`}
             >
               <option value="">Select Pet...</option>
@@ -323,7 +323,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
           <div>
             <label
               htmlFor={`${formId}-service`}
-              className="block text-xs font-semibold uppercase tracking-wider text-[#1A201E] mb-1.5"
+              className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-1.5"
             >
               Desired Service Package
             </label>
@@ -333,7 +333,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
               onChange={(e) =>
                 setFormData({ ...formData, service: e.target.value })
               }
-              className="w-full min-h-[44px] px-3.5 py-2.5 text-base sm:text-sm bg-[#FBFBF9] border border-[#CBD3CC] rounded-lg text-[#1A201E] focus-visible:outline-2 focus-visible:outline-[#1E3A34]"
+              className="w-full min-h-[46px] px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border border-[#F0C9C5] rounded-xl text-[#291817] focus-visible:outline-2 focus-visible:outline-[#FF3B40]"
             >
               <option value="Basic Bath & Hygiene">Basic Bath & Hygiene</option>
               <option value="Full Breed Styling & Groom">
@@ -358,7 +358,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
         <div>
           <label
             htmlFor={`${formId}-notes`}
-            className="block text-xs font-semibold uppercase tracking-wider text-[#1A201E] mb-1.5"
+            className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-1.5"
           >
             Pet Breed, Age, or Special Care Notes (Max 1000 characters)
           </label>
@@ -370,7 +370,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
             onChange={(e) =>
               setFormData({ ...formData, message: e.target.value })
             }
-            className="w-full px-3.5 py-2.5 text-base sm:text-sm bg-[#FBFBF9] border border-[#CBD3CC] rounded-lg text-[#1A201E] focus-visible:outline-2 focus-visible:outline-[#1E3A34]"
+            className="w-full px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border border-[#F0C9C5] rounded-xl text-[#291817] focus-visible:outline-2 focus-visible:outline-[#FF3B40]"
             placeholder="e.g. 2-year-old Golden Retriever, sensitive ears, friendly temperament..."
           />
           {errors.message && (
@@ -381,8 +381,8 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
         </div>
 
         {/* Transparency note as strictly mandated by Rule 16 */}
-        <div className="p-3 bg-[#F2F4F0] border border-[#CBD3CC] rounded-lg text-xs text-[#57635E] leading-relaxed">
-          <p className="font-semibold text-[#1A201E] mb-0.5">
+        <div className="p-3.5 bg-[#FCEAE7]/50 border border-[#F0C9C5] rounded-xl text-xs text-[#796B69] leading-relaxed">
+          <p className="font-bold text-[#291817] mb-0.5">
             Privacy & Transmission Transparency:
           </p>
           <p>
@@ -394,7 +394,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
         <div>
           <button
             type="submit"
-            className="w-full min-h-[48px] px-6 py-3 text-sm sm:text-base font-semibold text-white bg-[#1E3A34] hover:bg-[#142723] rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm"
+            className="btn-primary w-full py-3.5 text-base font-bold shadow-md cursor-pointer flex items-center justify-center gap-2"
           >
             <span>Continue to WhatsApp Booking</span>
             <svg
@@ -416,7 +416,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
         </div>
 
         {preparedWhatsAppUrl && (
-          <div className="mt-4 p-3 bg-[#EAF1ED] border border-[#1E3A34] rounded-lg text-xs text-[#1E3A34] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <div className="mt-4 p-3.5 bg-[#FCEAE7] border border-[#FF3B40]/40 rounded-xl text-xs text-[#291817] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
             <span>
               If WhatsApp did not automatically open, tap the link:
             </span>
@@ -424,7 +424,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
               href={preparedWhatsAppUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-bold underline shrink-0 inline-flex items-center gap-1"
+              className="font-bold text-[#FF3B40] underline shrink-0 inline-flex items-center gap-1"
             >
               <span>Open WhatsApp Now</span>
               <span>→</span>

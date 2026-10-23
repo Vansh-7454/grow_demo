@@ -17,40 +17,41 @@ export default function CatGroomingPage() {
   );
 
   return (
-    <div className="bg-[#FBFBF9]">
+    <div className="bg-[#FFF8F6] text-[#291817]">
       <FaqSchema faqs={catFaqs} />
 
       {/* Header & Breadcrumb Band with Real Photography Showcase */}
-      <section className="border-b border-[#E2E6E2] bg-white pt-6 pb-12">
+      <section className="border-b border-[#F0C9C5] bg-white pt-6 pb-12 sm:pb-16">
         <div className="site-container">
           <Breadcrumbs items={[{ label: "Cat Grooming" }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mt-6">
-            <div className="lg:col-span-7">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#D97706] block mb-2">
-                Quiet Feline Suite · Gurugram
+            <div className="lg:col-span-7 space-y-4">
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40]">
+                <span aria-hidden="true">✦</span>
+                <span>Quiet Feline Suite · Gurugram</span>
               </span>
-              <h1 className="heading-h1 text-[#1E3A34] mb-4">
-                Calm, stress-free cat grooming in Gurugram.
+              <h1 className="heading-h1">
+                Calm, stress-free <span className="text-[#FF3B40]">cat grooming</span> in Gurugram.
               </h1>
-              <p className="body-large text-[#57635E] max-readable mb-6">
+              <p className="body-large max-readable">
                 Cats require specialized gentle handling and silence. Our dedicated feline suite operates completely separated from canine areas, offering organic dry baths, Persian de-matting, and cool-blade lion trims.
               </p>
-              <div className="flex flex-wrap gap-2 text-xs">
-                <span className="px-3 py-1.5 bg-[#EAF1ED] text-[#1E3A34] font-semibold rounded-lg border border-[#CBD3CC]">
+              <div className="flex flex-wrap gap-2.5 pt-2 text-xs">
+                <span className="px-3.5 py-1.5 bg-[#FFF8F6] text-[#291817] font-bold rounded-full border border-[#F0C9C5]">
                   ✓ Private Room · Zero Dogs
                 </span>
-                <span className="px-3 py-1.5 bg-[#EAF1ED] text-[#1E3A34] font-semibold rounded-lg border border-[#CBD3CC]">
-                  ✓ Waterless Foam Bath Option
+                <span className="px-3.5 py-1.5 bg-[#FFF8F6] text-[#291817] font-bold rounded-full border border-[#F0C9C5]">
+                  ✓ Waterless Foam Option
                 </span>
-                <span className="px-3 py-1.5 bg-[#EAF1ED] text-[#1E3A34] font-semibold rounded-lg border border-[#CBD3CC]">
+                <span className="px-3.5 py-1.5 bg-[#FFF8F6] text-[#291817] font-bold rounded-full border border-[#F0C9C5]">
                   ✓ Low-Noise Towel Drying Only
                 </span>
               </div>
             </div>
 
             <div className="lg:col-span-5">
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#CBD3CC] shadow-md bg-[#EAF1ED]">
+              <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden border border-[#F0C9C5] shadow-[0_12px_36px_rgba(41,24,23,0.08)] bg-[#FCEAE7]">
                 <Image
                   src="/images/cat-grooming-hero.jpg"
                   alt="Gentle Persian cat grooming in private feline suite at Paws & Claws Gurugram"
@@ -59,10 +60,10 @@ export default function CatGroomingPage() {
                   priority
                   className="object-cover"
                 />
-                <div className="absolute top-3 left-3 bg-[#1E3A34]/90 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-md shadow-xs">
+                <div className="absolute top-3 left-3 bg-[#FF3B40] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
                   📍 Private Cat Suite · Gurugram
                 </div>
-                <div className="absolute bottom-3 right-3 bg-black/60 backdrop-blur-xs text-white text-[10px] font-mono px-2 py-0.5 rounded">
+                <div className="absolute bottom-3 right-3 bg-[#291817]/70 backdrop-blur-xs text-white text-[10px] font-mono px-2.5 py-0.5 rounded-full">
                   Quiet Room Care
                 </div>
               </div>
@@ -74,14 +75,15 @@ export default function CatGroomingPage() {
       {/* Package Comparison Grid */}
       <section className="section-pad">
         <div className="site-container">
-          <div className="text-center max-w-[700px] mx-auto mb-12 lg:mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#1E3A34] block mb-2">
-              Feline Packages
+          <div className="text-center max-w-[700px] mx-auto mb-12 sm:mb-16">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-2.5">
+              <span aria-hidden="true">✦</span>
+              <span>Feline Packages</span>
             </span>
-            <h2 className="heading-h2 text-[#1E3A34] mb-3">
-              Compare our cat grooming options.
+            <h2 className="heading-h2">
+              Compare our <span className="text-[#FF3B40]">cat grooming options.</span>
             </h2>
-            <p className="body-large text-[#57635E]">
+            <p className="body-large mt-3">
               From low-stress routine baths to intensive long-coat knot removal for Persian and Himalayan cats.
             </p>
           </div>
@@ -95,53 +97,54 @@ export default function CatGroomingPage() {
       </section>
 
       {/* How It Works Section (Consistent 3-Step Structure) */}
-      <section className="bg-[#F2F4F0] border-y border-[#E2E6E2] section-pad">
+      <section className="bg-white border-y border-[#F0C9C5] section-pad">
         <div className="site-container">
-          <div className="text-center max-w-[700px] mx-auto mb-12">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#D97706] block mb-2">
-              Pacing & Patience
+          <div className="text-center max-w-[700px] mx-auto mb-12 sm:mb-16">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-2.5">
+              <span aria-hidden="true">✦</span>
+              <span>Pacing & Patience</span>
             </span>
-            <h2 className="heading-h2 text-[#1E3A34] mb-3">
+            <h2 className="heading-h2">
               How cat grooming works in our quiet room.
             </h2>
-            <p className="body-large text-[#57635E]">
+            <p className="body-large mt-3">
               We work at the feline&apos;s natural pace with frequent pauses. We strictly forbid harsh restraints and loud commercial blowers.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1050px] mx-auto">
-            <div className="p-6 bg-white border border-[#CBD3CC] rounded-2xl">
-              <span className="w-8 h-8 rounded-full bg-[#1E3A34] text-white flex items-center justify-center font-bold text-xs mb-4">
-                1
+            <div className="p-6 sm:p-7 bg-[#FFF8F6] border border-[#F0C9C5] rounded-[24px] shadow-[0_4px_20px_rgba(41,24,23,0.03)]">
+              <span className="w-9 h-9 rounded-full border-1.5 border-[#FF3B40] text-[#FF3B40] bg-white flex items-center justify-center font-bold text-xs mb-4">
+                01
               </span>
-              <h3 className="text-lg font-bold text-[#1E3A34] mb-2">
+              <h3 className="text-lg font-extrabold text-[#291817] mb-2">
                 Quiet Room Acclimatization
               </h3>
-              <p className="text-sm text-[#57635E] leading-relaxed">
+              <p className="text-sm text-[#796B69] leading-relaxed">
                 Your cat spends 10 quiet minutes in our cat-only suite exploring the room and relaxing without sensory shocks.
               </p>
             </div>
 
-            <div className="p-6 bg-white border border-[#CBD3CC] rounded-2xl">
-              <span className="w-8 h-8 rounded-full bg-[#1E3A34] text-white flex items-center justify-center font-bold text-xs mb-4">
-                2
+            <div className="p-6 sm:p-7 bg-[#FFF8F6] border border-[#F0C9C5] rounded-[24px] shadow-[0_4px_20px_rgba(41,24,23,0.03)]">
+              <span className="w-9 h-9 rounded-full border-1.5 border-[#FF3B40] text-[#FF3B40] bg-white flex items-center justify-center font-bold text-xs mb-4">
+                02
               </span>
-              <h3 className="text-lg font-bold text-[#1E3A34] mb-2">
+              <h3 className="text-lg font-extrabold text-[#291817] mb-2">
                 Gentle Cleanse & Knot Release
               </h3>
-              <p className="text-sm text-[#57635E] leading-relaxed">
+              <p className="text-sm text-[#796B69] leading-relaxed">
                 We use organic hypoallergenic dry foam or warm water, towel wrap drying, and careful undercoat raking.
               </p>
             </div>
 
-            <div className="p-6 bg-white border border-[#CBD3CC] rounded-2xl">
-              <span className="w-8 h-8 rounded-full bg-[#1E3A34] text-white flex items-center justify-center font-bold text-xs mb-4">
-                3
+            <div className="p-6 sm:p-7 bg-[#FFF8F6] border border-[#F0C9C5] rounded-[24px] shadow-[0_4px_20px_rgba(41,24,23,0.03)]">
+              <span className="w-9 h-9 rounded-full border-1.5 border-[#FF3B40] text-[#FF3B40] bg-white flex items-center justify-center font-bold text-xs mb-4">
+                03
               </span>
-              <h3 className="text-lg font-bold text-[#1E3A34] mb-2">
+              <h3 className="text-lg font-extrabold text-[#291817] mb-2">
                 Nail Tip Clip & Quiet Rest
               </h3>
-              <p className="text-sm text-[#57635E] leading-relaxed">
+              <p className="text-sm text-[#796B69] leading-relaxed">
                 Sharp nail tips are clipped safely, ears are cleaned, and your cat rests in their carrier until you arrive.
               </p>
             </div>
@@ -152,12 +155,13 @@ export default function CatGroomingPage() {
       {/* Relevant FAQs for Cats */}
       <section className="section-pad">
         <div className="site-container">
-          <div className="text-center max-w-[700px] mx-auto mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#D97706] block mb-2">
-              Feline Care Questions
+          <div className="text-center max-w-[700px] mx-auto mb-10 sm:mb-12">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-2.5">
+              <span aria-hidden="true">✦</span>
+              <span>Feline Care Inquiries</span>
             </span>
-            <h2 className="heading-h2 text-[#1E3A34] mb-3">
-              Frequently asked cat grooming questions.
+            <h2 className="heading-h2">
+              Frequently asked <span className="text-[#FF3B40]">cat care questions.</span>
             </h2>
           </div>
 
@@ -166,25 +170,25 @@ export default function CatGroomingPage() {
       </section>
 
       {/* Cross-Link to Dog Services */}
-      <section className="bg-white border-t border-[#E2E6E2] py-16">
+      <section className="bg-white border-t border-[#F0C9C5] py-16">
         <div className="site-container">
-          <div className="p-8 bg-[#FBFBF9] border border-[#CBD3CC] rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="p-8 sm:p-10 bg-[#FCEAE7]/60 border border-[#F0C9C5] rounded-[32px] flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#D97706] block mb-1">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#FF3B40] block mb-1">
                 Also have a canine family member?
               </span>
-              <h3 className="text-xl font-bold text-[#1E3A34]">
+              <h3 className="text-xl sm:text-2xl font-extrabold text-[#291817]">
                 Explore our full Dog Grooming & Breed Styling Services
               </h3>
-              <p className="text-xs md:text-sm text-[#57635E] mt-1">
+              <p className="text-xs md:text-sm text-[#796B69] mt-1.5 max-w-[50ch]">
                 Hydro-baths, full breed scissor haircuts, and medicated anti-tick treatments for all dog sizes.
               </p>
             </div>
             <Link
               href="/dog-grooming"
-              className="min-h-[44px] px-6 py-2.5 bg-[#1E3A34] text-white text-sm font-semibold rounded-lg hover:bg-[#142723] transition-colors whitespace-nowrap"
+              className="btn-primary text-sm whitespace-nowrap"
             >
-              View Dog Packages →
+              <span>View Dog Packages →</span>
             </Link>
           </div>
         </div>

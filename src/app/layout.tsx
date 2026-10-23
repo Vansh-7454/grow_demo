@@ -11,7 +11,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-heading",
   display: "swap",
-  weight: ["500", "600", "700"],
+  weight: ["500", "600", "700", "800"],
 });
 
 const inter = Inter({
@@ -55,11 +55,11 @@ export default function RootLayout({
       <head>
         <LocalBusinessSchema />
       </head>
-      <body className="font-sans min-h-screen flex flex-col bg-[#FBFBF9] text-[#1A201E]">
+      <body className="font-sans min-h-screen flex flex-col bg-[#FFF8F6] text-[#291817]">
         {/* Skip to Content for Accessibility */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#1E3A34] focus:text-white focus:rounded-lg focus:shadow-md focus:text-sm font-semibold"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#FF3B40] focus:text-white focus:rounded-full focus:shadow-md focus:text-sm font-semibold"
         >
           Skip to main content
         </a>

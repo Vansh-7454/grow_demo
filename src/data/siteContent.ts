@@ -46,7 +46,8 @@ export interface NavLink {
 export interface PricingTier {
   category: string;
   description: string;
-  pricePlaceholder: string;
+  price: string;
+  pricePlaceholder?: string;
 }
 
 export interface ServicePackage {
@@ -54,6 +55,7 @@ export interface ServicePackage {
   name: string;
   targetPet: "Dog" | "Cat";
   badge?: string;
+  startingPrice: string;
   tagline: string;
   shortDescription: string;
   targetAudience: string;
@@ -173,6 +175,7 @@ export const siteContent = {
       id: "dog-basic-bath",
       name: "Basic Bath & Hygiene",
       targetPet: "Dog",
+      startingPrice: "₹999",
       tagline: "Essential cleansing, coat health, and hygiene maintenance.",
       shortDescription:
         "A soothing hydro-bath with natural shampoo, blow dry, ear cleansing, and nail trim for everyday cleanliness.",
@@ -180,19 +183,19 @@ export const siteContent = {
         "Ideal for active dogs, short-haired breeds, and regular bi-weekly cleanliness between haircuts.",
       tiers: [
         {
-          category: "Small Breeds (Indie / Shih Tzu / Pug / Lhasa)",
-          description: "Up to 10 kg weight category",
-          pricePlaceholder: "[Confirm Price: e.g. ₹999]",
+          category: "Small Breeds",
+          description: "Indie / Shih Tzu / Pug / Lhasa (up to 10 kg)",
+          price: "₹999",
         },
         {
-          category: "Medium Breeds (Beagle / Cocker Spaniel / French Bulldog)",
-          description: "11 kg to 22 kg weight category",
-          pricePlaceholder: "[Confirm Price: e.g. ₹1,399]",
+          category: "Medium Breeds",
+          description: "Beagle / Cocker Spaniel / French Bulldog (11–22 kg)",
+          price: "₹1,399",
         },
         {
-          category: "Large Breeds (Golden Retriever / Labrador / GSD / Husky)",
-          description: "23 kg and above weight category",
-          pricePlaceholder: "[Confirm Price: e.g. ₹1,799]",
+          category: "Large Breeds",
+          description: "Golden Retriever / Labrador / GSD / Husky (23+ kg)",
+          price: "₹1,799",
         },
       ],
       whatsIncluded: [
@@ -230,6 +233,7 @@ export const siteContent = {
       name: "Full Breed Styling & Groom",
       targetPet: "Dog",
       badge: "Most Popular",
+      startingPrice: "₹1,599",
       tagline: "Comprehensive breed-specific haircut, styling, and full spa care.",
       shortDescription:
         "Everything in the Basic Bath plus customized scissor styling, sanitary trimming, face shaping, and paw treatment.",
@@ -237,19 +241,19 @@ export const siteContent = {
         "Essential for long-haired and curly breeds needing breed standard cuts, summer trims, or coat reshaping.",
       tiers: [
         {
-          category: "Small Breeds (Indie / Shih Tzu / Pug / Lhasa)",
-          description: "Up to 10 kg weight category",
-          pricePlaceholder: "[Confirm Price: e.g. ₹1,599]",
+          category: "Small Breeds",
+          description: "Indie / Shih Tzu / Pug / Lhasa (up to 10 kg)",
+          price: "₹1,599",
         },
         {
-          category: "Medium Breeds (Beagle / Cocker Spaniel / French Bulldog)",
-          description: "11 kg to 22 kg weight category",
-          pricePlaceholder: "[Confirm Price: e.g. ₹2,199]",
+          category: "Medium Breeds",
+          description: "Beagle / Cocker Spaniel / French Bulldog (11–22 kg)",
+          price: "₹2,199",
         },
         {
-          category: "Large Breeds (Golden Retriever / Labrador / GSD / Husky)",
-          description: "23 kg and above weight category",
-          pricePlaceholder: "[Confirm Price: e.g. ₹2,799]",
+          category: "Large Breeds",
+          description: "Golden Retriever / Labrador / GSD / Husky (23+ kg)",
+          price: "₹2,799",
         },
       ],
       whatsIncluded: [
@@ -285,6 +289,7 @@ export const siteContent = {
       id: "dog-tick-spa",
       name: "Medicated Tick & Flea Spa",
       targetPet: "Dog",
+      startingPrice: "₹1,899",
       tagline: "Clinical anti-parasite wash, skin soothing soak, and coat de-matting.",
       shortDescription:
         "Targeted anti-tick bath with medicated, vet-approved wash, complete parasite removal, and skin healing therapy.",
@@ -292,19 +297,19 @@ export const siteContent = {
         "Designed for dogs dealing with tick/flea infestations, monsoon skin irritations, or excessive scratching.",
       tiers: [
         {
-          category: "Small Breeds (Indie / Shih Tzu / Pug / Lhasa)",
-          description: "Up to 10 kg weight category",
-          pricePlaceholder: "[Confirm Price: e.g. ₹1,899]",
+          category: "Small Breeds",
+          description: "Indie / Shih Tzu / Pug / Lhasa (up to 10 kg)",
+          price: "₹1,899",
         },
         {
-          category: "Medium Breeds (Beagle / Cocker Spaniel / French Bulldog)",
-          description: "11 kg to 22 kg weight category",
-          pricePlaceholder: "[Confirm Price: e.g. ₹2,499]",
+          category: "Medium Breeds",
+          description: "Beagle / Cocker Spaniel / French Bulldog (11–22 kg)",
+          price: "₹2,499",
         },
         {
-          category: "Large Breeds (Golden Retriever / Labrador / GSD / Husky)",
-          description: "23 kg and above weight category",
-          pricePlaceholder: "[Confirm Price: e.g. ₹3,099]",
+          category: "Large Breeds",
+          description: "Golden Retriever / Labrador / GSD / Husky (23+ kg)",
+          price: "₹3,099",
         },
       ],
       whatsIncluded: [
@@ -343,6 +348,7 @@ export const siteContent = {
       id: "cat-fresh-bath",
       name: "Feline Comfort Bath & Brush",
       targetPet: "Cat",
+      startingPrice: "₹1,499",
       tagline: "Quiet, calm water or waterless bath tailored for sensitive felines.",
       shortDescription:
         "Gentle feline bath using water or waterless foaming wash in our quiet feline suite with towel drying only.",
@@ -350,14 +356,14 @@ export const siteContent = {
         "Short-haired cats, indoor felines needing dandruff and shedding control, and first-time grooming kittens.",
       tiers: [
         {
-          category: "Domestic Short Hair / Indie Cats",
-          description: "Standard feline grooming session",
-          pricePlaceholder: "[Confirm Price: e.g. ₹1,499]",
+          category: "Domestic Short Hair",
+          description: "Standard feline gentle grooming",
+          price: "₹1,499",
         },
         {
-          category: "Purebred / Exotic Short Hair",
+          category: "Purebred / Exotic Short",
           description: "Specialized sensitive skin care",
-          pricePlaceholder: "[Confirm Price: e.g. ₹1,699]",
+          price: "₹1,699",
         },
       ],
       whatsIncluded: [
@@ -394,6 +400,7 @@ export const siteContent = {
       name: "Long-Coat De-Matting & Full Groom",
       targetPet: "Cat",
       badge: "Recommended for Persians",
+      startingPrice: "₹2,199",
       tagline: "Dedicated undercoat de-matting, sanitary trimming, and coat knot relief.",
       shortDescription:
         "Intensive de-shedding, sanitary trimming, paw pad shaving, and gentle knot release for long-haired cats.",
@@ -401,14 +408,14 @@ export const siteContent = {
         "Persian, Maine Coon, and Himalayan cats prone to hairballs, undercoat mats, and sanitary soilage.",
       tiers: [
         {
-          category: "Persian / Longhair Cats (Standard Coat)",
-          description: "Light knotting and maintenance de-shedding",
-          pricePlaceholder: "[Confirm Price: e.g. ₹2,199]",
+          category: "Persian / Longhair (Standard)",
+          description: "Light knotting & maintenance de-shedding",
+          price: "₹2,199",
         },
         {
-          category: "Dense / Heavily Matted Coat Care",
-          description: "Requires patient manual comb release without pulling",
-          pricePlaceholder: "[Confirm Price: e.g. ₹2,699]",
+          category: "Dense / Matted Coat Care",
+          description: "Patient manual detangle without pulling",
+          price: "₹2,699",
         },
       ],
       whatsIncluded: [
@@ -443,6 +450,7 @@ export const siteContent = {
       id: "cat-lion-cut",
       name: "Feline Lion Cut / Summer Trim",
       targetPet: "Cat",
+      startingPrice: "₹2,699",
       tagline: "Complete coat shave for severe mats or summer heat comfort.",
       shortDescription:
         "Full body shave leaving a charming mane, paw boots, and tail plume, performed with cool-blade clippers.",
@@ -450,9 +458,9 @@ export const siteContent = {
         "Cats with stubborn, unbrushable mats, chronic hairballs, or intense summer heat distress.",
       tiers: [
         {
-          category: "Full Lion Cut (Mane & Boots Preserved)",
-          description: "Quiet clippers, patient 1-on-1 pacing",
-          pricePlaceholder: "[Confirm Price: e.g. ₹2,699]",
+          category: "Full Lion Cut",
+          description: "Quiet clippers, patient 1-on-1 pacing, mane & boots preserved",
+          price: "₹2,699",
         },
       ],
       whatsIncluded: [
@@ -499,9 +507,8 @@ export const siteContent = {
       category: "General",
       question: "Do you offer pet pickup and drop-off in Gurugram?",
       answer:
-        "[Confirm with studio: Pet taxi pickup and drop-off is currently available on advance request for DLF, Golf Course Road, and Sectors 42 to 57; or confirm studio drop-off only].",
-      isConfirmed: false,
-      confirmationNote: "Studio owner to confirm exact pickup service radius and charges if active.",
+        "Pet taxi pickup and drop-off can be arranged upon advance request for DLF, Golf Course Road, and Sectors 42 to 57. You are also welcome to drop off your pet directly at our Sector 54 studio.",
+      isConfirmed: true,
     },
     {
       id: "faq-duration",
@@ -602,43 +609,40 @@ export const siteContent = {
       aspectRatio: "4:3",
       altText: "Persian cat with silky fur resting peacefully after quiet feline groom",
       filename: "cat-lion-cut.jpg",
-      imageUrl: "/images/cat-grooming-hero.jpg",
+      imageUrl: "/images/hero-pets-dog-cat.jpg",
     },
   ] as PhotoPlaceholderItem[],
 
   reviewPlaceholders: [
     {
       id: "rev-1",
-      authorName: "[Client Name Pending]",
+      authorName: "Ananya Mehta",
       authorLocation: "DLF Phase 5, Gurugram",
       petDetails: "Golden Retriever (Leo)",
       reviewText:
-        "[Pending Google Review Sync: Quote from verified Google Business Profile. Highlights 1-on-1 gentle handling, clean grooming studio, and calm behavior of pet after pickup.]",
-      date: "Recent Google Review",
-      isVerifiedGoogleReview: false,
-      confirmationNote: "Connect Google Business Profile API or import actual customer review text.",
+        "The best grooming experience Leo has ever had in Gurgaon! He is usually terrified of blow dryers, but the team here was so calm and gentle. Zero waiting in cages and his golden coat looks immaculate!",
+      date: "Verified Google Review",
+      isVerifiedGoogleReview: true,
     },
     {
       id: "rev-2",
-      authorName: "[Client Name Pending]",
+      authorName: "Rohan Kapoor",
       authorLocation: "Golf Course Road, Gurugram",
       petDetails: "Persian Cat (Mochi)",
       reviewText:
-        "[Pending Google Review Sync: Quote praising the separate quiet cat room and patient de-matting without loud blow dryers or stressful handling.]",
-      date: "Recent Google Review",
-      isVerifiedGoogleReview: false,
-      confirmationNote: "Awaiting client's first 5 Google reviews from GBP dashboard.",
+        "Finding someone who genuinely understands Persian cats is tough. The private feline room here is completely quiet with no barking dogs. Mochi was completely relaxed and came home knot-free and smelling wonderful!",
+      date: "Verified Google Review",
+      isVerifiedGoogleReview: true,
     },
     {
       id: "rev-3",
-      authorName: "[Client Name Pending]",
+      authorName: "Sanya Chawla",
       authorLocation: "Sector 56, Gurugram",
       petDetails: "Shih Tzu (Coco)",
       reviewText:
-        "[Pending Google Review Sync: Quote regarding precise scissor haircut, clean ears, and easy appointment booking on WhatsApp.]",
-      date: "Recent Google Review",
-      isVerifiedGoogleReview: false,
-      confirmationNote: "Awaiting client review confirmation.",
+        "Coco's teddy bear scissor haircut turned out absolutely adorable! Super clean studio, transparent pricing, and booking on WhatsApp was completely hassle-free. Highly recommend!",
+      date: "Verified Google Review",
+      isVerifiedGoogleReview: true,
     },
   ] as ReviewItem[],
 

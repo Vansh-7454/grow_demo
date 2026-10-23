@@ -17,12 +17,12 @@ export default function ContactPage() {
       {/* Header Band */}
       <section className="bg-white border-b border-[#F2CECA] pt-12 pb-14">
         <div className="site-container text-center max-w-[800px] mx-auto">
-          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-2.5">
+          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#DE1B54] mb-2.5">
             <span aria-hidden="true">✦</span>
             <span>Visit or Book Online</span>
           </span>
           <h1 className="heading-h1 mb-4">
-            Contact our Gurugram <span className="text-[#FF3B40]">grooming studio.</span>
+            Contact our Gurugram <span className="text-[#DE1B54]">grooming studio.</span>
           </h1>
           <p className="body-large">
             We operate strictly by appointment to ensure every dog and cat receives dedicated, unhurried attention. Get directions, call us directly, or book your slot on WhatsApp.
@@ -38,7 +38,7 @@ export default function ContactPage() {
             <div className="lg:col-span-5 space-y-6">
               {/* Direct Quick Action Buttons */}
               <div className="p-6 bg-white border border-[#F2CECA] rounded-[24px] shadow-[0_8px_30px_rgba(41,24,23,0.04)] space-y-3">
-                <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] block mb-1">
+                <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#DE1B54] block mb-1">
                   <span aria-hidden="true">✦</span>
                   <span>Instant Studio Contact</span>
                 </span>
@@ -60,7 +60,7 @@ export default function ContactPage() {
                   <svg
                     width={16}
                     height={16}
-                    className="w-4 h-4 text-[#FF3B40] shrink-0"
+                    className="w-4 h-4 text-[#DE1B54] shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -84,7 +84,7 @@ export default function ContactPage() {
                   <svg
                     width={16}
                     height={16}
-                    className="w-4 h-4 text-[#FF3B40] shrink-0"
+                    className="w-4 h-4 text-[#DE1B54] shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -114,9 +114,6 @@ export default function ContactPage() {
                   </h3>
                   <p className="text-xs sm:text-sm text-[#806F6C] leading-relaxed">
                     {siteContent.business.address}
-                  </p>
-                  <p className="text-xs text-[#FF3B40] font-semibold bg-[#FFF8F6] border border-[#F2CECA] p-2.5 rounded-xl mt-2">
-                    Note: {siteContent.business.addressPlaceholderNote}
                   </p>
                 </div>
 
@@ -157,7 +154,7 @@ export default function ContactPage() {
                     sizes="(max-width: 1024px) 100vw, 440px"
                     className="object-cover"
                   />
-                  <div className="absolute top-3 left-3 bg-[#FF3B40] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
+                  <div className="absolute top-3 left-3 bg-[#DE1B54] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
                     📍 Sector 54 Studio
                   </div>
                 </div>

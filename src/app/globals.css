@@ -2,9 +2,9 @@
 
 @layer base {
   :root {
-    --color-brand-primary: #FF3B40;
-    --color-brand-primary-hover: #E52E33;
-    --color-brand-primary-active: #CC2226;
+    --color-brand-primary: #DE1B54;
+    --color-brand-primary-hover: #C21345;
+    --color-brand-primary-active: #A10D36;
     --color-brand-accent-light: #FCEAE7;
     
     --color-bg-base: #FFF8F6;
@@ -22,7 +22,7 @@
     
     --shadow-card: 0 8px 28px -4px rgba(41, 24, 23, 0.05);
     --shadow-hover: 0 16px 36px -6px rgba(41, 24, 23, 0.09);
-    --shadow-coral: 0 4px 18px rgba(255, 59, 64, 0.28);
+    --shadow-coral: 0 4px 18px rgba(222, 27, 84, 0.28);
   }
 
   html,
@@ -55,7 +55,7 @@
   input:focus-visible,
   select:focus-visible,
   textarea:focus-visible {
-    outline: 2px solid #FF3B40;
+    outline: 2px solid #DE1B54;
     outline-offset: 2px;
   }
 }
@@ -129,7 +129,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #FF3B40;
+  background-color: #DE1B54;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 0.98rem;
@@ -137,15 +137,15 @@
   padding: 14px 28px;
   min-height: 50px;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 18px rgba(255, 59, 64, 0.28);
+  box-shadow: 0 4px 18px rgba(222, 27, 84, 0.28);
 }
 .btn-primary:hover {
-  background-color: #E52E33;
+  background-color: #C21345;
   transform: translateY(-1px);
-  box-shadow: 0 6px 22px rgba(255, 59, 64, 0.38);
+  box-shadow: 0 6px 22px rgba(222, 27, 84, 0.38);
 }
 .btn-primary:active {
-  background-color: #CC2226;
+  background-color: #A10D36;
   transform: translateY(0);
 }
 
@@ -165,7 +165,7 @@
 }
 .btn-secondary:hover {
   background-color: #FCEAE7;
-  border-color: #FF3B40;
-  color: #291817;
+  border-color: #DE1B54;
+  color: #DE1B54;
   transform: translateY(-1px);
 }

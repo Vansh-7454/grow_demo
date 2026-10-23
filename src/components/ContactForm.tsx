@@ -185,7 +185,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
             htmlFor={`${formId}-name`}
             className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-1.5"
           >
-            Pet Parent Full Name <span className="text-[#FF3B40]">*</span>
+            Pet Parent Full Name <span className="text-[#DE1B54]">*</span>
           </label>
           <input
             id={`${formId}-name`}
@@ -200,7 +200,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
             className={`w-full min-h-[46px] px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border rounded-xl text-[#291817] focus-visible:outline-2 ${
               errors.fullName
                 ? "border-red-600 focus-visible:outline-red-600"
-                : "border-[#F2CECA] focus-visible:outline-[#FF3B40]"
+                : "border-[#F2CECA] focus-visible:outline-[#DE1B54]"
             }`}
             placeholder="e.g. Priya Sharma"
           />
@@ -217,7 +217,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
             htmlFor={`${formId}-phone`}
             className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-1.5"
           >
-            Mobile Number (10 Digits) <span className="text-[#FF3B40]">*</span>
+            Mobile Number (10 Digits) <span className="text-[#DE1B54]">*</span>
           </label>
           <div className="relative">
             <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xs font-bold text-[#806F6C]">
@@ -237,7 +237,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
               className={`w-full min-h-[46px] pl-13 pr-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border rounded-xl text-[#291817] font-mono focus-visible:outline-2 ${
                 errors.phone
                   ? "border-red-600 focus-visible:outline-red-600"
-                  : "border-[#F2CECA] focus-visible:outline-[#FF3B40]"
+                  : "border-[#F2CECA] focus-visible:outline-[#DE1B54]"
               }`}
               placeholder="9812345678"
             />
@@ -272,7 +272,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
             className={`w-full min-h-[46px] px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border rounded-xl text-[#291817] focus-visible:outline-2 ${
               errors.email
                 ? "border-red-600 focus-visible:outline-red-600"
-                : "border-[#F2CECA] focus-visible:outline-[#FF3B40]"
+                : "border-[#F2CECA] focus-visible:outline-[#DE1B54]"
             }`}
             placeholder="priya@example.com"
           />
@@ -290,7 +290,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
               htmlFor={`${formId}-petType`}
               className="block text-xs font-bold uppercase tracking-wider text-[#291817] mb-1.5"
             >
-              Pet Type <span className="text-[#FF3B40]">*</span>
+              Pet Type <span className="text-[#DE1B54]">*</span>
             </label>
             <select
               id={`${formId}-petType`}
@@ -305,7 +305,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
               className={`w-full min-h-[46px] px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border rounded-xl text-[#291817] focus-visible:outline-2 ${
                 errors.petType
                   ? "border-red-600 focus-visible:outline-red-600"
-                  : "border-[#F2CECA] focus-visible:outline-[#FF3B40]"
+                  : "border-[#F2CECA] focus-visible:outline-[#DE1B54]"
               }`}
             >
               <option value="">Select Pet...</option>
@@ -333,7 +333,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
               onChange={(e) =>
                 setFormData({ ...formData, service: e.target.value })
               }
-              className="w-full min-h-[46px] px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border border-[#F2CECA] rounded-xl text-[#291817] focus-visible:outline-2 focus-visible:outline-[#FF3B40]"
+              className="w-full min-h-[46px] px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border border-[#F2CECA] rounded-xl text-[#291817] focus-visible:outline-2 focus-visible:outline-[#DE1B54]"
             >
               <option value="Basic Bath & Hygiene">Basic Bath &amp; Hygiene</option>
               <option value="Full Breed Styling & Groom">
@@ -370,7 +370,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
             onChange={(e) =>
               setFormData({ ...formData, message: e.target.value })
             }
-            className="w-full px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border border-[#F2CECA] rounded-xl text-[#291817] focus-visible:outline-2 focus-visible:outline-[#FF3B40]"
+            className="w-full px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border border-[#F2CECA] rounded-xl text-[#291817] focus-visible:outline-2 focus-visible:outline-[#DE1B54]"
             placeholder="e.g. 2-year-old Golden Retriever, sensitive ears, friendly temperament..."
           />
           {errors.message && (
@@ -402,7 +402,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
         </div>
 
         {preparedWhatsAppUrl && (
-          <div className="mt-4 p-3.5 bg-[#FCEAE7] border border-[#FF3B40]/40 rounded-xl text-xs text-[#291817] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <div className="mt-4 p-3.5 bg-[#FCEAE7] border border-[#DE1B54]/40 rounded-xl text-xs text-[#291817] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
             <span>
               If WhatsApp did not automatically open, tap the link:
             </span>
@@ -410,7 +410,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
               href={preparedWhatsAppUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-bold text-[#FF3B40] underline shrink-0 inline-flex items-center gap-1"
+              className="font-bold text-[#DE1B54] underline shrink-0 inline-flex items-center gap-1"
             >
               <span>Open WhatsApp Now</span>
               <span>→</span>

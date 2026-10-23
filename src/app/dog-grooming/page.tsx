@@ -27,12 +27,12 @@ export default function DogGroomingPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mt-6">
             <div className="lg:col-span-7 space-y-4">
-              <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40]">
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#DE1B54]">
                 <span aria-hidden="true">✦</span>
                 <span>Canine Grooming Studio · Gurugram</span>
               </span>
               <h1 className="heading-h1">
-                Gentle, breed-specific <span className="text-[#FF3B40]">dog grooming</span> in Gurugram.
+                Gentle, breed-specific <span className="text-[#DE1B54]">dog grooming</span> in Gurugram.
               </h1>
               <p className="body-large max-readable">
                 From everyday warm hydro-baths to specialized breed styling and anti-tick treatments. Every dog receives 1-on-1 care with pet-friendly organic products and zero holding cages.
@@ -60,7 +60,7 @@ export default function DogGroomingPage() {
                   priority
                   className="object-cover"
                 />
-                <div className="absolute top-3 left-3 bg-[#FF3B40] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
+                <div className="absolute top-3 left-3 bg-[#DE1B54] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
                   📍 Gurugram Canine Suite
                 </div>
                 <div className="absolute bottom-3 right-3 bg-[#291817]/70 backdrop-blur-xs text-white text-[10px] font-mono px-2.5 py-0.5 rounded-full">
@@ -76,12 +76,12 @@ export default function DogGroomingPage() {
       <section id="packages" className="section-pad scroll-mt-20">
         <div className="site-container">
           <div className="text-center max-w-[700px] mx-auto mb-12 sm:mb-16">
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-2.5">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#DE1B54] mb-2.5">
               <span aria-hidden="true">✦</span>
               <span>Transparent Packages</span>
             </span>
             <h2 className="heading-h2">
-              Compare our <span className="text-[#FF3B40]">dog grooming packages.</span>
+              Compare our <span className="text-[#DE1B54]">dog grooming packages.</span>
             </h2>
             <p className="body-large mt-3">
               Prices vary strictly by coat length and breed size. Choose the package that matches your dog&apos;s current needs.
@@ -100,7 +100,7 @@ export default function DogGroomingPage() {
       <section className="bg-white border-y border-[#F2CECA] section-pad">
         <div className="site-container">
           <div className="text-center max-w-[700px] mx-auto mb-12 sm:mb-16">
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-2.5">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#DE1B54] mb-2.5">
               <span aria-hidden="true">✦</span>
               <span>Our 3-Step Process</span>
             </span>
@@ -114,7 +114,7 @@ export default function DogGroomingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1050px] mx-auto">
             <div className="p-6 sm:p-7 bg-[#FFF8F6] border border-[#F2CECA] rounded-[24px] shadow-[0_4px_20px_rgba(41,24,23,0.03)]">
-              <span className="w-9 h-9 rounded-full border-1.5 border-[#FF3B40] text-[#FF3B40] bg-white flex items-center justify-center font-bold text-xs mb-4">
+              <span className="w-9 h-9 rounded-full border-1.5 border-[#DE1B54] text-[#DE1B54] bg-white flex items-center justify-center font-bold text-xs mb-4">
                 01
               </span>
               <h3 className="text-lg font-extrabold text-[#291817] mb-2">
@@ -126,7 +126,7 @@ export default function DogGroomingPage() {
             </div>
 
             <div className="p-6 sm:p-7 bg-[#FFF8F6] border border-[#F2CECA] rounded-[24px] shadow-[0_4px_20px_rgba(41,24,23,0.03)]">
-              <span className="w-9 h-9 rounded-full border-1.5 border-[#FF3B40] text-[#FF3B40] bg-white flex items-center justify-center font-bold text-xs mb-4">
+              <span className="w-9 h-9 rounded-full border-1.5 border-[#DE1B54] text-[#DE1B54] bg-white flex items-center justify-center font-bold text-xs mb-4">
                 02
               </span>
               <h3 className="text-lg font-extrabold text-[#291817] mb-2">
@@ -138,7 +138,7 @@ export default function DogGroomingPage() {
             </div>
 
             <div className="p-6 sm:p-7 bg-[#FFF8F6] border border-[#F2CECA] rounded-[24px] shadow-[0_4px_20px_rgba(41,24,23,0.03)]">
-              <span className="w-9 h-9 rounded-full border-1.5 border-[#FF3B40] text-[#FF3B40] bg-white flex items-center justify-center font-bold text-xs mb-4">
+              <span className="w-9 h-9 rounded-full border-1.5 border-[#DE1B54] text-[#DE1B54] bg-white flex items-center justify-center font-bold text-xs mb-4">
                 03
               </span>
               <h3 className="text-lg font-extrabold text-[#291817] mb-2">
@@ -156,12 +156,12 @@ export default function DogGroomingPage() {
       <section className="section-pad">
         <div className="site-container">
           <div className="text-center max-w-[700px] mx-auto mb-10 sm:mb-12">
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-2.5">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#DE1B54] mb-2.5">
               <span aria-hidden="true">✦</span>
               <span>Dog Care Inquiries</span>
             </span>
             <h2 className="heading-h2">
-              Frequently asked <span className="text-[#FF3B40]">dog care questions.</span>
+              Frequently asked <span className="text-[#DE1B54]">dog care questions.</span>
             </h2>
           </div>
 
@@ -174,7 +174,7 @@ export default function DogGroomingPage() {
         <div className="site-container">
           <div className="p-8 sm:p-10 bg-[#FCEAE7]/60 border border-[#F2CECA] rounded-[32px] flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#FF3B40] block mb-1">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#DE1B54] block mb-1">
                 Also have a cat?
               </span>
               <h3 className="text-xl sm:text-2xl font-extrabold text-[#291817]">

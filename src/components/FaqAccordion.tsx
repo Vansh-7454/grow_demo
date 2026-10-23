@@ -34,8 +34,8 @@ export default function FaqAccordion({
             key={faq.id}
             className={`border rounded-2xl overflow-hidden transition-all duration-200 ${
               isOpen
-                ? "border-[#FF3B40]/50 bg-white shadow-[0_8px_24px_rgba(41,24,23,0.06)]"
-                : "border-[#F2CECA] bg-white hover:border-[#FF3B40]/40 shadow-[0_4px_14px_rgba(41,24,23,0.03)]"
+                ? "border-[#DE1B54]/50 bg-white shadow-[0_8px_24px_rgba(41,24,23,0.06)]"
+                : "border-[#F2CECA] bg-white hover:border-[#DE1B54]/40 shadow-[0_4px_14px_rgba(41,24,23,0.03)]"
             }`}
           >
             <h3>
@@ -45,12 +45,12 @@ export default function FaqAccordion({
                 onClick={() => toggleItem(faq.id)}
                 aria-expanded={isOpen}
                 aria-controls={contentId}
-                className="w-full min-h-[56px] px-6 py-4.5 text-left flex items-center justify-between gap-4 font-bold text-base md:text-lg text-[#291817] hover:text-[#FF3B40] focus-visible:outline-2 focus-visible:outline-[#FF3B40] transition-colors cursor-pointer"
+                className="w-full min-h-[56px] px-6 py-4.5 text-left flex items-center justify-between gap-4 font-bold text-base md:text-lg text-[#291817] hover:text-[#DE1B54] focus-visible:outline-2 focus-visible:outline-[#DE1B54] transition-colors cursor-pointer"
               >
                 <span>{faq.question}</span>
                 <span
                   className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
-                    isOpen ? "bg-[#FF3B40] text-white" : "bg-[#FCEAE7] text-[#FF3B40]"
+                    isOpen ? "bg-[#DE1B54] text-white" : "bg-[#FCEAE7] text-[#DE1B54]"
                   }`}
                   aria-hidden="true"
                 >

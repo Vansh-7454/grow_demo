@@ -74,7 +74,7 @@ export default function Header() {
           {/* Logo & Tagline */}
           <Link
             href="/"
-            className="flex items-center gap-3 group min-h-[44px] focus-visible:outline-2 focus-visible:outline-[#FF3B40] rounded-xl py-1"
+            className="flex items-center gap-3 group min-h-[44px] focus-visible:outline-2 focus-visible:outline-[#DE1B54] rounded-xl py-1"
           >
             <div className="flex items-center">
               <Image
@@ -101,8 +101,8 @@ export default function Header() {
                   href={item.href}
                   className={`min-h-[44px] flex items-center px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-150 whitespace-nowrap ${
                     isActive
-                      ? "text-[#FF3B40] bg-[#FCEAE7]"
-                      : "text-[#291817] hover:text-[#FF3B40] hover:bg-[#FCEAE7]/70"
+                      ? "text-[#DE1B54] bg-[#FCEAE7]"
+                      : "text-[#291817] hover:text-[#DE1B54] hover:bg-[#FCEAE7]/70"
                   }`}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -116,13 +116,13 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-3 shrink-0">
             <a
               href={`tel:${siteContent.business.phoneRaw}`}
-              className="min-h-[44px] px-3.5 py-2 text-sm font-semibold text-[#291817] hover:text-[#FF3B40] transition-colors flex items-center gap-2 whitespace-nowrap"
+              className="min-h-[44px] px-3.5 py-2 text-sm font-semibold text-[#291817] hover:text-[#DE1B54] transition-colors flex items-center gap-2 whitespace-nowrap"
               title="Call studio directly"
             >
               <svg
                 width={16}
                 height={16}
-                className="w-4 h-4 text-[#FF3B40] shrink-0"
+                className="w-4 h-4 text-[#DE1B54] shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -142,7 +142,7 @@ export default function Header() {
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="min-h-[46px] px-6 py-2.5 text-sm font-bold text-white bg-[#FF3B40] hover:bg-[#E52E33] active:bg-[#CC2226] rounded-[14px] transition-all duration-150 flex items-center gap-2 shadow-[0_4px_16px_rgba(255,59,64,0.25)] hover:shadow-[0_6px_20px_rgba(255,59,64,0.35)] hover:-translate-y-0.5 whitespace-nowrap"
+              className="min-h-[46px] px-6 py-2.5 text-sm font-bold text-white bg-[#DE1B54] hover:bg-[#E52E33] active:bg-[#CC2226] rounded-[14px] transition-all duration-150 flex items-center gap-2 shadow-[0_4px_16px_rgba(255,59,64,0.25)] hover:shadow-[0_6px_20px_rgba(255,59,64,0.35)] hover:-translate-y-0.5 whitespace-nowrap"
               title="Book grooming session on WhatsApp"
             >
               <span>Book a Grooming</span>
@@ -156,7 +156,7 @@ export default function Header() {
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="min-h-[40px] px-3.5 py-1.5 text-xs font-bold text-white bg-[#FF3B40] rounded-[12px] shadow-xs flex items-center gap-1"
+              className="min-h-[40px] px-3.5 py-1.5 text-xs font-bold text-white bg-[#DE1B54] rounded-[12px] shadow-xs flex items-center gap-1"
             >
               <span>Book</span>
               <span aria-hidden="true">→</span>
@@ -168,7 +168,7 @@ export default function Header() {
               aria-label="Open navigation menu"
               aria-expanded={isOpen}
               aria-controls="mobile-drawer"
-              className="min-h-[44px] min-w-[44px] p-2 flex items-center justify-center text-[#291817] rounded-xl hover:bg-[#FCEAE7] focus-visible:outline-2 focus-visible:outline-[#FF3B40]"
+              className="min-h-[44px] min-w-[44px] p-2 flex items-center justify-center text-[#291817] rounded-xl hover:bg-[#FCEAE7] focus-visible:outline-2 focus-visible:outline-[#DE1B54]"
             >
               <svg
                 width={24}
@@ -216,7 +216,7 @@ export default function Header() {
               ref={closeButtonRef}
               onClick={() => setIsOpen(false)}
               aria-label="Close navigation menu"
-              className="min-h-[44px] min-w-[44px] p-2 flex items-center justify-center text-[#291817] rounded-xl hover:bg-[#FCEAE7] focus-visible:outline-2 focus-visible:outline-[#FF3B40]"
+              className="min-h-[44px] min-w-[44px] p-2 flex items-center justify-center text-[#291817] rounded-xl hover:bg-[#FCEAE7] focus-visible:outline-2 focus-visible:outline-[#DE1B54]"
             >
               <svg
                 width={24}
@@ -252,7 +252,7 @@ export default function Header() {
                     onClick={() => setIsOpen(false)}
                     className={`min-h-[48px] flex items-center px-4 py-3 text-base rounded-2xl transition-colors ${
                       isActive
-                        ? "text-[#FF3B40] bg-[#FCEAE7] font-bold"
+                        ? "text-[#DE1B54] bg-[#FCEAE7] font-bold"
                         : "text-[#291817] hover:bg-[#FCEAE7]/50 font-semibold"
                     }`}
                     aria-current={isActive ? "page" : undefined}
@@ -269,7 +269,7 @@ export default function Header() {
                 href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="min-h-[48px] w-full flex items-center justify-center gap-2 px-5 py-3.5 bg-[#FF3B40] text-white font-bold rounded-[14px] text-base shadow-[0_4px_14px_rgba(255,59,64,0.25)] hover:bg-[#E52E33]"
+                className="min-h-[48px] w-full flex items-center justify-center gap-2 px-5 py-3.5 bg-[#DE1B54] text-white font-bold rounded-[14px] text-base shadow-[0_4px_14px_rgba(255,59,64,0.25)] hover:bg-[#E52E33]"
               >
                 <span>Book a Grooming on WhatsApp</span>
                 <span>→</span>
@@ -282,7 +282,7 @@ export default function Header() {
                 <svg
                   width={18}
                   height={18}
-                  className="w-4 h-4 text-[#FF3B40] shrink-0"
+                  className="w-4 h-4 text-[#DE1B54] shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

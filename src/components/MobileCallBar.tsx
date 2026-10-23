@@ -20,7 +20,7 @@ export default function MobileCallBar() {
           <svg
             width={16}
             height={16}
-            className="w-4 h-4 text-[#FF3B40] shrink-0"
+            className="w-4 h-4 text-[#DE1B54] shrink-0"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -41,7 +41,7 @@ export default function MobileCallBar() {
           href={whatsappHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 min-h-[44px] flex items-center justify-center gap-2 px-3 py-2 bg-[#FF3B40] text-white text-sm font-bold rounded-[14px] hover:bg-[#E52E33] active:bg-[#CC2226] transition-colors shadow-xs"
+          className="flex-1 min-h-[44px] flex items-center justify-center gap-2 px-3 py-2 bg-[#DE1B54] text-white text-sm font-bold rounded-[14px] hover:bg-[#E52E33] active:bg-[#CC2226] transition-colors shadow-xs"
         >
           <span>Book Grooming</span>
           <span aria-hidden="true">→</span>

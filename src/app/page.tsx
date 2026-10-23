@@ -22,10 +22,10 @@ export default function HomePage() {
       {/* 1. Hero Section (Refined Woofly-Inspired 54/46 Composition) */}
       <section className="relative overflow-hidden pt-10 pb-16 sm:pt-14 sm:pb-20 lg:pt-20 lg:pb-28 border-b border-[#F2CECA]">
         {/* Subtle decorative background stars */}
-        <div className="absolute top-12 left-8 text-[#FF3B40] text-lg select-none opacity-40 hidden sm:block" aria-hidden="true">
+        <div className="absolute top-12 left-8 text-[#DE1B54] text-lg select-none opacity-40 hidden sm:block" aria-hidden="true">
           ✦
         </div>
-        <div className="absolute top-28 right-16 text-[#FF3B40] text-2xl select-none opacity-30 hidden lg:block" aria-hidden="true">
+        <div className="absolute top-28 right-16 text-[#DE1B54] text-2xl select-none opacity-30 hidden lg:block" aria-hidden="true">
           ✦
         </div>
 
@@ -34,7 +34,7 @@ export default function HomePage() {
             {/* Left Column: 54% width on desktop */}
             <div className="w-full lg:w-[54%] space-y-6 sm:space-y-7">
               {/* Eyebrow badge */}
-              <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#FF3B40]">
+              <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#DE1B54]">
                 <span className="text-sm" aria-hidden="true">✦</span>
                 <span>FOR HAPPY PETS. FOR THEIR PEOPLE.</span>
               </div>
@@ -43,7 +43,7 @@ export default function HomePage() {
               <h1 className="heading-hero">
                 Happy Pets. <br />
                 Healthy Coats. <br />
-                <span className="text-[#FF3B40]">Happier Tails.</span>
+                <span className="text-[#DE1B54]">Happier Tails.</span>
               </h1>
 
               {/* Concise, readable description */}
@@ -75,19 +75,19 @@ export default function HomePage() {
               {/* Restrained Trust Indicators Row */}
               <div className="flex flex-wrap items-center gap-y-2.5 gap-x-6 pt-3 text-xs sm:text-sm font-semibold text-[#806F6C]">
                 <div className="flex items-center gap-2">
-                  <span className="w-5 h-5 rounded-full bg-[#FCEAE7] text-[#FF3B40] flex items-center justify-center font-bold text-xs shrink-0">
+                  <span className="w-5 h-5 rounded-full bg-[#FCEAE7] text-[#DE1B54] flex items-center justify-center font-bold text-xs shrink-0">
                     ✓
                   </span>
                   <span>Personalized Grooming</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="w-5 h-5 rounded-full bg-[#FCEAE7] text-[#FF3B40] flex items-center justify-center font-bold text-xs shrink-0">
+                  <span className="w-5 h-5 rounded-full bg-[#FCEAE7] text-[#DE1B54] flex items-center justify-center font-bold text-xs shrink-0">
                     ✓
                   </span>
                   <span>Dog &amp; Cat Care</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="w-5 h-5 rounded-full bg-[#FCEAE7] text-[#FF3B40] flex items-center justify-center font-bold text-xs shrink-0">
+                  <span className="w-5 h-5 rounded-full bg-[#FCEAE7] text-[#DE1B54] flex items-center justify-center font-bold text-xs shrink-0">
                     ✓
                   </span>
                   <span>Convenient Appointments</span>
@@ -123,12 +123,12 @@ export default function HomePage() {
               {/* Floating Decorative Card 1: Top Right */}
               <div className="absolute top-4 right-1 sm:-right-3 z-20 bg-white/95 backdrop-blur-md border border-[#F2CECA] rounded-full px-4 py-2 shadow-[0_8px_20px_rgba(41,24,23,0.06)] flex items-center gap-1.5">
                 <span className="text-xs font-bold text-[#291817]">A little care, a lot of love</span>
-                <span className="text-sm text-[#FF3B40]">❤️</span>
+                <span className="text-sm text-[#DE1B54]">❤️</span>
               </div>
 
               {/* Floating Decorative Card 2: Bottom Left */}
               <div className="absolute bottom-4 left-1 sm:-left-3 z-20 bg-white/95 backdrop-blur-md border border-[#F2CECA] rounded-full px-4 py-2 shadow-[0_8px_20px_rgba(41,24,23,0.06)] flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#FF3B40]" aria-hidden="true" />
+                <span className="w-2 h-2 rounded-full bg-[#DE1B54]" aria-hidden="true" />
                 <span className="text-xs font-bold text-[#291817]">Dog &amp; Cat Grooming</span>
                 <span className="text-sm">🐾</span>
               </div>
@@ -141,12 +141,12 @@ export default function HomePage() {
       <section id="services" className="bg-white border-b border-[#F2CECA] section-pad scroll-mt-20">
         <div className="site-container">
           <div className="text-center max-w-[700px] mx-auto mb-12 sm:mb-16">
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-2.5">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#DE1B54] mb-2.5">
               <span aria-hidden="true">✦</span>
               <span>Our Grooming Services</span>
             </span>
             <h2 className="heading-h2">
-              Everything Your Pet <span className="text-[#FF3B40]">Needs.</span>
+              Everything Your Pet <span className="text-[#DE1B54]">Needs.</span>
             </h2>
             <p className="body-large mt-3">
               We operate distinct grooming protocols tailored to canine energy and feline sensitivity, ensuring calm, soothing visits.
@@ -155,7 +155,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Service Card 1: Dog Grooming & Breed Styling */}
-            <div className="bg-[#FFF8F6] border border-[#F2CECA] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between shadow-[0_8px_30px_rgba(41,24,23,0.04)] hover:border-[#FF3B40] hover:-translate-y-1 transition-all duration-300">
+            <div className="bg-[#FFF8F6] border border-[#F2CECA] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between shadow-[0_8px_30px_rgba(41,24,23,0.04)] hover:border-[#DE1B54] hover:-translate-y-1 transition-all duration-300">
               <div>
                 <div className="relative aspect-[16/11] rounded-2xl overflow-hidden mb-6 border border-[#F2CECA] bg-[#FCEAE7]">
                   <Image
@@ -165,13 +165,13 @@ export default function HomePage() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 360px"
                     className="object-cover"
                   />
-                  <div className="absolute top-3 left-3 bg-[#FF3B40] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
+                  <div className="absolute top-3 left-3 bg-[#DE1B54] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
                     Canine Suite
                   </div>
                 </div>
 
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#FF3B40]">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#DE1B54]">
                     Dog Grooming
                   </span>
                   <span className="text-xs font-bold text-[#806F6C]">From ₹999</span>
@@ -186,13 +186,13 @@ export default function HomePage() {
 
                 <ul className="space-y-2 text-xs md:text-sm text-[#291817] mb-8">
                   <li className="flex items-center gap-2">
-                    <span className="text-[#FF3B40] font-bold">✓</span> Basic Bath & Hygiene Care
+                    <span className="text-[#DE1B54] font-bold">✓</span> Basic Bath & Hygiene Care
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#FF3B40] font-bold">✓</span> Full Breed Styling & Scissor Cuts
+                    <span className="text-[#DE1B54] font-bold">✓</span> Full Breed Styling & Scissor Cuts
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#FF3B40] font-bold">✓</span> Medicated Tick & Flea Baths
+                    <span className="text-[#DE1B54] font-bold">✓</span> Medicated Tick & Flea Baths
                   </li>
                 </ul>
               </div>
@@ -206,7 +206,7 @@ export default function HomePage() {
             </div>
 
             {/* Service Card 2: Cat Grooming & Undercoat Care */}
-            <div className="bg-[#FFF8F6] border border-[#F2CECA] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between shadow-[0_8px_30px_rgba(41,24,23,0.04)] hover:border-[#FF3B40] hover:-translate-y-1 transition-all duration-300">
+            <div className="bg-[#FFF8F6] border border-[#F2CECA] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between shadow-[0_8px_30px_rgba(41,24,23,0.04)] hover:border-[#DE1B54] hover:-translate-y-1 transition-all duration-300">
               <div>
                 <div className="relative aspect-[16/11] rounded-2xl overflow-hidden mb-6 border border-[#F2CECA] bg-[#FCEAE7]">
                   <Image
@@ -216,13 +216,13 @@ export default function HomePage() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 360px"
                     className="object-cover"
                   />
-                  <div className="absolute top-3 left-3 bg-[#FF3B40] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
+                  <div className="absolute top-3 left-3 bg-[#DE1B54] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
                     Private Cat Room
                   </div>
                 </div>
 
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#FF3B40]">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#DE1B54]">
                     Cat Grooming
                   </span>
                   <span className="text-xs font-bold text-[#806F6C]">From ₹1,299</span>
@@ -237,13 +237,13 @@ export default function HomePage() {
 
                 <ul className="space-y-2 text-xs md:text-sm text-[#291817] mb-8">
                   <li className="flex items-center gap-2">
-                    <span className="text-[#FF3B40] font-bold">✓</span> Quiet Suite with Zero Dogs
+                    <span className="text-[#DE1B54] font-bold">✓</span> Quiet Suite with Zero Dogs
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#FF3B40] font-bold">✓</span> Persian De-Matting & Sanitary Care
+                    <span className="text-[#DE1B54] font-bold">✓</span> Persian De-Matting & Sanitary Care
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#FF3B40] font-bold">✓</span> Low-Noise Towel Drying Only
+                    <span className="text-[#DE1B54] font-bold">✓</span> Low-Noise Towel Drying Only
                   </li>
                 </ul>
               </div>
@@ -257,7 +257,7 @@ export default function HomePage() {
             </div>
 
             {/* Service Card 3: Spa Baths & Hygiene Care */}
-            <div className="bg-[#FFF8F6] border border-[#F2CECA] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between shadow-[0_8px_30px_rgba(41,24,23,0.04)] hover:border-[#FF3B40] hover:-translate-y-1 transition-all duration-300">
+            <div className="bg-[#FFF8F6] border border-[#F2CECA] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between shadow-[0_8px_30px_rgba(41,24,23,0.04)] hover:border-[#DE1B54] hover:-translate-y-1 transition-all duration-300">
               <div>
                 <div className="relative aspect-[16/11] rounded-2xl overflow-hidden mb-6 border border-[#F2CECA] bg-[#FCEAE7]">
                   <Image
@@ -267,13 +267,13 @@ export default function HomePage() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 360px"
                     className="object-cover"
                   />
-                  <div className="absolute top-3 left-3 bg-[#FF3B40] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
+                  <div className="absolute top-3 left-3 bg-[#DE1B54] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
                     Organic Hydro-Spa
                   </div>
                 </div>
 
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#FF3B40]">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#DE1B54]">
                     Hygiene & Bath
                   </span>
                   <span className="text-xs font-bold text-[#806F6C]">From ₹799</span>
@@ -288,13 +288,13 @@ export default function HomePage() {
 
                 <ul className="space-y-2 text-xs md:text-sm text-[#291817] mb-8">
                   <li className="flex items-center gap-2">
-                    <span className="text-[#FF3B40] font-bold">✓</span> Hypoallergenic Herbal Wash
+                    <span className="text-[#DE1B54] font-bold">✓</span> Hypoallergenic Herbal Wash
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#FF3B40] font-bold">✓</span> Gentle Nail Grinding & Paw Balm
+                    <span className="text-[#DE1B54] font-bold">✓</span> Gentle Nail Grinding & Paw Balm
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#FF3B40] font-bold">✓</span> Ear Cleaning & Sanitary Trim
+                    <span className="text-[#DE1B54] font-bold">✓</span> Ear Cleaning & Sanitary Trim
                   </li>
                 </ul>
               </div>
@@ -321,13 +321,13 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Left: Editorial Story & Values (Col 1-7) */}
             <div className="lg:col-span-7 space-y-6">
-              <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40]">
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#DE1B54]">
                 <span aria-hidden="true">✦</span>
                 <span>Our Philosophy</span>
               </span>
 
               <h2 className="heading-h2">
-                Care that feels like <span className="text-[#FF3B40]">home.</span>
+                Care that feels like <span className="text-[#DE1B54]">home.</span>
               </h2>
 
               <p className="body-large">
@@ -336,7 +336,7 @@ export default function HomePage() {
 
               <div className="space-y-4 pt-2">
                 <div className="flex items-start gap-3.5">
-                  <div className="w-8 h-8 rounded-full bg-[#FCEAE7] text-[#FF3B40] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-full bg-[#FCEAE7] text-[#DE1B54] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                     ✦
                   </div>
                   <div>
@@ -350,7 +350,7 @@ export default function HomePage() {
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="w-8 h-8 rounded-full bg-[#FCEAE7] text-[#FF3B40] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-full bg-[#FCEAE7] text-[#DE1B54] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                     ✦
                   </div>
                   <div>
@@ -364,7 +364,7 @@ export default function HomePage() {
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="w-8 h-8 rounded-full bg-[#FCEAE7] text-[#FF3B40] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-full bg-[#FCEAE7] text-[#DE1B54] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                     ✦
                   </div>
                   <div>
@@ -411,12 +411,12 @@ export default function HomePage() {
       <section className="bg-white border-b border-[#F2CECA] section-pad">
         <div className="site-container">
           <div className="text-center max-w-[700px] mx-auto mb-12 sm:mb-16">
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-2.5">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#DE1B54] mb-2.5">
               <span aria-hidden="true">✦</span>
               <span>Our Core Standards</span>
             </span>
             <h2 className="heading-h2">
-              Why pet parents choose <span className="text-[#FF3B40]">Paws &amp; Claws.</span>
+              Why pet parents choose <span className="text-[#DE1B54]">Paws &amp; Claws.</span>
             </h2>
             <p className="body-large mt-3">
               We built our studio around honest, stress-reducing practices that put animal comfort before speed.
@@ -427,9 +427,9 @@ export default function HomePage() {
             {siteContent.valuePoints.map((point, idx) => (
               <div
                 key={idx}
-                className="p-6 sm:p-7 bg-[#FFF8F6] border border-[#F2CECA] rounded-[24px] shadow-[0_4px_20px_rgba(41,24,23,0.03)] hover:border-[#FF3B40] hover:-translate-y-1 transition-all duration-300"
+                className="p-6 sm:p-7 bg-[#FFF8F6] border border-[#F2CECA] rounded-[24px] shadow-[0_4px_20px_rgba(41,24,23,0.03)] hover:border-[#DE1B54] hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="w-10 h-10 rounded-full border border-[#FF3B40] text-[#FF3B40] bg-white flex items-center justify-center font-bold text-xs mb-4">
+                <div className="w-10 h-10 rounded-full border border-[#DE1B54] text-[#DE1B54] bg-white flex items-center justify-center font-bold text-xs mb-4">
                   0{idx + 1}
                 </div>
                 <h3 className="text-lg font-extrabold text-[#291817] mb-2">
@@ -449,17 +449,17 @@ export default function HomePage() {
         <div className="site-container">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
             <div>
-              <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-2">
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#DE1B54] mb-2">
                 <span aria-hidden="true">✦</span>
                 <span>Authentic Studio Results</span>
               </span>
               <h2 className="heading-h2">
-                Real grooming results from our <span className="text-[#FF3B40]">Gurugram salon.</span>
+                Real grooming results from our <span className="text-[#DE1B54]">Gurugram salon.</span>
               </h2>
             </div>
             <Link
               href="/gallery"
-              className="text-sm font-bold text-[#FF3B40] hover:underline inline-flex items-center gap-1.5 whitespace-nowrap"
+              className="text-sm font-bold text-[#DE1B54] hover:underline inline-flex items-center gap-1.5 whitespace-nowrap"
             >
               <span>Explore full 6-photo gallery</span>
               <span aria-hidden="true">→</span>
@@ -468,7 +468,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Photo 1: Indie Dog Bath */}
-            <div className="border border-[#F2CECA] rounded-[24px] overflow-hidden bg-white shadow-xs group hover:border-[#FF3B40] hover:-translate-y-1 transition-all duration-300">
+            <div className="border border-[#F2CECA] rounded-[24px] overflow-hidden bg-white shadow-xs group hover:border-[#DE1B54] hover:-translate-y-1 transition-all duration-300">
               <div className="relative aspect-[4/3] bg-[#FCEAE7] overflow-hidden border-b border-[#F2CECA]">
                 <Image
                   src="/images/indie-dog-bath.jpg"
@@ -477,7 +477,7 @@ export default function HomePage() {
                   sizes="(max-width: 768px) 100vw, 360px"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-3 left-3 bg-[#FF3B40] text-white text-[11px] font-bold px-3 py-1 rounded-full">
+                <div className="absolute top-3 left-3 bg-[#DE1B54] text-white text-[11px] font-bold px-3 py-1 rounded-full">
                   Dog Bath &amp; Hygiene
                 </div>
               </div>
@@ -488,7 +488,7 @@ export default function HomePage() {
             </div>
 
             {/* Photo 2: Shih Tzu Scissor Cut */}
-            <div className="border border-[#F2CECA] rounded-[24px] overflow-hidden bg-white shadow-xs group hover:border-[#FF3B40] hover:-translate-y-1 transition-all duration-300">
+            <div className="border border-[#F2CECA] rounded-[24px] overflow-hidden bg-white shadow-xs group hover:border-[#DE1B54] hover:-translate-y-1 transition-all duration-300">
               <div className="relative aspect-[4/3] bg-[#FCEAE7] overflow-hidden border-b border-[#F2CECA]">
                 <Image
                   src="/images/shih-tzu-cut.jpg"
@@ -497,7 +497,7 @@ export default function HomePage() {
                   sizes="(max-width: 768px) 100vw, 360px"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-3 left-3 bg-[#FF3B40] text-white text-[11px] font-bold px-3 py-1 rounded-full">
+                <div className="absolute top-3 left-3 bg-[#DE1B54] text-white text-[11px] font-bold px-3 py-1 rounded-full">
                   Breed Scissor Styling
                 </div>
               </div>
@@ -508,7 +508,7 @@ export default function HomePage() {
             </div>
 
             {/* Photo 3: Calm Cat Towel Rest */}
-            <div className="border border-[#F2CECA] rounded-[24px] overflow-hidden bg-white shadow-xs group hover:border-[#FF3B40] hover:-translate-y-1 transition-all duration-300">
+            <div className="border border-[#F2CECA] rounded-[24px] overflow-hidden bg-white shadow-xs group hover:border-[#DE1B54] hover:-translate-y-1 transition-all duration-300">
               <div className="relative aspect-[4/3] bg-[#FCEAE7] overflow-hidden border-b border-[#F2CECA]">
                 <Image
                   src="/images/cat-calm-dry-bath.jpg"
@@ -517,7 +517,7 @@ export default function HomePage() {
                   sizes="(max-width: 768px) 100vw, 360px"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-3 left-3 bg-[#FF3B40] text-white text-[11px] font-bold px-3 py-1 rounded-full">
+                <div className="absolute top-3 left-3 bg-[#DE1B54] text-white text-[11px] font-bold px-3 py-1 rounded-full">
                   Quiet Cat Suite
                 </div>
               </div>
@@ -535,7 +535,7 @@ export default function HomePage() {
         <div className="site-container">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="space-y-2.5 text-center lg:text-left">
-              <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40]">
+              <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#DE1B54]">
                 <span>★★★★★</span>
                 <span>Google Business Reviews</span>
               </div>
@@ -571,7 +571,7 @@ export default function HomePage() {
       <section className="bg-[#FFF8F6] border-b border-[#F2CECA] section-pad">
         <div className="site-container">
           <div className="text-center max-w-[700px] mx-auto mb-12">
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-2.5">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#DE1B54] mb-2.5">
               <span aria-hidden="true">✦</span>
               <span>Common Inquiries</span>
             </span>
@@ -592,7 +592,7 @@ export default function HomePage() {
                 href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#FF3B40] font-bold underline"
+                className="text-[#DE1B54] font-bold underline"
               >
                 Ask our groomer on WhatsApp
               </a>
@@ -606,18 +606,18 @@ export default function HomePage() {
         <div className="site-container">
           <div className="bg-[#FCEAE7] border border-[#F2CECA] rounded-[32px] p-8 sm:p-12 lg:p-16 text-center max-w-[950px] mx-auto shadow-[0_16px_40px_rgba(255,59,64,0.06)] relative overflow-hidden">
             {/* Decorative background star */}
-            <div className="absolute top-6 right-8 text-[#FF3B40] text-xl select-none opacity-40" aria-hidden="true">
+            <div className="absolute top-6 right-8 text-[#DE1B54] text-xl select-none opacity-40" aria-hidden="true">
               ✦
             </div>
 
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-3">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#DE1B54] mb-3">
               <span aria-hidden="true">✦</span>
               <span>RESERVE YOUR 1-ON-1 APPOINTMENT</span>
             </span>
 
             <h2 className="heading-h1 mb-4 text-[#291817]">
               Ready for a Happier, <br className="hidden sm:inline" />
-              <span className="text-[#FF3B40]">Healthier Coat?</span>
+              <span className="text-[#DE1B54]">Healthier Coat?</span>
             </h2>
 
             <p className="body-large max-readable mx-auto mb-8 sm:mb-10 text-[#806F6C]">
@@ -644,7 +644,7 @@ export default function HomePage() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center min-h-[44px] px-5 py-2.5 text-sm font-bold text-[#806F6C] hover:text-[#FF3B40] transition-colors w-full sm:w-auto"
+                className="inline-flex items-center justify-center min-h-[44px] px-5 py-2.5 text-sm font-bold text-[#806F6C] hover:text-[#DE1B54] transition-colors w-full sm:w-auto"
               >
                 <span>Studio Address &amp; Hours →</span>
               </Link>

@@ -9,11 +9,11 @@ export default function NotFound() {
   return (
     <div className="min-h-[60vh] flex items-center justify-center section-pad bg-[#FFF8F6] text-[#291817]">
       <div className="site-container max-w-lg text-center">
-        <div className="w-16 h-16 rounded-full bg-[#FCEAE7] text-[#FF3B40] mx-auto flex items-center justify-center font-extrabold text-xl mb-4 border border-[#F2CECA] shadow-2xs">
+        <div className="w-16 h-16 rounded-full bg-[#FCEAE7] text-[#DE1B54] mx-auto flex items-center justify-center font-extrabold text-xl mb-4 border border-[#F2CECA] shadow-2xs">
           404
         </div>
         <h1 className="heading-h2 mb-3">
-          This page <span className="text-[#FF3B40]">wandered off.</span>
+          This page <span className="text-[#DE1B54]">wandered off.</span>
         </h1>
         <p className="body-large mb-8">
           The link you followed does not exist or may have been moved. Return to our homepage or reach out on WhatsApp if you need help finding grooming information.

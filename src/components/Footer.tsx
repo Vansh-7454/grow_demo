@@ -25,7 +25,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link
               href="/"
-              className="inline-flex items-center gap-3 focus-visible:outline-2 focus-visible:outline-[#FF3B40] rounded-xl"
+              className="inline-flex items-center gap-3 focus-visible:outline-2 focus-visible:outline-[#DE1B54] rounded-xl"
             >
               <div className="w-10 h-10 rounded-2xl overflow-hidden shrink-0 bg-white p-1 border border-[#F2CECA] shadow-2xs">
                 <Image
@@ -54,9 +54,9 @@ export default function Footer() {
                 href={siteContent.business.googleReviewUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-semibold text-[#291817] bg-white border border-[#F2CECA] px-3.5 py-1.5 rounded-full hover:border-[#FF3B40] transition-colors shadow-2xs"
+                className="inline-flex items-center gap-2 text-xs font-semibold text-[#291817] bg-white border border-[#F2CECA] px-3.5 py-1.5 rounded-full hover:border-[#DE1B54] transition-colors shadow-2xs"
               >
-                <span className="text-[#FF3B40]">★</span>
+                <span className="text-[#DE1B54]">★</span>
                 <span>Google Rating: {siteContent.business.googleRating}</span>
                 <span className="text-[11px] text-[#806F6C]">({siteContent.business.googleReviewCount})</span>
               </a>
@@ -72,7 +72,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/"
-                  className="text-sm text-[#806F6C] hover:text-[#FF3B40] transition-colors inline-block"
+                  className="text-sm text-[#806F6C] hover:text-[#DE1B54] transition-colors inline-block"
                 >
                   Home
                 </Link>
@@ -80,7 +80,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/dog-grooming"
-                  className="text-sm text-[#806F6C] hover:text-[#FF3B40] transition-colors inline-block"
+                  className="text-sm text-[#806F6C] hover:text-[#DE1B54] transition-colors inline-block"
                 >
                   Dog Grooming
                 </Link>
@@ -88,7 +88,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/cat-grooming"
-                  className="text-sm text-[#806F6C] hover:text-[#FF3B40] transition-colors inline-block"
+                  className="text-sm text-[#806F6C] hover:text-[#DE1B54] transition-colors inline-block"
                 >
                   Cat Grooming
                 </Link>
@@ -96,7 +96,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/gallery"
-                  className="text-sm text-[#806F6C] hover:text-[#FF3B40] transition-colors inline-block"
+                  className="text-sm text-[#806F6C] hover:text-[#DE1B54] transition-colors inline-block"
                 >
                   Photo Gallery
                 </Link>
@@ -104,7 +104,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/reviews"
-                  className="text-sm text-[#806F6C] hover:text-[#FF3B40] transition-colors inline-block"
+                  className="text-sm text-[#806F6C] hover:text-[#DE1B54] transition-colors inline-block"
                 >
                   Verified Reviews
                 </Link>
@@ -112,7 +112,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-sm text-[#806F6C] hover:text-[#FF3B40] transition-colors inline-block"
+                  className="text-sm text-[#806F6C] hover:text-[#DE1B54] transition-colors inline-block"
                 >
                   Contact &amp; Location
                 </Link>
@@ -129,7 +129,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/dog-grooming#packages"
-                  className="text-sm text-[#806F6C] hover:text-[#FF3B40] transition-colors block"
+                  className="text-sm text-[#806F6C] hover:text-[#DE1B54] transition-colors block"
                 >
                   Dog Bath &amp; Hygiene Care
                 </Link>
@@ -137,7 +137,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/dog-grooming#packages"
-                  className="text-sm text-[#806F6C] hover:text-[#FF3B40] transition-colors block"
+                  className="text-sm text-[#806F6C] hover:text-[#DE1B54] transition-colors block"
                 >
                   Breed Scissor Haircuts &amp; Styling
                 </Link>
@@ -145,7 +145,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/dog-grooming#packages"
-                  className="text-sm text-[#806F6C] hover:text-[#FF3B40] transition-colors block"
+                  className="text-sm text-[#806F6C] hover:text-[#DE1B54] transition-colors block"
                 >
                   Medicated &amp; Anti-Tick Baths
                 </Link>
@@ -153,7 +153,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/cat-grooming#packages"
-                  className="text-sm text-[#806F6C] hover:text-[#FF3B40] transition-colors block"
+                  className="text-sm text-[#806F6C] hover:text-[#DE1B54] transition-colors block"
                 >
                   Quiet Feline Dry &amp; Wet Baths
                 </Link>
@@ -161,7 +161,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/cat-grooming#packages"
-                  className="text-sm text-[#806F6C] hover:text-[#FF3B40] transition-colors block"
+                  className="text-sm text-[#806F6C] hover:text-[#DE1B54] transition-colors block"
                 >
                   Persian Cat De-Matting &amp; Lion Cut
                 </Link>
@@ -171,7 +171,7 @@ export default function Footer() {
                   href={whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs font-bold text-[#FF3B40] hover:underline inline-flex items-center gap-1 pt-1"
+                  className="text-xs font-bold text-[#DE1B54] hover:underline inline-flex items-center gap-1 pt-1"
                 >
                   <span>Book Grooming on WhatsApp</span>
                   <span aria-hidden="true">→</span>
@@ -193,7 +193,7 @@ export default function Footer() {
                   href={siteContent.business.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs font-semibold text-[#FF3B40] hover:underline inline-block mt-1"
+                  className="text-xs font-semibold text-[#DE1B54] hover:underline inline-block mt-1"
                 >
                   Get directions on Google Maps →
                 </a>
@@ -204,7 +204,7 @@ export default function Footer() {
                 <p className="mt-0.5">
                   <a
                     href={`tel:${siteContent.business.phoneRaw}`}
-                    className="hover:text-[#FF3B40] text-[#291817] font-semibold mr-2 transition-colors"
+                    className="hover:text-[#DE1B54] text-[#291817] font-semibold mr-2 transition-colors"
                   >
                     {siteContent.business.phoneDisplay}
                   </a>
@@ -214,7 +214,7 @@ export default function Footer() {
                     href={whatsappHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#FF3B40] font-semibold hover:underline"
+                    className="text-[#DE1B54] font-semibold hover:underline"
                   >
                     Chat on WhatsApp →
                   </a>
@@ -225,7 +225,7 @@ export default function Footer() {
                 <p className="font-bold text-[#291817]">Email Inquiries:</p>
                 <a
                   href={`mailto:${siteContent.business.email}`}
-                  className="hover:text-[#FF3B40] text-[#806F6C] block mt-0.5 transition-colors"
+                  className="hover:text-[#DE1B54] text-[#806F6C] block mt-0.5 transition-colors"
                 >
                   {siteContent.business.email}
                 </a>
@@ -249,13 +249,13 @@ export default function Footer() {
             © {currentYear} {siteContent.business.name}. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="/contact" className="hover:text-[#FF3B40] transition-colors">
+            <Link href="/contact" className="hover:text-[#DE1B54] transition-colors">
               Studio Location
             </Link>
-            <Link href="/reviews" className="hover:text-[#FF3B40] transition-colors">
+            <Link href="/reviews" className="hover:text-[#DE1B54] transition-colors">
               Customer Feedback
             </Link>
-            <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="hover:text-[#FF3B40] transition-colors">
+            <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="hover:text-[#DE1B54] transition-colors">
               Book Appointment
             </a>
           </div>

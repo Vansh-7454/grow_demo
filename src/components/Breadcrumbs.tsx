@@ -12,7 +12,7 @@ export default function Breadcrumbs({ items }: { items: Crumb[] }) {
         <li>
           <Link
             href="/"
-            className="hover:text-[#FF3B40] hover:underline focus-visible:outline-[#FF3B40]"
+            className="hover:text-[#DE1B54] hover:underline focus-visible:outline-[#DE1B54]"
           >
             Home
           </Link>
@@ -34,7 +34,7 @@ export default function Breadcrumbs({ items }: { items: Crumb[] }) {
               ) : (
                 <Link
                   href={item.href}
-                  className="hover:text-[#FF3B40] hover:underline focus-visible:outline-[#FF3B40]"
+                  className="hover:text-[#DE1B54] hover:underline focus-visible:outline-[#DE1B54]"
                 >
                   {item.label}
                 </Link>

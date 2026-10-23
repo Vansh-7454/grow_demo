@@ -16,12 +16,12 @@ export default function GalleryPage() {
       {/* Header Band */}
       <section className="bg-white border-b border-[#F2CECA] pt-12 pb-14">
         <div className="site-container text-center max-w-[800px] mx-auto">
-          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-2.5">
+          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#DE1B54] mb-2.5">
             <span aria-hidden="true">✦</span>
             <span>Real Grooming Results</span>
           </span>
           <h1 className="heading-h1 mb-4">
-            Our Gurugram <span className="text-[#FF3B40]">pet grooming showcase.</span>
+            Our Gurugram <span className="text-[#DE1B54]">pet grooming showcase.</span>
           </h1>
           <p className="body-large">
             We showcase only real pets groomed inside our Gurugram studio. Filter below to explore dog styling and cat grooming sessions.
@@ -36,70 +36,28 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Photo Submission Guide for Client */}
-      <section className="bg-[#FFF8F6] border-t border-[#F2CECA] section-pad">
-        <div className="site-container max-w-[950px] mx-auto">
-          <div className="bg-white border border-[#F2CECA] rounded-[28px] p-6 sm:p-8 md:p-10 shadow-[0_8px_30px_rgba(41,24,23,0.04)]">
-            <div className="mb-6">
-              <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-1.5">
-                <span aria-hidden="true">✦</span>
-                <span>Client Content Checklist</span>
-              </span>
-              <h2 className="heading-h2 mb-2">
-                Photos to submit for your live gallery.
-              </h2>
-              <p className="text-xs sm:text-sm text-[#806F6C] leading-relaxed">
-                As per our studio transparency policy, we do not use artificial stock imagery or pretend another groomer&apos;s work is ours. Please provide high-resolution photos of pets groomed at your studio following the checklist below.
-              </p>
-            </div>
-
-            <div className="overflow-x-auto -mx-1 sm:mx-0">
-              <table className="w-full text-left text-xs md:text-sm border-collapse min-w-[500px]">
-                <thead>
-                  <tr className="border-b border-[#F2CECA] bg-[#FFF8F6] text-[#291817]">
-                    <th className="py-3.5 px-3.5 font-bold">Slot #</th>
-                    <th className="py-3.5 px-3.5 font-bold">Filename</th>
-                    <th className="py-3.5 px-3.5 font-bold">Size &amp; Ratio</th>
-                    <th className="py-3.5 px-3.5 font-bold">Subject &amp; Shot Guidelines</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-[#F2CECA]/50 text-[#291817]">
-                  {siteContent.galleryPlaceholders.map((item, idx) => (
-                    <tr key={item.id} className="hover:bg-[#FFF8F6]/60">
-                      <td className="py-3 px-3.5 font-mono font-bold text-[#FF3B40]">
-                        0{idx + 1}
-                      </td>
-                      <td className="py-3 px-3.5 font-mono text-xs text-[#806F6C]">
-                        {item.filename}
-                      </td>
-                      <td className="py-3 px-3.5 font-mono whitespace-nowrap text-xs text-[#291817]">
-                        {item.recommendedSize} (4:3)
-                      </td>
-                      <td className="py-3 px-3.5 text-xs text-[#806F6C]">
-                        <span className="font-bold text-[#291817] block">
-                          {item.title}
-                        </span>
-                        {item.description}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            <div className="mt-6 pt-6 border-t border-[#F2CECA]/60 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <p className="text-xs text-[#806F6C]">
-                Once photos are ready, drop them directly into your GitHub <code className="bg-[#FFF8F6] border border-[#F2CECA] px-1.5 py-0.5 rounded font-mono text-[#291817]">/public/gallery/</code> folder or send via WhatsApp.
-              </p>
-              <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary text-xs whitespace-nowrap"
-              >
-                <span>Send Photos on WhatsApp →</span>
-              </a>
-            </div>
+      {/* Customer Wall of Fame Invitation */}
+      <section className="bg-white border-t border-[#F2CECA] section-pad text-center">
+        <div className="site-container max-w-[800px] mx-auto">
+          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#DE1B54] mb-2.5">
+            <span aria-hidden="true">✦</span>
+            <span>Join Our Happy Pet Family</span>
+          </span>
+          <h2 className="heading-h2 mb-3">
+            Want to see your pet featured in our <span className="text-[#DE1B54]">studio gallery?</span>
+          </h2>
+          <p className="body-large mb-8">
+            Every guest at Paws &amp; Claws receives a gentle, cage-free grooming session and a post-groom studio portrait sent straight to your WhatsApp!
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              <span>Book Your Session on WhatsApp →</span>
+            </a>
           </div>
         </div>
       </section>

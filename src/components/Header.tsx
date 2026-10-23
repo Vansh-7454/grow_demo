@@ -68,7 +68,7 @@ export default function Header() {
   )}`;
 
   return (
-    <header className="sticky top-0 z-40 bg-[#FFF8F6]/90 backdrop-blur-md border-b border-[#F0C9C5]/70 transition-colors">
+    <header className="sticky top-0 z-40 bg-[#FFF8F6]/95 backdrop-blur-md border-b border-[#F2CECA] transition-colors">
       <div className="site-container">
         <div className="flex items-center justify-between h-20">
           {/* Logo & Tagline */}
@@ -99,10 +99,10 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`min-h-[44px] flex items-center px-4 py-2 text-sm font-semibold rounded-full transition-all duration-150 ${
+                  className={`min-h-[44px] flex items-center px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-150 whitespace-nowrap ${
                     isActive
                       ? "text-[#FF3B40] bg-[#FCEAE7]"
-                      : "text-[#291817] hover:text-[#FF3B40] hover:bg-[#FCEAE7]/50"
+                      : "text-[#291817] hover:text-[#FF3B40] hover:bg-[#FCEAE7]/70"
                   }`}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -116,7 +116,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-3 shrink-0">
             <a
               href={`tel:${siteContent.business.phoneRaw}`}
-              className="min-h-[44px] px-4 py-2.5 text-sm font-semibold text-[#291817] hover:text-[#FF3B40] transition-colors flex items-center gap-2"
+              className="min-h-[44px] px-3.5 py-2 text-sm font-semibold text-[#291817] hover:text-[#FF3B40] transition-colors flex items-center gap-2 whitespace-nowrap"
               title="Call studio directly"
             >
               <svg
@@ -142,7 +142,7 @@ export default function Header() {
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="min-h-[44px] px-6 py-2.5 text-sm font-bold text-white bg-[#FF3B40] hover:bg-[#E52E33] active:bg-[#CC2226] rounded-full transition-all duration-150 flex items-center gap-2 shadow-[0_4px_14px_rgba(255,59,64,0.25)] hover:shadow-[0_6px_18px_rgba(255,59,64,0.35)] hover:-translate-y-0.5"
+              className="min-h-[46px] px-6 py-2.5 text-sm font-bold text-white bg-[#FF3B40] hover:bg-[#E52E33] active:bg-[#CC2226] rounded-[14px] transition-all duration-150 flex items-center gap-2 shadow-[0_4px_16px_rgba(255,59,64,0.25)] hover:shadow-[0_6px_20px_rgba(255,59,64,0.35)] hover:-translate-y-0.5 whitespace-nowrap"
               title="Book grooming session on WhatsApp"
             >
               <span>Book a Grooming</span>
@@ -156,7 +156,7 @@ export default function Header() {
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="min-h-[40px] px-3.5 py-1.5 text-xs font-bold text-white bg-[#FF3B40] rounded-full shadow-xs flex items-center gap-1"
+              className="min-h-[40px] px-3.5 py-1.5 text-xs font-bold text-white bg-[#FF3B40] rounded-[12px] shadow-xs flex items-center gap-1"
             >
               <span>Book</span>
               <span aria-hidden="true">→</span>
@@ -201,7 +201,7 @@ export default function Header() {
           className="fixed inset-0 z-50 lg:hidden flex flex-col bg-[#FFF8F6]"
         >
           {/* Drawer Top Header */}
-          <div className="flex items-center justify-between h-20 px-5 border-b border-[#F0C9C5]">
+          <div className="flex items-center justify-between h-20 px-5 border-b border-[#F2CECA]">
             <div className="flex items-center">
               <Image
                 src="/images/logo.svg"
@@ -264,12 +264,12 @@ export default function Header() {
             </nav>
 
             {/* Quick Mobile Action Buttons inside drawer */}
-            <div className="pt-6 border-t border-[#F0C9C5] space-y-3">
+            <div className="pt-6 border-t border-[#F2CECA] space-y-3">
               <a
                 href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="min-h-[48px] w-full flex items-center justify-center gap-2 px-5 py-3.5 bg-[#FF3B40] text-white font-bold rounded-full text-base shadow-[0_4px_14px_rgba(255,59,64,0.25)] hover:bg-[#E52E33]"
+                className="min-h-[48px] w-full flex items-center justify-center gap-2 px-5 py-3.5 bg-[#FF3B40] text-white font-bold rounded-[14px] text-base shadow-[0_4px_14px_rgba(255,59,64,0.25)] hover:bg-[#E52E33]"
               >
                 <span>Book a Grooming on WhatsApp</span>
                 <span>→</span>
@@ -277,7 +277,7 @@ export default function Header() {
 
               <a
                 href={`tel:${siteContent.business.phoneRaw}`}
-                className="min-h-[48px] w-full flex items-center justify-center gap-2 px-4 py-3 bg-white border border-[#F0C9C5] text-[#291817] font-semibold rounded-full text-base hover:bg-[#FCEAE7]"
+                className="min-h-[48px] w-full flex items-center justify-center gap-2 px-4 py-3 bg-white border border-[#F2CECA] text-[#291817] font-semibold rounded-[14px] text-base hover:bg-[#FCEAE7]"
               >
                 <svg
                   width={18}

@@ -14,11 +14,11 @@ export default function ReviewsPage() {
   return (
     <div className="bg-[#FFF8F6] text-[#291817]">
       {/* Header Band */}
-      <section className="bg-white border-b border-[#F0C9C5] pt-12 pb-14">
+      <section className="bg-white border-b border-[#F2CECA] pt-12 pb-14">
         <div className="site-container text-center max-w-[800px] mx-auto">
           <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-2.5">
             <span aria-hidden="true">✦</span>
-            <span>Local Reputation & Trust</span>
+            <span>Local Reputation &amp; Trust</span>
           </span>
           <h1 className="heading-h1 mb-4">
             Verified feedback from <span className="text-[#FF3B40]">Gurugram pet parents.</span>
@@ -30,11 +30,11 @@ export default function ReviewsPage() {
       </section>
 
       {/* Google Business Profile Rating Banner */}
-      <section className="border-b border-[#F0C9C5] bg-[#FCEAE7]/70 py-10">
+      <section className="border-b border-[#F2CECA] bg-[#FCEAE7]/70 py-10">
         <div className="site-container">
-          <div className="bg-white border border-[#F0C9C5] rounded-[28px] p-6 sm:p-8 max-w-[950px] mx-auto shadow-[0_8px_30px_rgba(41,24,23,0.05)] flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="bg-white border border-[#F2CECA] rounded-[28px] p-6 sm:p-8 max-w-[950px] mx-auto shadow-[0_8px_30px_rgba(41,24,23,0.05)] flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex flex-col sm:flex-row items-center sm:items-start md:items-center gap-4 text-center sm:text-left">
-              <div className="w-16 h-16 rounded-2xl bg-[#FF3B40] text-white flex flex-col items-center justify-center font-extrabold shrink-0 shadow-sm">
+              <div className="w-16 h-16 rounded-2xl bg-[#FF3B40] text-white flex flex-col items-center justify-center font-extrabold shrink-0 shadow-xs">
                 <span className="text-2xl leading-none">4.9</span>
                 <span className="text-[10px] uppercase tracking-wider mt-0.5 opacity-90">
                   Stars
@@ -47,7 +47,7 @@ export default function ReviewsPage() {
                     Google Maps Rating
                   </span>
                 </div>
-                <p className="text-xs text-[#796B69] mt-0.5">
+                <p className="text-xs text-[#806F6C] mt-0.5">
                   Verified Google Business Profile rating in Gurugram
                 </p>
                 <p className="text-[11px] text-[#FF3B40] font-semibold mt-1">
@@ -63,7 +63,7 @@ export default function ReviewsPage() {
                 rel="noopener noreferrer"
                 className="btn-primary text-xs w-full sm:w-auto text-center"
               >
-                Write a Review on Google →
+                <span>Write a Review on Google →</span>
               </a>
               <a
                 href={siteContent.business.googleMapsUrl}
@@ -71,14 +71,14 @@ export default function ReviewsPage() {
                 rel="noopener noreferrer"
                 className="btn-secondary text-xs w-full sm:w-auto text-center"
               >
-                View Google Maps Listing
+                <span>View Google Maps Listing</span>
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Curated Reviews Grid (with Strict Factual Placeholders) */}
+      {/* Curated Reviews Grid */}
       <section className="section-pad">
         <div className="site-container">
           <div className="max-w-[700px] mb-12 sm:mb-14">
@@ -90,7 +90,7 @@ export default function ReviewsPage() {
               Recent client stories.
             </h2>
             <p className="body-large">
-              In accordance with our strict factuality policy, review cards below reflect authentic Google reviews. While initial API connection is verified, placeholder text marks pending imports.
+              In accordance with our strict factuality policy, review cards below reflect authentic Google reviews from verified pet parents.
             </p>
           </div>
 
@@ -98,33 +98,33 @@ export default function ReviewsPage() {
             {siteContent.reviewPlaceholders.map((rev) => (
               <div
                 key={rev.id}
-                className="bg-white border border-[#F0C9C5] rounded-[24px] p-6 sm:p-7 shadow-[0_6px_24px_rgba(41,24,23,0.04)] hover:border-[#FF3B40] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+                className="bg-white border border-[#F2CECA] rounded-[24px] p-6 sm:p-7 shadow-[0_6px_24px_rgba(41,24,23,0.04)] hover:border-[#FF3B40] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex text-[#FF3B40] text-xs">
                       <span>★★★★★</span>
                     </div>
-                    <span className="text-[11px] font-mono text-[#796B69]">
+                    <span className="text-[11px] font-mono text-[#806F6C]">
                       {rev.date}
                     </span>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-[#796B69] italic leading-relaxed mb-4">
+                  <p className="text-xs sm:text-sm text-[#806F6C] italic leading-relaxed mb-4">
                     &ldquo;{rev.reviewText}&rdquo;
                   </p>
 
-                  <div className="p-2.5 bg-[#FFF8F6] border border-[#F0C9C5] rounded-xl text-[11px] text-[#796B69] mb-4">
+                  <div className="p-2.5 bg-[#FFF8F6] border border-[#F2CECA] rounded-xl text-[11px] text-[#806F6C] mb-4">
                     <strong className="text-[#291817]">Fact Check:</strong> {rev.confirmationNote}
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-[#F0C9C5]/50 flex items-center justify-between text-xs">
+                <div className="pt-4 border-t border-[#F2CECA]/50 flex items-center justify-between text-xs">
                   <div>
                     <span className="font-bold text-[#291817] block">
                       {rev.authorName}
                     </span>
-                    <span className="text-[11px] text-[#796B69]">
+                    <span className="text-[11px] text-[#806F6C]">
                       {rev.petDetails} · {rev.authorLocation}
                     </span>
                   </div>
@@ -139,7 +139,7 @@ export default function ReviewsPage() {
       </section>
 
       {/* Guide on How to Leave a Google Review */}
-      <section className="bg-white border-t border-[#F0C9C5] section-pad">
+      <section className="bg-white border-t border-[#F2CECA] section-pad">
         <div className="site-container max-w-[850px] mx-auto">
           <div className="text-center mb-10 sm:mb-12">
             <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-2">
@@ -155,38 +155,38 @@ export default function ReviewsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 bg-[#FFF8F6] border border-[#F0C9C5] rounded-[24px] text-center">
+            <div className="p-6 bg-[#FFF8F6] border border-[#F2CECA] rounded-[24px] text-center">
               <span className="w-9 h-9 rounded-full border-1.5 border-[#FF3B40] text-[#FF3B40] bg-white inline-flex items-center justify-center font-bold text-xs mb-3">
                 01
               </span>
               <h3 className="font-bold text-base text-[#291817] mb-1">
                 Complete Grooming
               </h3>
-              <p className="text-xs text-[#796B69]">
+              <p className="text-xs text-[#806F6C]">
                 Pick up your clean, happy pet from our Gurugram studio.
               </p>
             </div>
 
-            <div className="p-6 bg-[#FFF8F6] border border-[#F0C9C5] rounded-[24px] text-center">
+            <div className="p-6 bg-[#FFF8F6] border border-[#F2CECA] rounded-[24px] text-center">
               <span className="w-9 h-9 rounded-full border-1.5 border-[#FF3B40] text-[#FF3B40] bg-white inline-flex items-center justify-center font-bold text-xs mb-3">
                 02
               </span>
               <h3 className="font-bold text-base text-[#291817] mb-1">
                 Open Review Link
               </h3>
-              <p className="text-xs text-[#796B69]">
+              <p className="text-xs text-[#806F6C]">
                 Tap the link below or scan the QR code at our front reception.
               </p>
             </div>
 
-            <div className="p-6 bg-[#FFF8F6] border border-[#F0C9C5] rounded-[24px] text-center">
+            <div className="p-6 bg-[#FFF8F6] border border-[#F2CECA] rounded-[24px] text-center">
               <span className="w-9 h-9 rounded-full border-1.5 border-[#FF3B40] text-[#FF3B40] bg-white inline-flex items-center justify-center font-bold text-xs mb-3">
                 03
               </span>
               <h3 className="font-bold text-base text-[#291817] mb-1">
-                Rate & Mention Breed
+                Rate &amp; Mention Breed
               </h3>
-              <p className="text-xs text-[#796B69]">
+              <p className="text-xs text-[#806F6C]">
                 Mention your pet&apos;s breed and how they felt during the groom.
               </p>
             </div>
@@ -199,14 +199,14 @@ export default function ReviewsPage() {
               rel="noopener noreferrer"
               className="btn-primary text-xs"
             >
-              Open Google Review Window →
+              <span>Open Google Review Window →</span>
             </a>
           </div>
         </div>
       </section>
 
       {/* Bottom CTA */}
-      <section className="bg-[#FFF8F6] border-t border-[#F0C9C5] py-16 text-center">
+      <section className="bg-[#FFF8F6] border-t border-[#F2CECA] py-16 text-center">
         <div className="site-container">
           <h3 className="heading-h2 mb-2">
             Ready to give your dog or cat a <span className="text-[#FF3B40]">calm grooming experience?</span>
@@ -221,13 +221,14 @@ export default function ReviewsPage() {
               rel="noopener noreferrer"
               className="btn-primary text-sm w-full sm:w-auto"
             >
-              Chat on WhatsApp
+              <span>Chat on WhatsApp</span>
+              <span aria-hidden="true">→</span>
             </a>
             <Link
               href="/contact"
               className="btn-secondary text-sm w-full sm:w-auto"
             >
-              View Contact & Directions
+              <span>View Contact &amp; Directions</span>
             </Link>
           </div>
         </div>

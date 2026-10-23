@@ -9,13 +9,13 @@ export default function MobileCallBar() {
     <div
       role="region"
       aria-label="Quick Mobile Contact"
-      className="fixed bottom-0 left-0 right-0 z-30 lg:hidden bg-[#FFF8F6]/95 backdrop-blur-md border-t border-[#F0C9C5] px-4 py-2.5 shadow-[0_-4px_16px_rgba(41,24,23,0.06)]"
+      className="fixed bottom-0 left-0 right-0 z-30 lg:hidden bg-[#FFF8F6]/95 backdrop-blur-md border-t border-[#F2CECA] px-4 py-2.5 shadow-[0_-4px_16px_rgba(41,24,23,0.06)]"
     >
       <div className="flex items-center gap-3 max-w-md mx-auto">
         {/* Direct Call Button */}
         <a
           href={`tel:${siteContent.business.phoneRaw}`}
-          className="flex-1 min-h-[44px] flex items-center justify-center gap-2 px-3 py-2 bg-white border border-[#F0C9C5] text-[#291817] text-sm font-semibold rounded-full hover:bg-[#FCEAE7] active:bg-[#FCEAE7] transition-colors"
+          className="flex-1 min-h-[44px] flex items-center justify-center gap-2 px-3 py-2 bg-white border border-[#F2CECA] text-[#291817] text-sm font-semibold rounded-[14px] hover:bg-[#FCEAE7] active:bg-[#FCEAE7] transition-colors"
         >
           <svg
             width={16}
@@ -41,7 +41,7 @@ export default function MobileCallBar() {
           href={whatsappHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 min-h-[44px] flex items-center justify-center gap-2 px-3 py-2 bg-[#FF3B40] text-white text-sm font-bold rounded-full hover:bg-[#E52E33] active:bg-[#CC2226] transition-colors shadow-sm"
+          className="flex-1 min-h-[44px] flex items-center justify-center gap-2 px-3 py-2 bg-[#FF3B40] text-white text-sm font-bold rounded-[14px] hover:bg-[#E52E33] active:bg-[#CC2226] transition-colors shadow-xs"
         >
           <span>Book Grooming</span>
           <span aria-hidden="true">→</span>

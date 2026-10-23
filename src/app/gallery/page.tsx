@@ -14,7 +14,7 @@ export default function GalleryPage() {
   return (
     <div className="bg-[#FFF8F6] text-[#291817]">
       {/* Header Band */}
-      <section className="bg-white border-b border-[#F0C9C5] pt-12 pb-14">
+      <section className="bg-white border-b border-[#F2CECA] pt-12 pb-14">
         <div className="site-container text-center max-w-[800px] mx-auto">
           <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-2.5">
             <span aria-hidden="true">✦</span>
@@ -36,10 +36,10 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Photo Submission Guide for Client (Per Rule 2: "list exactly which photos to send (shot description and size)") */}
-      <section className="bg-[#FFF8F6] border-t border-[#F0C9C5] section-pad">
+      {/* Photo Submission Guide for Client */}
+      <section className="bg-[#FFF8F6] border-t border-[#F2CECA] section-pad">
         <div className="site-container max-w-[950px] mx-auto">
-          <div className="bg-white border border-[#F0C9C5] rounded-[28px] p-6 sm:p-8 md:p-10 shadow-[0_8px_30px_rgba(41,24,23,0.04)]">
+          <div className="bg-white border border-[#F2CECA] rounded-[28px] p-6 sm:p-8 md:p-10 shadow-[0_8px_30px_rgba(41,24,23,0.04)]">
             <div className="mb-6">
               <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF3B40] mb-1.5">
                 <span aria-hidden="true">✦</span>
@@ -48,7 +48,7 @@ export default function GalleryPage() {
               <h2 className="heading-h2 mb-2">
                 Photos to submit for your live gallery.
               </h2>
-              <p className="text-xs sm:text-sm text-[#796B69] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#806F6C] leading-relaxed">
                 As per our studio transparency policy, we do not use artificial stock imagery or pretend another groomer&apos;s work is ours. Please provide high-resolution photos of pets groomed at your studio following the checklist below.
               </p>
             </div>
@@ -56,26 +56,26 @@ export default function GalleryPage() {
             <div className="overflow-x-auto -mx-1 sm:mx-0">
               <table className="w-full text-left text-xs md:text-sm border-collapse min-w-[500px]">
                 <thead>
-                  <tr className="border-b border-[#F0C9C5] bg-[#FFF8F6] text-[#291817]">
+                  <tr className="border-b border-[#F2CECA] bg-[#FFF8F6] text-[#291817]">
                     <th className="py-3.5 px-3.5 font-bold">Slot #</th>
                     <th className="py-3.5 px-3.5 font-bold">Filename</th>
-                    <th className="py-3.5 px-3.5 font-bold">Size & Ratio</th>
-                    <th className="py-3.5 px-3.5 font-bold">Subject & Shot Guidelines</th>
+                    <th className="py-3.5 px-3.5 font-bold">Size &amp; Ratio</th>
+                    <th className="py-3.5 px-3.5 font-bold">Subject &amp; Shot Guidelines</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[#F0C9C5]/50 text-[#291817]">
+                <tbody className="divide-y divide-[#F2CECA]/50 text-[#291817]">
                   {siteContent.galleryPlaceholders.map((item, idx) => (
                     <tr key={item.id} className="hover:bg-[#FFF8F6]/60">
                       <td className="py-3 px-3.5 font-mono font-bold text-[#FF3B40]">
                         0{idx + 1}
                       </td>
-                      <td className="py-3 px-3.5 font-mono text-xs text-[#796B69]">
+                      <td className="py-3 px-3.5 font-mono text-xs text-[#806F6C]">
                         {item.filename}
                       </td>
                       <td className="py-3 px-3.5 font-mono whitespace-nowrap text-xs text-[#291817]">
                         {item.recommendedSize} (4:3)
                       </td>
-                      <td className="py-3 px-3.5 text-xs text-[#796B69]">
+                      <td className="py-3 px-3.5 text-xs text-[#806F6C]">
                         <span className="font-bold text-[#291817] block">
                           {item.title}
                         </span>
@@ -87,9 +87,9 @@ export default function GalleryPage() {
               </table>
             </div>
 
-            <div className="mt-6 pt-6 border-t border-[#F0C9C5]/60 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <p className="text-xs text-[#796B69]">
-                Once photos are ready, drop them directly into your GitHub <code className="bg-[#FFF8F6] border border-[#F0C9C5] px-1.5 py-0.5 rounded font-mono text-[#291817]">/public/gallery/</code> folder or send via WhatsApp.
+            <div className="mt-6 pt-6 border-t border-[#F2CECA]/60 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <p className="text-xs text-[#806F6C]">
+                Once photos are ready, drop them directly into your GitHub <code className="bg-[#FFF8F6] border border-[#F2CECA] px-1.5 py-0.5 rounded font-mono text-[#291817]">/public/gallery/</code> folder or send via WhatsApp.
               </p>
               <a
                 href={whatsappHref}

@@ -7,9 +7,9 @@ export default function PhotoPlaceholder({
   item: PhotoPlaceholderItem;
 }) {
   return (
-    <div className="group border border-[#F0C9C5] bg-white rounded-[24px] overflow-hidden shadow-[0_6px_24px_rgba(41,24,23,0.04)] hover:border-[#FF3B40] hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
+    <div className="group border border-[#F2CECA] bg-white rounded-[24px] overflow-hidden shadow-[0_6px_24px_rgba(41,24,23,0.04)] hover:border-[#FF3B40] hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
       {/* 4:3 Aspect Ratio Frame */}
-      <div className="relative aspect-[4/3] bg-[#FFF8F6] overflow-hidden border-b border-[#F0C9C5]">
+      <div className="relative aspect-[4/3] bg-[#FFF8F6] overflow-hidden border-b border-[#F2CECA]">
         {item.imageUrl ? (
           <>
             <Image
@@ -19,16 +19,16 @@ export default function PhotoPlaceholder({
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 380px"
               className="object-cover group-hover:scale-105 transition-transform duration-500"
             />
-            <div className="absolute top-3 left-3 bg-[#FF3B40] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">
+            <div className="absolute top-3 left-3 bg-[#FF3B40] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
               {item.category} Care
             </div>
-            <div className="absolute bottom-3 right-3 bg-[#291817]/70 backdrop-blur-xs text-white text-[10px] font-mono px-2 py-0.5 rounded-full">
+            <div className="absolute bottom-3 right-3 bg-[#291817]/70 backdrop-blur-xs text-white text-[10px] font-mono px-2.5 py-0.5 rounded-full">
               Studio Result
             </div>
           </>
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center">
-            <div className="w-12 h-12 rounded-full bg-white border border-[#F0C9C5] flex items-center justify-center text-[#FF3B40] mb-3 shadow-xs">
+            <div className="w-12 h-12 rounded-full bg-white border border-[#F2CECA] flex items-center justify-center text-[#FF3B40] mb-3 shadow-2xs">
               <svg
                 width={24}
                 height={24}
@@ -53,14 +53,14 @@ export default function PhotoPlaceholder({
               </svg>
             </div>
 
-            <span className="inline-block px-2.5 py-0.5 rounded-full bg-white text-[11px] font-mono font-bold text-[#FF3B40] border border-[#F0C9C5] mb-2">
+            <span className="inline-block px-2.5 py-0.5 rounded-full bg-white text-[11px] font-mono font-bold text-[#FF3B40] border border-[#F2CECA] mb-2">
               {item.recommendedSize} · {item.aspectRatio}
             </span>
 
             <p className="text-xs font-bold text-[#291817] max-w-[240px]">
               {item.filename}
             </p>
-            <span className="text-[11px] text-[#796B69] mt-1">
+            <span className="text-[11px] text-[#806F6C] mt-1">
               Awaiting Client Real Pet Photo
             </span>
           </div>
@@ -79,12 +79,12 @@ export default function PhotoPlaceholder({
           <h4 className="text-base font-bold text-[#291817] tracking-tight mb-1">
             {item.title}
           </h4>
-          <p className="text-xs text-[#796B69] leading-relaxed">
+          <p className="text-xs text-[#806F6C] leading-relaxed">
             {item.description}
           </p>
         </div>
 
-        <div className="mt-4 pt-3 border-t border-[#F0C9C5]/50 flex items-center justify-between text-[11px] text-[#9E8E8C]">
+        <div className="mt-4 pt-3 border-t border-[#F2CECA]/50 flex items-center justify-between text-[11px] text-[#9E8E8C]">
           <span>Alt: {item.altText.slice(0, 32)}...</span>
           <span className="font-mono text-[#FF3B40] font-bold">1-on-1 Care</span>
         </div>

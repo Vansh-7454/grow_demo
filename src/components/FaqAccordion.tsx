@@ -35,7 +35,7 @@ export default function FaqAccordion({
             className={`border rounded-2xl overflow-hidden transition-all duration-200 ${
               isOpen
                 ? "border-[#FF3B40]/50 bg-white shadow-[0_8px_24px_rgba(41,24,23,0.06)]"
-                : "border-[#F0C9C5] bg-white hover:border-[#FF3B40]/40 shadow-[0_4px_14px_rgba(41,24,23,0.03)]"
+                : "border-[#F2CECA] bg-white hover:border-[#FF3B40]/40 shadow-[0_4px_14px_rgba(41,24,23,0.03)]"
             }`}
           >
             <h3>
@@ -45,11 +45,11 @@ export default function FaqAccordion({
                 onClick={() => toggleItem(faq.id)}
                 aria-expanded={isOpen}
                 aria-controls={contentId}
-                className="w-full min-h-[56px] px-6 py-4.5 text-left flex items-center justify-between gap-4 font-bold text-base md:text-lg text-[#291817] hover:text-[#FF3B40] focus-visible:outline-2 focus-visible:outline-[#FF3B40] transition-colors"
+                className="w-full min-h-[56px] px-6 py-4.5 text-left flex items-center justify-between gap-4 font-bold text-base md:text-lg text-[#291817] hover:text-[#FF3B40] focus-visible:outline-2 focus-visible:outline-[#FF3B40] transition-colors cursor-pointer"
               >
                 <span>{faq.question}</span>
                 <span
-                  className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
+                  className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
                     isOpen ? "bg-[#FF3B40] text-white" : "bg-[#FCEAE7] text-[#FF3B40]"
                   }`}
                   aria-hidden="true"
@@ -96,11 +96,11 @@ export default function FaqAccordion({
                 id={contentId}
                 role="region"
                 aria-labelledby={buttonId}
-                className="px-6 pb-6 pt-1 text-sm md:text-base text-[#796B69] leading-relaxed border-t border-[#FCEAE7]"
+                className="px-6 pb-6 pt-1 text-sm md:text-base text-[#806F6C] leading-relaxed border-t border-[#FCEAE7]"
               >
                 <p>{faq.answer}</p>
                 {!faq.isConfirmed && (
-                  <p className="mt-3 text-xs text-[#291817] font-semibold bg-[#FCEAE7] p-2.5 rounded-xl border border-[#F0C9C5]">
+                  <p className="mt-3 text-xs text-[#291817] font-semibold bg-[#FCEAE7] p-2.5 rounded-xl border border-[#F2CECA]">
                     Note: {faq.confirmationNote || "Studio confirmation pending"}
                   </p>
                 )}

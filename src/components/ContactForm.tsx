@@ -168,12 +168,12 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
   };
 
   return (
-    <div className="bg-white border border-[#F0C9C5] rounded-[28px] p-5 sm:p-7 md:p-9 shadow-[0_12px_36px_rgba(41,24,23,0.05)] w-full">
+    <div className="bg-white border border-[#F2CECA] rounded-[24px] p-5 sm:p-7 md:p-9 shadow-[0_12px_36px_rgba(41,24,23,0.05)] w-full">
       <div className="mb-6">
         <h3 className="text-xl md:text-2xl font-extrabold text-[#291817] tracking-tight">
           Request a Grooming Appointment
         </h3>
-        <p className="text-xs sm:text-sm text-[#796B69] mt-1.5 leading-relaxed">
+        <p className="text-xs sm:text-sm text-[#806F6C] mt-1.5 leading-relaxed">
           Fill in your pet&apos;s details below to initiate a direct appointment inquiry on WhatsApp.
         </p>
       </div>
@@ -200,7 +200,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
             className={`w-full min-h-[46px] px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border rounded-xl text-[#291817] focus-visible:outline-2 ${
               errors.fullName
                 ? "border-red-600 focus-visible:outline-red-600"
-                : "border-[#F0C9C5] focus-visible:outline-[#FF3B40]"
+                : "border-[#F2CECA] focus-visible:outline-[#FF3B40]"
             }`}
             placeholder="e.g. Priya Sharma"
           />
@@ -220,7 +220,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
             Mobile Number (10 Digits) <span className="text-[#FF3B40]">*</span>
           </label>
           <div className="relative">
-            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xs font-bold text-[#796B69]">
+            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xs font-bold text-[#806F6C]">
               +91
             </span>
             <input
@@ -237,7 +237,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
               className={`w-full min-h-[46px] pl-13 pr-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border rounded-xl text-[#291817] font-mono focus-visible:outline-2 ${
                 errors.phone
                   ? "border-red-600 focus-visible:outline-red-600"
-                  : "border-[#F0C9C5] focus-visible:outline-[#FF3B40]"
+                  : "border-[#F2CECA] focus-visible:outline-[#FF3B40]"
               }`}
               placeholder="9812345678"
             />
@@ -272,7 +272,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
             className={`w-full min-h-[46px] px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border rounded-xl text-[#291817] focus-visible:outline-2 ${
               errors.email
                 ? "border-red-600 focus-visible:outline-red-600"
-                : "border-[#F0C9C5] focus-visible:outline-[#FF3B40]"
+                : "border-[#F2CECA] focus-visible:outline-[#FF3B40]"
             }`}
             placeholder="priya@example.com"
           />
@@ -305,13 +305,13 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
               className={`w-full min-h-[46px] px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border rounded-xl text-[#291817] focus-visible:outline-2 ${
                 errors.petType
                   ? "border-red-600 focus-visible:outline-red-600"
-                  : "border-[#F0C9C5] focus-visible:outline-[#FF3B40]"
+                  : "border-[#F2CECA] focus-visible:outline-[#FF3B40]"
               }`}
             >
               <option value="">Select Pet...</option>
               <option value="Dog">Dog</option>
               <option value="Cat">Cat</option>
-              <option value="Both">Both Dog & Cat</option>
+              <option value="Both">Both Dog &amp; Cat</option>
             </select>
             {errors.petType && (
               <p className="text-xs text-red-600 mt-1 font-medium">
@@ -333,18 +333,18 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
               onChange={(e) =>
                 setFormData({ ...formData, service: e.target.value })
               }
-              className="w-full min-h-[46px] px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border border-[#F0C9C5] rounded-xl text-[#291817] focus-visible:outline-2 focus-visible:outline-[#FF3B40]"
+              className="w-full min-h-[46px] px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border border-[#F2CECA] rounded-xl text-[#291817] focus-visible:outline-2 focus-visible:outline-[#FF3B40]"
             >
-              <option value="Basic Bath & Hygiene">Basic Bath & Hygiene</option>
+              <option value="Basic Bath & Hygiene">Basic Bath &amp; Hygiene</option>
               <option value="Full Breed Styling & Groom">
-                Full Breed Styling & Groom
+                Full Breed Styling &amp; Groom
               </option>
               <option value="Medicated Tick & Flea Spa">
-                Medicated Tick & Flea Spa
+                Medicated Tick &amp; Flea Spa
               </option>
               <option value="Feline Comfort Bath">Feline Comfort Bath</option>
               <option value="Persian Cat De-Shedding & Groom">
-                Persian Cat De-Shedding & Groom
+                Persian Cat De-Shedding &amp; Groom
               </option>
               <option value="Cat Lion Cut / Summer Trim">
                 Cat Lion Cut / Summer Trim
@@ -370,7 +370,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
             onChange={(e) =>
               setFormData({ ...formData, message: e.target.value })
             }
-            className="w-full px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border border-[#F0C9C5] rounded-xl text-[#291817] focus-visible:outline-2 focus-visible:outline-[#FF3B40]"
+            className="w-full px-4 py-2.5 text-base sm:text-sm bg-[#FFF8F6] border border-[#F2CECA] rounded-xl text-[#291817] focus-visible:outline-2 focus-visible:outline-[#FF3B40]"
             placeholder="e.g. 2-year-old Golden Retriever, sensitive ears, friendly temperament..."
           />
           {errors.message && (
@@ -381,9 +381,9 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
         </div>
 
         {/* Transparency note as strictly mandated by Rule 16 */}
-        <div className="p-3.5 bg-[#FCEAE7]/50 border border-[#F0C9C5] rounded-xl text-xs text-[#796B69] leading-relaxed">
+        <div className="p-3.5 bg-[#FCEAE7]/50 border border-[#F2CECA] rounded-xl text-xs text-[#806F6C] leading-relaxed">
           <p className="font-bold text-[#291817] mb-0.5">
-            Privacy & Transmission Transparency:
+            Privacy &amp; Transmission Transparency:
           </p>
           <p>
             This website does not transmit or store personal data in a remote database or cloud service. Submitting this form prepares your details directly into a WhatsApp chat with our Gurugram studio for immediate coordination.
@@ -397,21 +397,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
             className="btn-primary w-full py-3.5 text-base font-bold shadow-md cursor-pointer flex items-center justify-center gap-2"
           >
             <span>Continue to WhatsApp Booking</span>
-            <svg
-              width={16}
-              height={16}
-              className="w-4 h-4 shrink-0"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
+            <span aria-hidden="true">→</span>
           </button>
         </div>
 

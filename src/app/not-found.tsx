@@ -9,7 +9,7 @@ export default function NotFound() {
   return (
     <div className="min-h-[60vh] flex items-center justify-center section-pad bg-[#FFF8F6] text-[#291817]">
       <div className="site-container max-w-lg text-center">
-        <div className="w-16 h-16 rounded-full bg-[#FCEAE7] text-[#FF3B40] mx-auto flex items-center justify-center font-extrabold text-xl mb-4 border border-[#F0C9C5] shadow-xs">
+        <div className="w-16 h-16 rounded-full bg-[#FCEAE7] text-[#FF3B40] mx-auto flex items-center justify-center font-extrabold text-xl mb-4 border border-[#F2CECA] shadow-2xs">
           404
         </div>
         <h1 className="heading-h2 mb-3">

@@ -26,7 +26,7 @@ export default function GalleryGrid() {
               className={`min-h-[44px] px-4 sm:px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 border cursor-pointer ${
                 isActive
                   ? "bg-[#FF3B40] text-white border-[#FF3B40] shadow-sm"
-                  : "bg-white text-[#796B69] border-[#F0C9C5] hover:text-[#FF3B40] hover:border-[#FF3B40] hover:bg-[#FFF8F6]"
+                  : "bg-white text-[#806F6C] border-[#F2CECA] hover:text-[#FF3B40] hover:border-[#FF3B40] hover:bg-[#FFF8F6]"
               }`}
             >
               {category === "All" ? "All Groomed Pets" : `${category} Only`}

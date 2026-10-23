@@ -8,7 +8,7 @@ interface Crumb {
 export default function Breadcrumbs({ items }: { items: Crumb[] }) {
   return (
     <nav aria-label="Breadcrumb" className="py-4">
-      <ol className="flex items-center space-x-2 text-xs md:text-sm text-[#796B69]">
+      <ol className="flex items-center space-x-2 text-xs md:text-sm text-[#806F6C]">
         <li>
           <Link
             href="/"
@@ -21,7 +21,7 @@ export default function Breadcrumbs({ items }: { items: Crumb[] }) {
           const isLast = index === items.length - 1;
           return (
             <li key={index} className="flex items-center space-x-2">
-              <span className="text-[#F0C9C5]" aria-hidden="true">
+              <span className="text-[#F2CECA]" aria-hidden="true">
                 /
               </span>
               {isLast || !item.href ? (

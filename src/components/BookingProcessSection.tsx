@@ -33,7 +33,7 @@ export default function BookingProcessSection() {
   ];
 
   return (
-    <section className="bg-[#FCEAE7]/70 border-y border-[#F0C9C5] section-pad">
+    <section className="bg-[#FCEAE7]/70 border-y border-[#F2CECA] section-pad">
       <div className="site-container">
         {/* Section Header */}
         <div className="max-w-[700px] mb-12 sm:mb-16">
@@ -53,7 +53,7 @@ export default function BookingProcessSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           {/* Left Column: Interactive Visual App/Booking Mockup */}
           <div className="lg:col-span-6 order-2 lg:order-1">
-            <div className="bg-[#FFF8F6] border border-[#F0C9C5] rounded-[32px] p-5 sm:p-7 shadow-[0_16px_36px_rgba(41,24,23,0.06)] relative overflow-hidden">
+            <div className="bg-[#FFF8F6] border border-[#F2CECA] rounded-[28px] p-5 sm:p-7 shadow-[0_16px_36px_rgba(41,24,23,0.06)] relative overflow-hidden">
               {/* Decorative mini starlet */}
               <div className="absolute top-4 right-5 text-[#FF3B40] text-sm select-none opacity-70" aria-hidden="true">
                 ✦
@@ -61,53 +61,53 @@ export default function BookingProcessSection() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* Screen Card 1: Address */}
-                <div className="bg-white border border-[#F0C9C5] rounded-2xl p-4 shadow-xs">
+                <div className="bg-white border border-[#F2CECA] rounded-2xl p-4 shadow-xs">
                   <div className="flex items-center justify-between text-xs font-bold text-[#291817] mb-2">
                     <span>📍 Studio Location</span>
                     <span className="text-[#FF3B40]">Active</span>
                   </div>
-                  <div className="bg-[#FFF8F6] p-2.5 rounded-xl border border-[#F0C9C5]/60 text-xs">
+                  <div className="bg-[#FFF8F6] p-2.5 rounded-xl border border-[#F2CECA]/60 text-xs">
                     <p className="font-bold text-[#291817]">Sector 54 Studio</p>
-                    <p className="text-[11px] text-[#796B69] mt-0.5">Golf Course Road, Gurugram</p>
+                    <p className="text-[11px] text-[#806F6C] mt-0.5">Golf Course Road, Gurugram</p>
                   </div>
                 </div>
 
                 {/* Screen Card 2: Package Preview */}
-                <div className="bg-white border border-[#F0C9C5] rounded-2xl p-4 shadow-xs">
+                <div className="bg-white border border-[#F2CECA] rounded-2xl p-4 shadow-xs">
                   <div className="flex items-center justify-between text-xs font-bold text-[#291817] mb-1.5">
                     <span>Spa Bath Preview</span>
                     <span className="text-xs font-mono font-bold text-[#FF3B40]">₹1,499</span>
                   </div>
-                  <p className="text-[11px] text-[#796B69] mb-2.5">60 mins · Hydro-bath & ears</p>
+                  <p className="text-[11px] text-[#806F6C] mb-2.5">60 mins · Hydro-bath &amp; ears</p>
                   <div className="w-full py-1.5 bg-[#FF3B40] text-white text-[11px] font-bold rounded-lg text-center">
                     1-on-1 Reserved
                   </div>
                 </div>
 
                 {/* Screen Card 3: Pet Selection */}
-                <div className="bg-white border border-[#F0C9C5] rounded-2xl p-4 shadow-xs">
+                <div className="bg-white border border-[#F2CECA] rounded-2xl p-4 shadow-xs">
                   <p className="text-xs font-bold text-[#291817] mb-2">Who are we pampering?</p>
                   <div className="grid grid-cols-2 gap-2 text-center text-xs">
                     <div className="p-2 rounded-xl bg-[#FCEAE7] border border-[#FF3B40]/40 font-bold text-[#FF3B40]">
                       🐶 Dog
                     </div>
-                    <div className="p-2 rounded-xl bg-[#FFF8F6] border border-[#F0C9C5] text-[#796B69] font-medium">
+                    <div className="p-2 rounded-xl bg-[#FFF8F6] border border-[#F2CECA] text-[#806F6C] font-medium">
                       🐱 Cat
                     </div>
                   </div>
                 </div>
 
                 {/* Screen Card 4: Date & Time */}
-                <div className="bg-white border border-[#F0C9C5] rounded-2xl p-4 shadow-xs">
+                <div className="bg-white border border-[#F2CECA] rounded-2xl p-4 shadow-xs">
                   <p className="text-xs font-bold text-[#291817] mb-2">Selected Time Slot</p>
-                  <div className="bg-[#FFF8F6] p-2 rounded-xl border border-[#F0C9C5]/60 text-xs text-center font-bold text-[#291817]">
+                  <div className="bg-[#FFF8F6] p-2 rounded-xl border border-[#F2CECA]/60 text-xs text-center font-bold text-[#291817]">
                     Tue – Sun · 10:00 AM – 7:30 PM
                   </div>
                 </div>
               </div>
 
               {/* Bottom Notification Strip */}
-              <div className="mt-4 pt-3 border-t border-[#F0C9C5] flex items-center justify-between text-xs text-[#796B69]">
+              <div className="mt-4 pt-3 border-t border-[#F2CECA] flex items-center justify-between text-xs text-[#806F6C]">
                 <span className="flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-[#FF3B40]" aria-hidden="true" />
                   <span className="font-semibold text-[#291817]">Zero Waiting Delays</span>
@@ -120,7 +120,7 @@ export default function BookingProcessSection() {
           {/* Right Column: Numbered Steps matching Screenshot 1 */}
           <div className="lg:col-span-6 space-y-6 sm:space-y-8 order-1 lg:order-2">
             {steps.map((step, idx) => (
-              <div key={idx} className="pb-6 sm:pb-8 border-b border-[#F0C9C5] last:border-b-0 last:pb-0">
+              <div key={idx} className="pb-6 sm:pb-8 border-b border-[#F2CECA] last:border-b-0 last:pb-0">
                 <div className="flex items-start gap-4">
                   {/* Circular step badge outline */}
                   <span className="w-9 h-9 rounded-full border-1.5 border-[#FF3B40] text-[#FF3B40] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 bg-white">
@@ -130,7 +130,7 @@ export default function BookingProcessSection() {
                     <h3 className="text-lg sm:text-xl font-bold text-[#291817] tracking-tight mb-1.5">
                       {step.title}
                     </h3>
-                    <p className="text-sm text-[#796B69] leading-relaxed">
+                    <p className="text-sm text-[#806F6C] leading-relaxed">
                       {step.description}
                     </p>
                   </div>

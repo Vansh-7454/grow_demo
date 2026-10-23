@@ -56,12 +56,12 @@ export default function HomePage() {
               </div>
 
               {/* Primary & Secondary Buttons */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 pt-3">
                 <a
                   href={whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="min-h-[48px] px-6 py-3.5 text-base font-semibold text-white bg-[#1E3A34] hover:bg-[#142723] rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm"
+                  className="min-h-[48px] px-5 sm:px-6 py-3 sm:py-3.5 text-sm sm:text-base font-semibold text-white bg-[#1E3A34] hover:bg-[#142723] rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm text-center"
                 >
                   <svg
                     width={20}
@@ -77,14 +77,14 @@ export default function HomePage() {
 
                 <Link
                   href="/dog-grooming"
-                  className="min-h-[48px] px-6 py-3.5 text-base font-semibold text-[#1E3A34] bg-white border border-[#CBD3CC] hover:bg-[#F2F4F0] rounded-lg transition-colors flex items-center justify-center"
+                  className="min-h-[48px] px-5 sm:px-6 py-3 sm:py-3.5 text-sm sm:text-base font-semibold text-[#1E3A34] bg-white border border-[#CBD3CC] hover:bg-[#F2F4F0] rounded-lg transition-colors flex items-center justify-center text-center"
                 >
                   <span>View Dog Packages</span>
                 </Link>
 
                 <Link
                   href="/cat-grooming"
-                  className="min-h-[48px] px-6 py-3.5 text-base font-semibold text-[#1E3A34] bg-white border border-[#CBD3CC] hover:bg-[#F2F4F0] rounded-lg transition-colors flex items-center justify-center"
+                  className="min-h-[48px] px-5 sm:px-6 py-3 sm:py-3.5 text-sm sm:text-base font-semibold text-[#1E3A34] bg-white border border-[#CBD3CC] hover:bg-[#F2F4F0] rounded-lg transition-colors flex items-center justify-center text-center"
                 >
                   <span>View Cat Packages</span>
                 </Link>
@@ -430,37 +430,37 @@ export default function HomePage() {
       {/* 6. Closing Contact Call-to-Action Band */}
       <section className="bg-[#FBFBF9] section-pad">
         <div className="site-container">
-          <div className="bg-[#EAF1ED] border border-[#CBD3CC] rounded-3xl p-8 sm:p-12 lg:p-16 text-center max-w-[900px] mx-auto shadow-sm">
+          <div className="bg-[#EAF1ED] border border-[#CBD3CC] rounded-3xl p-6 sm:p-10 lg:p-14 text-center max-w-[900px] mx-auto shadow-sm">
             <span className="text-xs font-bold uppercase tracking-wider text-[#D97706] block mb-2">
               Book Today in Gurugram
             </span>
-            <h2 className="heading-h2 text-[#1E3A34] mb-4">
+            <h2 className="heading-h2 text-[#1E3A34] mb-3">
               Schedule your pet&apos;s 1-on-1 grooming session.
             </h2>
-            <p className="body-large text-[#57635E] max-readable mx-auto mb-8">
+            <p className="body-large text-[#57635E] max-readable mx-auto mb-6 sm:mb-8">
               We operate strictly by appointment to ensure zero waiting time and zero stress for your pet. Send us a message on WhatsApp with your pet&apos;s breed and desired service.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-3 sm:gap-4">
               <a
                 href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="min-h-[48px] px-8 py-3.5 text-base font-semibold text-white bg-[#1E3A34] hover:bg-[#142723] rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm w-full sm:w-auto"
+                className="min-h-[48px] px-6 sm:px-8 py-3.5 text-sm sm:text-base font-semibold text-white bg-[#1E3A34] hover:bg-[#142723] rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm w-full sm:w-auto text-center"
               >
                 <span>Chat on WhatsApp</span>
               </a>
 
               <a
                 href={`tel:${siteContent.business.phoneRaw}`}
-                className="min-h-[48px] px-8 py-3.5 text-base font-semibold text-[#1E3A34] bg-white border border-[#CBD3CC] hover:bg-[#F2F4F0] rounded-lg transition-colors flex items-center justify-center w-full sm:w-auto"
+                className="min-h-[48px] px-6 sm:px-8 py-3.5 text-sm sm:text-base font-semibold text-[#1E3A34] bg-white border border-[#CBD3CC] hover:bg-[#F2F4F0] rounded-lg transition-colors flex items-center justify-center w-full sm:w-auto text-center"
               >
                 <span>Call Studio: {siteContent.business.phoneDisplay}</span>
               </a>
 
               <Link
                 href="/contact"
-                className="min-h-[48px] px-6 py-3.5 text-base font-semibold text-[#57635E] hover:text-[#1E3A34] transition-colors flex items-center justify-center w-full sm:w-auto"
+                className="min-h-[48px] px-5 sm:px-6 py-3.5 text-sm sm:text-base font-semibold text-[#57635E] hover:text-[#1E3A34] transition-colors flex items-center justify-center w-full sm:w-auto text-center"
               >
                 <span>View Studio Address & Hours →</span>
               </Link>

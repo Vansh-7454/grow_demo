@@ -36,7 +36,7 @@ export default function ContactPage() {
             {/* Left: Studio Info, Hours & Direct Conversion (Col 1-5) */}
             <div className="lg:col-span-5 space-y-8">
               {/* Direct Quick Action Buttons */}
-              <div className="p-6 bg-white border border-[#CBD3CC] rounded-2xl shadow-[0_4px_20px_-2px_rgba(30,58,52,0.05)] space-y-3">
+              <div className="p-4 sm:p-6 bg-white border border-[#CBD3CC] rounded-2xl shadow-[0_4px_20px_-2px_rgba(30,58,52,0.05)] space-y-3">
                 <span className="text-xs font-bold uppercase tracking-wider text-[#1E3A34] block">
                   Instant Contact
                 </span>
@@ -113,7 +113,7 @@ export default function ContactPage() {
               </div>
 
               {/* Studio Details Card */}
-              <div className="p-6 bg-white border border-[#CBD3CC] rounded-2xl shadow-[0_4px_20px_-2px_rgba(30,58,52,0.05)] space-y-5 text-sm text-[#1A201E]">
+              <div className="p-4 sm:p-6 bg-white border border-[#CBD3CC] rounded-2xl shadow-[0_4px_20px_-2px_rgba(30,58,52,0.05)] space-y-5 text-sm text-[#1A201E]">
                 <div>
                   <h3 className="font-bold text-[#1E3A34] text-base mb-1">
                     Studio Location

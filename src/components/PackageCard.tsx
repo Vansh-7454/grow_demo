@@ -6,7 +6,7 @@ export default function PackageCard({ pkg }: { pkg: ServicePackage }) {
   )}`;
 
   return (
-    <div className="bg-white border border-[#CBD3CC] rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-[0_4px_20px_-2px_rgba(30,58,52,0.05)] hover:border-[#1E3A34] transition-colors relative">
+    <div className="bg-white border border-[#CBD3CC] rounded-2xl p-4 sm:p-6 md:p-8 flex flex-col justify-between shadow-[0_4px_20px_-2px_rgba(30,58,52,0.05)] hover:border-[#1E3A34] transition-colors relative">
       {pkg.badge && (
         <span className="absolute -top-3 left-6 bg-[#D97706] text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
           {pkg.badge}
@@ -15,7 +15,7 @@ export default function PackageCard({ pkg }: { pkg: ServicePackage }) {
 
       <div>
         <div className="mb-4">
-          <h3 className="text-2xl font-bold text-[#1E3A34] tracking-tight">
+          <h3 className="text-xl sm:text-2xl font-bold text-[#1E3A34] tracking-tight">
             {pkg.name}
           </h3>
           <p className="text-xs font-semibold text-[#57635E] uppercase tracking-wide mt-1">
@@ -28,7 +28,7 @@ export default function PackageCard({ pkg }: { pkg: ServicePackage }) {
         </p>
 
         {/* Pricing & Size Breakdown */}
-        <div className="bg-[#F2F4F0] p-4 rounded-xl mb-6 space-y-2 border border-[#E2E6E2]">
+        <div className="bg-[#F2F4F0] p-3.5 sm:p-4 rounded-xl mb-6 space-y-2 border border-[#E2E6E2]">
           <span className="text-xs font-bold text-[#1E3A34] uppercase tracking-wider block">
             Pricing by Pet Size / Coat
           </span>
@@ -36,7 +36,7 @@ export default function PackageCard({ pkg }: { pkg: ServicePackage }) {
             {pkg.tiers.map((tier, idx) => (
               <div
                 key={idx}
-                className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs py-1 border-b border-[#E2E6E2] last:border-none gap-1"
+                className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs py-1 border-b border-[#E2E6E2] last:border-none gap-1 sm:gap-2"
               >
                 <div>
                   <span className="font-semibold text-[#1A201E]">
@@ -46,8 +46,8 @@ export default function PackageCard({ pkg }: { pkg: ServicePackage }) {
                     {tier.description}
                   </span>
                 </div>
-                <div className="text-right">
-                  <span className="inline-block px-2 py-0.5 bg-white border border-[#CBD3CC] rounded font-mono font-medium text-[#1E3A34]">
+                <div className="text-left sm:text-right pt-0.5 sm:pt-0">
+                  <span className="inline-block px-2 py-0.5 bg-white border border-[#CBD3CC] rounded font-mono font-medium text-[#1E3A34] text-xs">
                     {tier.pricePlaceholder}
                   </span>
                 </div>

@@ -168,17 +168,17 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
   };
 
   return (
-    <div className="bg-white border border-[#CBD3CC] rounded-2xl p-6 sm:p-8 shadow-[0_4px_20px_-2px_rgba(30,58,52,0.05)]">
+    <div className="bg-white border border-[#CBD3CC] rounded-2xl p-4 sm:p-6 md:p-8 shadow-[0_4px_20px_-2px_rgba(30,58,52,0.05)] w-full">
       <div className="mb-6">
         <h3 className="text-xl md:text-2xl font-bold text-[#1E3A34] tracking-tight">
           Request a Grooming Appointment
         </h3>
-        <p className="text-sm text-[#57635E] mt-1 leading-relaxed">
+        <p className="text-xs sm:text-sm text-[#57635E] mt-1 leading-relaxed">
           Fill in your pet&apos;s details below to initiate a direct appointment inquiry on WhatsApp.
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} noValidate className="space-y-5">
+      <form onSubmit={handleSubmit} noValidate className="space-y-4 sm:space-y-5">
         {/* Full Name */}
         <div>
           <label
@@ -197,7 +197,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
             onChange={(e) =>
               setFormData({ ...formData, fullName: e.target.value })
             }
-            className={`w-full min-h-[44px] px-3.5 py-2.5 text-sm bg-[#FBFBF9] border rounded-lg text-[#1A201E] focus-visible:outline-2 ${
+            className={`w-full min-h-[44px] px-3.5 py-2.5 text-base sm:text-sm bg-[#FBFBF9] border rounded-lg text-[#1A201E] focus-visible:outline-2 ${
               errors.fullName
                 ? "border-red-600 focus-visible:outline-red-600"
                 : "border-[#CBD3CC] focus-visible:outline-[#1E3A34]"
@@ -234,7 +234,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
               onChange={(e) =>
                 setFormData({ ...formData, phone: e.target.value })
               }
-              className={`w-full min-h-[44px] pl-12 pr-3.5 py-2.5 text-sm bg-[#FBFBF9] border rounded-lg text-[#1A201E] font-mono focus-visible:outline-2 ${
+              className={`w-full min-h-[44px] pl-12 pr-3.5 py-2.5 text-base sm:text-sm bg-[#FBFBF9] border rounded-lg text-[#1A201E] font-mono focus-visible:outline-2 ${
                 errors.phone
                   ? "border-red-600 focus-visible:outline-red-600"
                   : "border-[#CBD3CC] focus-visible:outline-[#1E3A34]"
@@ -269,7 +269,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
             }
-            className={`w-full min-h-[44px] px-3.5 py-2.5 text-sm bg-[#FBFBF9] border rounded-lg text-[#1A201E] focus-visible:outline-2 ${
+            className={`w-full min-h-[44px] px-3.5 py-2.5 text-base sm:text-sm bg-[#FBFBF9] border rounded-lg text-[#1A201E] focus-visible:outline-2 ${
               errors.email
                 ? "border-red-600 focus-visible:outline-red-600"
                 : "border-[#CBD3CC] focus-visible:outline-[#1E3A34]"
@@ -302,7 +302,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
                   petType: e.target.value as FormState["petType"],
                 })
               }
-              className={`w-full min-h-[44px] px-3.5 py-2.5 text-sm bg-[#FBFBF9] border rounded-lg text-[#1A201E] focus-visible:outline-2 ${
+              className={`w-full min-h-[44px] px-3.5 py-2.5 text-base sm:text-sm bg-[#FBFBF9] border rounded-lg text-[#1A201E] focus-visible:outline-2 ${
                 errors.petType
                   ? "border-red-600 focus-visible:outline-red-600"
                   : "border-[#CBD3CC] focus-visible:outline-[#1E3A34]"
@@ -333,7 +333,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
               onChange={(e) =>
                 setFormData({ ...formData, service: e.target.value })
               }
-              className="w-full min-h-[44px] px-3.5 py-2.5 text-sm bg-[#FBFBF9] border border-[#CBD3CC] rounded-lg text-[#1A201E] focus-visible:outline-2 focus-visible:outline-[#1E3A34]"
+              className="w-full min-h-[44px] px-3.5 py-2.5 text-base sm:text-sm bg-[#FBFBF9] border border-[#CBD3CC] rounded-lg text-[#1A201E] focus-visible:outline-2 focus-visible:outline-[#1E3A34]"
             >
               <option value="Basic Bath & Hygiene">Basic Bath & Hygiene</option>
               <option value="Full Breed Styling & Groom">
@@ -370,7 +370,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
             onChange={(e) =>
               setFormData({ ...formData, message: e.target.value })
             }
-            className="w-full px-3.5 py-2.5 text-sm bg-[#FBFBF9] border border-[#CBD3CC] rounded-lg text-[#1A201E] focus-visible:outline-2 focus-visible:outline-[#1E3A34]"
+            className="w-full px-3.5 py-2.5 text-base sm:text-sm bg-[#FBFBF9] border border-[#CBD3CC] rounded-lg text-[#1A201E] focus-visible:outline-2 focus-visible:outline-[#1E3A34]"
             placeholder="e.g. 2-year-old Golden Retriever, sensitive ears, friendly temperament..."
           />
           {errors.message && (
@@ -394,7 +394,7 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
         <div>
           <button
             type="submit"
-            className="w-full min-h-[48px] px-6 py-3 text-base font-semibold text-white bg-[#1E3A34] hover:bg-[#142723] rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm"
+            className="w-full min-h-[48px] px-6 py-3 text-sm sm:text-base font-semibold text-white bg-[#1E3A34] hover:bg-[#142723] rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm"
           >
             <span>Continue to WhatsApp Booking</span>
             <svg
@@ -416,17 +416,18 @@ ${sanitizedMessage ? `Notes: ${sanitizedMessage}` : ""}`;
         </div>
 
         {preparedWhatsAppUrl && (
-          <div className="mt-4 p-3 bg-[#EAF1ED] border border-[#1E3A34] rounded-lg text-xs text-[#1E3A34] flex items-center justify-between">
+          <div className="mt-4 p-3 bg-[#EAF1ED] border border-[#1E3A34] rounded-lg text-xs text-[#1E3A34] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
             <span>
-              If WhatsApp did not automatically open, tap the link below:
+              If WhatsApp did not automatically open, tap the link:
             </span>
             <a
               href={preparedWhatsAppUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-bold underline ml-2"
+              className="font-bold underline shrink-0 inline-flex items-center gap-1"
             >
-              Open WhatsApp Now →
+              <span>Open WhatsApp Now</span>
+              <span>→</span>
             </a>
           </div>
         )}

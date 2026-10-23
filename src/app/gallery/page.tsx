@@ -38,7 +38,7 @@ export default function GalleryPage() {
       {/* Photo Submission Guide for Client (Per Rule 2: "list exactly which photos to send (shot description and size)") */}
       <section className="bg-[#F2F4F0] border-t border-[#E2E6E2] section-pad">
         <div className="site-container max-w-[950px] mx-auto">
-          <div className="bg-white border border-[#CBD3CC] rounded-2xl p-8 shadow-[0_4px_20px_-2px_rgba(30,58,52,0.05)]">
+          <div className="bg-white border border-[#CBD3CC] rounded-2xl p-4 sm:p-6 md:p-8 shadow-[0_4px_20px_-2px_rgba(30,58,52,0.05)]">
             <div className="mb-6">
               <span className="text-xs font-bold uppercase tracking-wider text-[#D97706] block mb-1">
                 Client Content Checklist
@@ -46,13 +46,13 @@ export default function GalleryPage() {
               <h2 className="heading-h2 text-[#1E3A34] mb-2">
                 Photos to submit for your live gallery.
               </h2>
-              <p className="text-sm text-[#57635E] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#57635E] leading-relaxed">
                 As per our studio transparency policy, we do not use artificial stock imagery or pretend another groomer&apos;s work is ours. Please provide high-resolution photos of pets groomed at your studio following the checklist below.
               </p>
             </div>
 
-            <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs md:text-sm border-collapse">
+            <div className="overflow-x-auto -mx-1 sm:mx-0">
+              <table className="w-full text-left text-xs md:text-sm border-collapse min-w-[500px]">
                 <thead>
                   <tr className="border-b border-[#CBD3CC] bg-[#FBFBF9] text-[#1E3A34]">
                     <th className="py-3 px-3 font-semibold">Slot #</th>

@@ -67,8 +67,8 @@ export default function RootLayout({
         {/* Global Navigation Header */}
         <Header />
 
-        {/* Main Content Area - pb-20 on mobile ensures sticky bottom bar never overlaps page content */}
-        <main id="main-content" className="flex-1 pb-20 md:pb-0">
+        {/* Main Content Area - pb-24 on mobile/tablet ensures sticky bottom bar never overlaps page content */}
+        <main id="main-content" className="flex-1 pb-24 lg:pb-0">
           {children}
         </main>
 

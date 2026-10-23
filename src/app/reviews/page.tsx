@@ -31,16 +31,16 @@ export default function ReviewsPage() {
       {/* Google Business Profile Rating Banner */}
       <section className="border-b border-[#CBD3CC] bg-[#EAF1ED] py-10">
         <div className="site-container">
-          <div className="bg-white border border-[#CBD3CC] rounded-2xl p-6 sm:p-8 max-w-[950px] mx-auto shadow-[0_4px_20px_-2px_rgba(30,58,52,0.05)] flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-4 text-center md:text-left">
-              <div className="w-16 h-16 rounded-xl bg-[#1E3A34] text-white flex flex-col items-center justify-center font-bold">
+          <div className="bg-white border border-[#CBD3CC] rounded-2xl p-5 sm:p-8 max-w-[950px] mx-auto shadow-[0_4px_20px_-2px_rgba(30,58,52,0.05)] flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start md:items-center gap-4 text-center sm:text-left">
+              <div className="w-16 h-16 rounded-xl bg-[#1E3A34] text-white flex flex-col items-center justify-center font-bold shrink-0">
                 <span className="text-xl leading-none">4.9</span>
                 <span className="text-[10px] uppercase text-[#FEF3C7] tracking-wider mt-0.5">
                   Stars
                 </span>
               </div>
               <div>
-                <div className="flex items-center gap-1 text-[#D97706] text-sm">
+                <div className="flex items-center justify-center sm:justify-start gap-1 text-[#D97706] text-sm">
                   <span>★★★★★</span>
                   <span className="text-xs font-semibold text-[#1E3A34] ml-1">
                     Google Maps Rating

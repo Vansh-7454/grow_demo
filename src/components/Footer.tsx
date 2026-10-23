@@ -10,12 +10,12 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#142723] text-[#F2F4F0] border-t border-[#1E3A34]">
-      <div className="site-container py-16 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
+      <div className="site-container py-12 sm:py-16 md:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8">
           {/* Brand & Studio Description (Col 1-5) */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-11 h-11 rounded-2xl overflow-hidden shadow-xs shrink-0">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl overflow-hidden shadow-xs shrink-0">
                 <Image
                   src="/images/logo.svg"
                   alt="Paws & Claws Logo"
@@ -25,7 +25,7 @@ export default function Footer() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl font-bold tracking-tight text-white leading-tight">
+                <span className="text-xl sm:text-2xl font-bold tracking-tight text-white leading-tight">
                   {siteContent.business.name}
                 </span>
                 <span className="text-xs text-[#CBD3CC] font-medium">

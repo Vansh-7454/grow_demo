@@ -6,12 +6,91 @@ export default function BookingProcessSection() {
     siteContent.business.whatsappPrefill
   )}`;
 
+  const featuredPacks = [
+    {
+      id: "dog-bath",
+      title: "Bath & Hygiene Spa",
+      targetPet: "Dog Suite",
+      petIcon: "🐶",
+      badge: "Essential Care",
+      price: "From ₹999",
+      duration: "45–60 mins",
+      image: "/images/indie-dog-bath.jpg",
+      alt: "Dog gentle hydro-bath at Paws & Claws Gurugram",
+      highlights: [
+        "Warm organic hydro-bath",
+        "Gentle blow dry & fluff",
+        "Nail trim & paw balm",
+        "Ear hygiene & sanitary trim",
+      ],
+      whatsappPrefill:
+        "Hello Paws & Claws, I want to book the 'Bath & Hygiene Spa' (From ₹999) for my dog in Gurugram.",
+    },
+    {
+      id: "dog-groom",
+      title: "Breed Scissor Styling",
+      targetPet: "Dog Suite",
+      petIcon: "🐶",
+      badge: "Most Popular",
+      price: "From ₹1,599",
+      duration: "75–90 mins",
+      image: "/images/shih-tzu-cut.jpg",
+      alt: "Shih Tzu breed scissor cut at Paws & Claws Gurugram",
+      highlights: [
+        "Custom scissor haircut",
+        "Hydro-bath & conditioning",
+        "Teddy bear face shaping",
+        "Sanitary clearing & nail filing",
+      ],
+      whatsappPrefill:
+        "Hello Paws & Claws, I want to book the 'Breed Scissor Styling' (From ₹1,599) for my dog in Gurugram.",
+    },
+    {
+      id: "cat-bath",
+      title: "Feline Comfort Bath",
+      targetPet: "Cat Suite",
+      petIcon: "🐱",
+      badge: "Quiet Suite",
+      price: "From ₹1,499",
+      duration: "45–60 mins",
+      image: "/images/cat-calm-dry-bath.jpg",
+      alt: "Cat quiet room soothing bath at Paws & Claws Gurugram",
+      highlights: [
+        "Waterless or warm hydro-wash",
+        "Gentle face & ear cleanse",
+        "Feline nail tip clip",
+        "Warm towel de-stress wrap",
+      ],
+      whatsappPrefill:
+        "Hello Paws & Claws, I want to book the 'Feline Comfort Bath' (From ₹1,499) for my cat in Gurugram.",
+    },
+    {
+      id: "cat-deshed",
+      title: "Persian De-Shedding",
+      targetPet: "Cat Suite",
+      petIcon: "🐱",
+      badge: "Specialized",
+      price: "From ₹2,199",
+      duration: "60–90 mins",
+      image: "/images/cat-grooming-hero.jpg",
+      alt: "Persian cat de-matting and styling at Paws & Claws Gurugram",
+      highlights: [
+        "Deep tangle & mat removal",
+        "Undercoat thinning & brush",
+        "Summer trim / Lion cut option",
+        "Chamomile soothing mist",
+      ],
+      whatsappPrefill:
+        "Hello Paws & Claws, I want to book the 'Persian De-Shedding' (From ₹2,199) for my cat in Gurugram.",
+    },
+  ];
+
   const steps = [
     {
       number: "01",
-      title: "Choose Your Service",
+      title: "Choose Your Service Pack",
       description:
-        "Explore our gentle canine hydro-baths, breed scissor haircuts, or feline quiet room treatments.",
+        "Select your companion's ideal pack—from warm canine hydro-baths to specialized feline de-shedding.",
     },
     {
       number: "02",
@@ -21,9 +100,9 @@ export default function BookingProcessSection() {
     },
     {
       number: "03",
-      title: "Select a Convenient Time",
+      title: "Reserve a 1-on-1 Slot",
       description:
-        "Reserve a dedicated 1-on-1 slot with zero overlapping dogs, zero waiting cages, and prompt WhatsApp pickup alerts.",
+        "Lock in an individual time slot with zero overlapping dogs, zero waiting cages, and prompt WhatsApp pickup alerts.",
     },
     {
       number: "04",
@@ -52,7 +131,7 @@ export default function BookingProcessSection() {
 
         {/* 2-Column Layout matching Woofly Aesthetic */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          {/* Left Column: Ultra-Premium App Preview Cards Deck */}
+          {/* Left Column: 4 Premium Service Pack Cards (2x2 Grid) */}
           <div className="lg:col-span-6 order-2 lg:order-1">
             <div className="relative">
               {/* Soft decorative background ambient aura */}
@@ -61,209 +140,80 @@ export default function BookingProcessSection() {
                 aria-hidden="true"
               />
 
+              {/* 4 Premium Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-                {/* Mobile Screen Card 1: Studio Address & Photo */}
-                <div className="bg-white border border-[#F2CECA] rounded-[24px] p-4 sm:p-5 shadow-[0_10px_28px_rgba(41,24,23,0.05)] flex flex-col justify-between hover:border-[#DE1B54]/60 transition-colors">
-                  <div>
-                    <div className="flex items-center justify-between text-xs font-bold text-[#291817] pb-2.5 mb-2.5 border-b border-[#F2CECA]/50">
-                      <span className="flex items-center gap-1.5 text-[#291817]">
-                        <span className="text-xs text-[#806F6C]">←</span>
-                        <span>Studio Location</span>
-                      </span>
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#DE1B54] bg-[#FCEAE7] px-2 py-0.5 rounded-full flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                        <span>Open</span>
-                      </span>
-                    </div>
-
-                    {/* Studio Real Photo */}
-                    <div className="relative aspect-[16/9] rounded-xl overflow-hidden mb-2.5 border border-[#F2CECA] bg-[#FCEAE7]">
-                      <Image
-                        src="/images/studio-hero.jpg"
-                        alt="Paws & Claws Pet Grooming Studio Gurugram"
-                        fill
-                        sizes="(max-width: 640px) 100vw, 220px"
-                        className="object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
-                      <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between text-white text-[10px] font-bold">
-                        <span>📍 Sector 54 Studio</span>
-                        <span className="bg-[#291817]/80 backdrop-blur-xs px-2 py-0.5 rounded-md text-[9px] font-normal">
-                          Golf Course Rd
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-1.5 text-[10px] text-[#806F6C]">
-                      <div className="bg-[#FFF8F6] p-1.5 rounded-lg border border-[#F2CECA]/60 text-center font-medium">
-                        🚇 Near Metro 54
-                      </div>
-                      <div className="bg-[#FFF8F6] p-1.5 rounded-lg border border-[#F2CECA]/60 text-center font-medium text-[#DE1B54]">
-                        🅿️ Free Parking
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="pt-2.5 mt-2.5 border-t border-[#F2CECA]/50 flex items-center justify-between text-[10px] text-[#806F6C]">
-                    <span className="font-semibold text-[#291817]">1-on-1 Studio</span>
-                    <span className="text-[#DE1B54] font-bold">Zero Cage Stays</span>
-                  </div>
-                </div>
-
-                {/* Mobile Screen Card 2: Package Preview with Photo */}
-                <div className="bg-white border border-[#F2CECA] rounded-[24px] p-4 sm:p-5 shadow-[0_10px_28px_rgba(41,24,23,0.05)] flex flex-col justify-between hover:border-[#DE1B54]/60 transition-colors">
-                  <div>
-                    <div className="flex items-center justify-between text-xs font-bold text-[#291817] pb-2.5 mb-2.5 border-b border-[#F2CECA]/50">
-                      <span className="flex items-center gap-1.5 text-[#291817]">
-                        <span className="text-xs text-[#806F6C]">←</span>
-                        <span>Package Preview</span>
-                      </span>
-                      <span className="text-xs font-mono font-bold text-[#DE1B54]">From ₹999</span>
-                    </div>
-
-                    {/* Mini Pet Photo preview */}
-                    <div className="relative aspect-[16/9] rounded-xl overflow-hidden mb-2.5 border border-[#F2CECA] bg-[#FCEAE7]">
-                      <Image
-                        src="/images/shih-tzu-cut.jpg"
-                        alt="Signature Grooming Preview"
-                        fill
-                        sizes="(max-width: 640px) 100vw, 220px"
-                        className="object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
-                      <div className="absolute bottom-2 left-2 bg-[#291817]/75 backdrop-blur-xs text-white text-[10px] font-semibold px-2 py-0.5 rounded-md">
-                        Spa Hydro-Bath &amp; Styling
-                      </div>
-                    </div>
-
-                    <div className="flex items-center justify-between text-[11px] text-[#806F6C] mb-2">
-                      <span className="font-semibold text-[#291817]">60 mins · Dedicated</span>
-                      <span className="text-[#DE1B54] font-bold">Organic Wash</span>
-                    </div>
-                  </div>
-
-                  <div className="w-full py-2 bg-[#DE1B54] text-white text-xs font-bold rounded-xl text-center shadow-xs">
-                    Reserved 1-on-1 Slot ✓
-                  </div>
-                </div>
-
-                {/* Mobile Screen Card 3: Who are we pampering? with REAL PET PHOTOS */}
-                <div className="bg-white border border-[#F2CECA] rounded-[24px] p-4 sm:p-5 shadow-[0_10px_28px_rgba(41,24,23,0.05)] flex flex-col justify-between hover:border-[#DE1B54]/60 transition-colors">
-                  <div>
-                    <div className="flex items-center justify-between text-xs font-bold text-[#291817] pb-2.5 mb-2.5 border-b border-[#F2CECA]/50">
-                      <span className="flex items-center gap-1.5 text-[#291817]">
-                        <span className="text-xs text-[#806F6C]">←</span>
-                        <span>Who are we pampering?</span>
-                      </span>
-                      <span className="text-[10px] font-mono text-[#DE1B54] font-bold">Step 2/4</span>
-                    </div>
-
-                    {/* Pet Cards with REAL PHOTOS instead of generic emojis */}
-                    <div className="grid grid-cols-2 gap-2.5 mb-2.5">
-                      {/* Dog Profile */}
-                      <div className="p-2.5 rounded-2xl bg-[#FCEAE7] border-2 border-[#DE1B54] text-center shadow-2xs">
-                        <div className="relative w-11 h-11 mx-auto mb-1.5 rounded-xl overflow-hidden border border-[#DE1B54]/30">
+                {featuredPacks.map((pack) => {
+                  const packWaUrl = `https://wa.me/${siteContent.business.whatsappRaw}?text=${encodeURIComponent(
+                    pack.whatsappPrefill
+                  )}`;
+                  return (
+                    <div
+                      key={pack.id}
+                      className="bg-white border border-[#F2CECA] rounded-[24px] overflow-hidden p-4 sm:p-4.5 flex flex-col justify-between shadow-[0_8px_24px_rgba(41,24,23,0.04)] hover:border-[#DE1B54] hover:shadow-[0_12px_32px_rgba(41,24,23,0.08)] transition-all duration-300 group"
+                    >
+                      <div>
+                        {/* Photo Banner with Badges */}
+                        <div className="relative aspect-[16/10] rounded-2xl overflow-hidden mb-3 border border-[#F2CECA] bg-[#FCEAE7]">
                           <Image
-                            src="/images/indie-dog-bath.jpg"
-                            alt="Dog Grooming Suite"
+                            src={pack.image}
+                            alt={pack.alt}
                             fill
-                            sizes="48px"
-                            className="object-cover"
+                            sizes="(max-width: 640px) 100vw, 240px"
+                            className="object-cover group-hover:scale-105 transition-transform duration-500"
                           />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+
+                          {/* Top Badges */}
+                          <div className="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-xs text-[#291817] text-[10px] font-extrabold px-2.5 py-1 rounded-full border border-white/60 shadow-xs flex items-center gap-1">
+                            <span>{pack.petIcon}</span>
+                            <span>{pack.targetPet}</span>
+                          </div>
+
+                          <div className="absolute top-2.5 right-2.5 bg-[#DE1B54] text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-xs">
+                            {pack.badge}
+                          </div>
+
+                          {/* Duration Badge on Photo */}
+                          <div className="absolute bottom-2 left-2.5 text-white text-[10px] font-semibold drop-shadow-sm flex items-center gap-1">
+                            <span>⏱️</span>
+                            <span>{pack.duration}</span>
+                          </div>
                         </div>
-                        <p className="text-xs font-extrabold text-[#291817]">Dog Suite</p>
-                        <p className="text-[10px] text-[#DE1B54] font-bold">Active Select ✓</p>
-                      </div>
 
-                      {/* Cat Profile */}
-                      <div className="p-2.5 rounded-2xl bg-[#FFF8F6] border border-[#F2CECA] text-center hover:border-[#DE1B54]/40 transition-colors">
-                        <div className="relative w-11 h-11 mx-auto mb-1.5 rounded-xl overflow-hidden border border-[#F2CECA]">
-                          <Image
-                            src="/images/cat-calm-dry-bath.jpg"
-                            alt="Cat Grooming Suite"
-                            fill
-                            sizes="48px"
-                            className="object-cover"
-                          />
+                        {/* Title & Starting Price */}
+                        <div className="flex items-baseline justify-between mb-2">
+                          <h3 className="font-extrabold text-[#291817] text-sm tracking-tight group-hover:text-[#DE1B54] transition-colors">
+                            {pack.title}
+                          </h3>
+                          <span className="text-xs font-mono font-black text-[#DE1B54] shrink-0 ml-2">
+                            {pack.price}
+                          </span>
                         </div>
-                        <p className="text-xs font-bold text-[#806F6C]">Cat Suite</p>
-                        <p className="text-[10px] text-[#806F6C]">Quiet Room</p>
+
+                        {/* Inclusions List */}
+                        <ul className="space-y-1 mb-3.5 text-[11px] text-[#806F6C]">
+                          {pack.highlights.map((h, i) => (
+                            <li key={i} className="flex items-center gap-1.5">
+                              <span className="text-[#DE1B54] font-bold text-[10px]">✓</span>
+                              <span className="truncate">{h}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
+
+                      {/* Action Button */}
+                      <a
+                        href={packWaUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full py-2 px-3 text-xs font-bold bg-[#FFF8F6] text-[#291817] border border-[#F2CECA] group-hover:bg-[#DE1B54] group-hover:text-white group-hover:border-[#DE1B54] rounded-xl text-center transition-all duration-200 flex items-center justify-center gap-1.5 shadow-2xs min-h-[38px]"
+                      >
+                        <span>Book on WhatsApp</span>
+                        <span aria-hidden="true" className="text-xs">→</span>
+                      </a>
                     </div>
-
-                    <p className="text-[10px] text-[#806F6C] leading-snug">
-                      Breed &amp; temperament confirmed on WhatsApp before appointment.
-                    </p>
-                  </div>
-
-                  <div className="pt-2.5 mt-2.5 border-t border-[#F2CECA]/50 flex items-center justify-between text-[10px] text-[#806F6C]">
-                    <span>Temperament First</span>
-                    <span className="font-bold text-[#DE1B54]">No Overlapping Pets</span>
-                  </div>
-                </div>
-
-                {/* Mobile Screen Card 4: Date & Time Picker with Groomer Photo */}
-                <div className="bg-white border border-[#F2CECA] rounded-[24px] p-4 sm:p-5 shadow-[0_10px_28px_rgba(41,24,23,0.05)] flex flex-col justify-between hover:border-[#DE1B54]/60 transition-colors">
-                  <div>
-                    <div className="flex items-center justify-between text-xs font-bold text-[#291817] pb-2.5 mb-2.5 border-b border-[#F2CECA]/50">
-                      <span className="flex items-center gap-1.5 text-[#291817]">
-                        <span className="text-xs text-[#806F6C]">←</span>
-                        <span>Choose Date &amp; Time</span>
-                      </span>
-                      <span className="text-[10px] font-mono text-[#806F6C]">Step 3/4</span>
-                    </div>
-
-                    {/* Dedicated Stylist Match Preview */}
-                    <div className="flex items-center gap-2.5 p-2 bg-[#FFF8F6] rounded-xl border border-[#F2CECA]/70 mb-2.5">
-                      <div className="relative w-9 h-9 rounded-lg overflow-hidden shrink-0 border border-[#F2CECA]">
-                        <Image
-                          src="/images/about-pet-story.jpg"
-                          alt="Dedicated Grooming Stylist"
-                          fill
-                          sizes="36px"
-                          className="object-cover"
-                        />
-                      </div>
-                      <div className="min-w-0 flex-1">
-                        <p className="text-[11px] font-bold text-[#291817] truncate">
-                          1-on-1 Stylist Assured
-                        </p>
-                        <p className="text-[10px] text-emerald-700 font-semibold flex items-center gap-1">
-                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                          <span>Slots Open Today</span>
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Date Pills */}
-                    <div className="flex items-center gap-1.5 mb-2">
-                      <span className="flex-1 py-1 text-center text-[10px] font-bold rounded-lg bg-[#DE1B54] text-white shadow-2xs">
-                        Today
-                      </span>
-                      <span className="flex-1 py-1 text-center text-[10px] font-semibold rounded-lg bg-[#FFF8F6] border border-[#F2CECA] text-[#291817]">
-                        Tomorrow
-                      </span>
-                      <span className="flex-1 py-1 text-center text-[10px] font-semibold rounded-lg bg-[#FFF8F6] border border-[#F2CECA] text-[#806F6C]">
-                        Weekend
-                      </span>
-                    </div>
-
-                    {/* Time chips */}
-                    <div className="grid grid-cols-2 gap-1.5">
-                      <div className="py-1 px-2 bg-[#FCEAE7] border border-[#DE1B54]/50 rounded-lg text-center text-[11px] font-bold text-[#291817]">
-                        10:30 AM
-                      </div>
-                      <div className="py-1 px-2 bg-[#FFF8F6] border border-[#F2CECA] rounded-lg text-center text-[11px] font-medium text-[#806F6C]">
-                        03:00 PM
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="pt-2.5 mt-2.5 border-t border-[#F2CECA]/50 flex items-center justify-between text-[10px]">
-                    <span className="text-[#806F6C]">Fast WhatsApp Sync</span>
-                    <span className="font-bold text-[#DE1B54]">Instant Confirm</span>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
 
               {/* Bottom Trust Ribbon */}
@@ -272,7 +222,7 @@ export default function BookingProcessSection() {
                   <span className="w-2.5 h-2.5 rounded-full bg-[#DE1B54] animate-pulse" aria-hidden="true" />
                   <span className="font-bold text-[#291817]">100% Gentle &amp; Cage-Free Promise</span>
                 </span>
-                <span className="font-bold text-[#DE1B54]">Gurugram Studio</span>
+                <span className="font-bold text-[#DE1B54]">1-on-1 Sanctuary</span>
               </div>
             </div>
           </div>
@@ -315,4 +265,3 @@ export default function BookingProcessSection() {
     </section>
   );
 }
-

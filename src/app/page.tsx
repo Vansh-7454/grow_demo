@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteContent } from "@/data/siteContent";
 import FaqAccordion from "@/components/FaqAccordion";
 import { FaqSchema } from "@/components/SchemaOrg";
@@ -90,46 +91,25 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Column: Hero Visual Frame (Static Neutral Studio Showcase) */}
+            {/* Right Column: Hero Visual Frame (Authentic Studio Photography) */}
             <div className="lg:col-span-5">
-              <div className="bg-white border border-[#CBD3CC] rounded-2xl p-4 sm:p-6 shadow-[0_4px_24px_-2px_rgba(30,58,52,0.06)] space-y-4">
-                <div className="relative aspect-[4/3] bg-[#EAF1ED] rounded-xl border border-[#CBD3CC] flex flex-col items-center justify-center p-6 text-center">
-                  <div className="w-14 h-14 rounded-full bg-white border border-[#CBD3CC] flex items-center justify-center text-[#1E3A34] mb-3 shadow-xs">
-                    <svg
-                      width={28}
-                      height={28}
-                      className="w-7 h-7 text-[#1E3A34] shrink-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="1.5"
-                        d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="1.5"
-                        d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
-                      />
-                    </svg>
+              <div className="bg-white border border-[#CBD3CC] rounded-2xl p-3 sm:p-4 shadow-[0_4px_24px_-2px_rgba(30,58,52,0.06)] space-y-3">
+                <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-[#CBD3CC] bg-[#EAF1ED]">
+                  <Image
+                    src="/images/studio-hero.jpg"
+                    alt="Authentic pet grooming session in Gurugram salon with gentle groomer and Golden Retriever"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 480px"
+                    priority
+                    className="object-cover"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#1E3A34]/90 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-md shadow-xs">
+                    📍 Gurugram Studio
                   </div>
-                  <span className="px-2.5 py-1 bg-white text-xs font-mono font-medium text-[#1E3A34] border border-[#CBD3CC] rounded">
-                    Studio Photo Slot · 1200 x 900 px (4:3)
-                  </span>
-                  <p className="text-xs font-semibold text-[#1E3A34] mt-2">
-                    hero-studio-grooming.jpg
-                  </p>
-                  <p className="text-[11px] text-[#57635E] mt-0.5 max-w-[260px]">
-                    Awaiting client photograph of the Gurugram grooming room and bathing station.
-                  </p>
                 </div>
 
-                <div className="flex items-center justify-between text-xs text-[#57635E] pt-2 px-1">
-                  <span>📍 Sector 54, Golf Course Rd</span>
+                <div className="flex items-center justify-between text-xs text-[#57635E] px-1 pt-1">
+                  <span className="font-medium text-[#1A201E]">1-on-1 Gentle Hydro-Bath & Groom</span>
                   <span className="font-semibold text-[#1E3A34]">Tue – Sun: 10AM – 7:30PM</span>
                 </div>
               </div>
@@ -153,10 +133,24 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1000px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1050px] mx-auto">
             {/* Dog Grooming Card */}
-            <div className="bg-white border border-[#CBD3CC] rounded-2xl p-8 flex flex-col justify-between shadow-[0_4px_20px_-2px_rgba(30,58,52,0.05)] hover:border-[#1E3A34] transition-colors">
+            <div className="bg-white border border-[#CBD3CC] rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-[0_4px_20px_-2px_rgba(30,58,52,0.05)] hover:border-[#1E3A34] transition-colors">
               <div>
+                {/* Photo Showcase Frame */}
+                <div className="relative aspect-[16/10] rounded-xl overflow-hidden mb-6 border border-[#CBD3CC] bg-[#EAF1ED]">
+                  <Image
+                    src="/images/shih-tzu-cut.jpg"
+                    alt="Shih Tzu teddy bear scissor haircut at Paws & Claws Gurugram"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 480px"
+                    className="object-cover"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#1E3A34]/90 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-md shadow-xs">
+                    Canine Suite · Gurugram
+                  </div>
+                </div>
+
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-xs font-bold uppercase tracking-wider text-[#1E3A34] bg-[#EAF1ED] px-3 py-1 rounded-full">
                     Canine Care
@@ -191,8 +185,22 @@ export default function HomePage() {
             </div>
 
             {/* Cat Grooming Card */}
-            <div className="bg-white border border-[#CBD3CC] rounded-2xl p-8 flex flex-col justify-between shadow-[0_4px_20px_-2px_rgba(30,58,52,0.05)] hover:border-[#1E3A34] transition-colors">
+            <div className="bg-white border border-[#CBD3CC] rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-[0_4px_20px_-2px_rgba(30,58,52,0.05)] hover:border-[#1E3A34] transition-colors">
               <div>
+                {/* Photo Showcase Frame */}
+                <div className="relative aspect-[16/10] rounded-xl overflow-hidden mb-6 border border-[#CBD3CC] bg-[#EAF1ED]">
+                  <Image
+                    src="/images/cat-grooming-hero.jpg"
+                    alt="Gentle Persian cat grooming in private quiet feline suite at Paws & Claws Gurugram"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 480px"
+                    className="object-cover"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#1E3A34]/90 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-md shadow-xs">
+                    Quiet Cat Suite · Zero Dogs
+                  </div>
+                </div>
+
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-xs font-bold uppercase tracking-wider text-[#1E3A34] bg-[#EAF1ED] px-3 py-1 rounded-full">
                     Feline Care
@@ -261,6 +269,91 @@ export default function HomePage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3.5 Real Studio Photography Strip */}
+      <section className="bg-white border-b border-[#E2E6E2] section-pad">
+        <div className="site-container">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-[#D97706] block mb-2">
+                Real Studio Results
+              </span>
+              <h2 className="heading-h2 text-[#1E3A34]">
+                Authentic grooming results from our Gurugram salon.
+              </h2>
+            </div>
+            <Link
+              href="/gallery"
+              className="text-sm font-semibold text-[#1E3A34] hover:text-[#142723] inline-flex items-center gap-1.5 whitespace-nowrap"
+            >
+              <span>Explore full 6-photo gallery</span>
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Photo 1: Indie Dog Bath */}
+            <div className="border border-[#CBD3CC] rounded-2xl overflow-hidden bg-white shadow-xs group hover:border-[#1E3A34] transition-colors">
+              <div className="relative aspect-[4/3] bg-[#EAF1ED] overflow-hidden border-b border-[#CBD3CC]">
+                <Image
+                  src="/images/indie-dog-bath.jpg"
+                  alt="Indie dog enjoying a warm hydro-bath and de-shedding cleanse in Gurugram"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 360px"
+                  className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                />
+                <div className="absolute top-3 left-3 bg-[#1E3A34]/90 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-md">
+                  Dog Bath & Hygiene
+                </div>
+              </div>
+              <div className="p-5">
+                <h3 className="font-bold text-base text-[#1A201E] mb-1">Indie Dog Gentle Hydro-Bath</h3>
+                <p className="text-xs text-[#57635E] leading-relaxed">Deep cleansing wash, de-shedding, and ear hygiene for an Indian native rescue dog.</p>
+              </div>
+            </div>
+
+            {/* Photo 2: Shih Tzu Scissor Cut */}
+            <div className="border border-[#CBD3CC] rounded-2xl overflow-hidden bg-white shadow-xs group hover:border-[#1E3A34] transition-colors">
+              <div className="relative aspect-[4/3] bg-[#EAF1ED] overflow-hidden border-b border-[#CBD3CC]">
+                <Image
+                  src="/images/shih-tzu-cut.jpg"
+                  alt="Shih Tzu puppy with clean teddy bear scissor haircut at Gurugram salon"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 360px"
+                  className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                />
+                <div className="absolute top-3 left-3 bg-[#1E3A34]/90 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-md">
+                  Breed Scissor Styling
+                </div>
+              </div>
+              <div className="p-5">
+                <h3 className="font-bold text-base text-[#1A201E] mb-1">Shih Tzu Teddy Bear Haircut</h3>
+                <p className="text-xs text-[#57635E] leading-relaxed">Rounded scissor facial shaping, hygienic sanitary contouring, and paw pad balm.</p>
+              </div>
+            </div>
+
+            {/* Photo 3: Calm Cat Towel Rest */}
+            <div className="border border-[#CBD3CC] rounded-2xl overflow-hidden bg-white shadow-xs group hover:border-[#1E3A34] transition-colors">
+              <div className="relative aspect-[4/3] bg-[#EAF1ED] overflow-hidden border-b border-[#CBD3CC]">
+                <Image
+                  src="/images/cat-calm-dry-bath.jpg"
+                  alt="Domestic cat resting in soft warm towel after quiet grooming in Gurugram"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 360px"
+                  className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                />
+                <div className="absolute top-3 left-3 bg-[#1E3A34]/90 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-md">
+                  Quiet Cat Suite
+                </div>
+              </div>
+              <div className="p-5">
+                <h3 className="font-bold text-base text-[#1A201E] mb-1">Domestic Cat Towel Wrap & Rest</h3>
+                <p className="text-xs text-[#57635E] leading-relaxed">Gentle dry foam bath, nail tip clipping, and patient towel-wrap relaxation with zero loud dryers.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

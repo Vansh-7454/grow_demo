@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { siteContent } from "@/data/siteContent";
 import ContactForm from "@/components/ContactForm";
 
@@ -152,20 +153,32 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Static Map Representation Frame */}
-              <div className="border border-[#CBD3CC] rounded-2xl overflow-hidden bg-[#F2F4F0] p-4 text-center">
-                <div className="aspect-[16/9] bg-[#EAF1ED] rounded-xl border border-[#CBD3CC] flex flex-col items-center justify-center p-4">
-                  <span className="text-xs font-bold text-[#1E3A34] mb-1">
-                    📍 Gurugram Service Area Map
-                  </span>
-                  <span className="text-[11px] text-[#57635E] max-w-[240px]">
-                    Sector 54 · Golf Course Road · DLF Phase 5 · Gurugram
-                  </span>
+              {/* Studio Photography & Map Reference */}
+              <div className="border border-[#CBD3CC] rounded-2xl overflow-hidden bg-white shadow-xs">
+                <div className="relative aspect-[16/10] bg-[#EAF1ED]">
+                  <Image
+                    src="/images/studio-hero.jpg"
+                    alt="Paws & Claws Pet Grooming Studio in Gurugram"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 440px"
+                    className="object-cover"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#1E3A34]/90 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-md shadow-xs">
+                    📍 Sector 54 Studio
+                  </div>
+                </div>
+                <div className="p-4 bg-[#FBFBF9] text-center border-t border-[#E2E6E2]">
+                  <p className="text-xs font-semibold text-[#1E3A34]">
+                    Dedicated 1-on-1 Grooming & Reception
+                  </p>
+                  <p className="text-[11px] text-[#57635E] mt-0.5">
+                    Sector 54 · Golf Course Road · Gurugram
+                  </p>
                   <a
                     href={siteContent.business.googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block mt-3 px-3 py-1.5 bg-white border border-[#CBD3CC] rounded text-xs font-semibold text-[#1E3A34] hover:bg-[#F2F4F0]"
+                    className="inline-block mt-3 px-4 py-2 bg-white border border-[#CBD3CC] rounded-lg text-xs font-semibold text-[#1E3A34] hover:bg-[#F2F4F0] shadow-xs"
                   >
                     Open Live Interactive Map →
                   </a>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { siteContent } from "@/data/siteContent";
 
@@ -73,14 +74,27 @@ export default function Header() {
           {/* Logo & Tagline */}
           <Link
             href="/"
-            className="flex flex-col group min-h-[44px] justify-center focus-visible:outline-2 focus-visible:outline-[#1E3A34] rounded"
+            className="flex items-center gap-3 sm:gap-3.5 group min-h-[44px] focus-visible:outline-2 focus-visible:outline-[#1E3A34] rounded-lg py-1"
           >
-            <span className="text-xl md:text-2xl font-bold tracking-tight text-[#1E3A34] leading-tight">
-              {siteContent.business.name}
-            </span>
-            <span className="text-xs text-[#57635E] font-medium tracking-wide">
-              {siteContent.business.tagline}
-            </span>
+            <div className="w-11 h-11 sm:w-12 sm:h-12 shrink-0 rounded-2xl overflow-hidden shadow-xs group-hover:scale-[1.02] transition-transform">
+              <Image
+                src="/images/logo.svg"
+                alt="Paws & Claws Brand Logo"
+                width={48}
+                height={48}
+                className="w-full h-full object-contain"
+                priority
+              />
+            </div>
+            <div className="flex flex-col justify-center">
+              <span className="text-xl sm:text-2xl font-bold tracking-tight text-[#1E3A34] leading-tight group-hover:text-[#142723] transition-colors">
+                {siteContent.business.name}
+              </span>
+              <span className="text-[11px] sm:text-xs text-[#57635E] font-medium tracking-wide flex items-center gap-1.5 leading-none mt-1">
+                <span className="w-2 h-2 rounded-full bg-[#D97706] shrink-0" aria-hidden="true" />
+                <span>Pet Grooming Studio · Gurugram</span>
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -195,13 +209,25 @@ export default function Header() {
         >
           {/* Drawer Top Header */}
           <div className="flex items-center justify-between h-20 px-5 border-b border-[#E2E6E2]">
-            <div className="flex flex-col">
-              <span className="text-lg font-bold text-[#1E3A34]">
-                {siteContent.business.name}
-              </span>
-              <span className="text-xs text-[#57635E]">
-                {siteContent.business.city} · Studio Menu
-              </span>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl overflow-hidden shadow-xs shrink-0">
+                <Image
+                  src="/images/logo.svg"
+                  alt="Paws & Claws Brand Logo"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-base font-bold text-[#1E3A34] leading-tight">
+                  {siteContent.business.name}
+                </span>
+                <span className="text-[11px] text-[#57635E] font-medium flex items-center gap-1.5 mt-0.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#D97706] shrink-0" aria-hidden="true" />
+                  <span>{siteContent.business.city} · Studio Menu</span>
+                </span>
+              </div>
             </div>
 
             <button

@@ -81,6 +81,7 @@ export interface PhotoPlaceholderItem {
   aspectRatio: "4:3" | "1:1";
   altText: string;
   filename: string;
+  imageUrl?: string;
 }
 
 export interface ReviewItem {
@@ -544,8 +545,9 @@ export const siteContent = {
       description: "Post-grooming coat blowout, tidy paws, and glossy feathering.",
       recommendedSize: "1200 x 900 px",
       aspectRatio: "4:3",
-      altText: "Golden Retriever after a full breed grooming session in Gurugram",
+      altText: "Golden Retriever after a full breed grooming session in Gurugram salon",
       filename: "golden-retriever-full-groom.jpg",
+      imageUrl: "/images/studio-hero.jpg",
     },
     {
       id: "photo-dog-2",
@@ -556,46 +558,51 @@ export const siteContent = {
       aspectRatio: "4:3",
       altText: "Shih Tzu with a clean teddy bear haircut at Paws & Claws Gurugram",
       filename: "shih-tzu-teddy-cut.jpg",
+      imageUrl: "/images/shih-tzu-cut.jpg",
     },
     {
       id: "photo-dog-3",
       category: "Dogs",
-      title: "Indie Dog Anti-Tick Cleansing",
-      description: "Fresh, shiny short coat after a medicated hydro-bath and nail trim.",
+      title: "Indie Dog Gentle Bath & Cleansing",
+      description: "Fresh, shiny short coat after a soothing hydro-bath and nail trim.",
       recommendedSize: "1200 x 900 px",
       aspectRatio: "4:3",
-      altText: "Clean indie dog enjoying fresh coat after medicated bath in Gurugram",
+      altText: "Clean indie dog enjoying fresh coat after gentle bath in Gurugram",
       filename: "indie-dog-bath.jpg",
+      imageUrl: "/images/indie-dog-bath.jpg",
     },
     {
       id: "photo-cat-1",
       category: "Cats",
       title: "Persian Cat De-Shedding & Groom",
-      description: "Detangled, silky coat with hygiene trim and clean eyes.",
+      description: "Detangled, silky coat with gentle face wipe and combed feathering.",
       recommendedSize: "1200 x 900 px",
       aspectRatio: "4:3",
       altText: "Persian cat groomed in a quiet feline suite at Paws & Claws Gurugram",
       filename: "persian-cat-grooming.jpg",
+      imageUrl: "/images/cat-grooming-hero.jpg",
     },
     {
       id: "photo-cat-2",
       category: "Cats",
-      title: "Domestic Cat Nail Trim & Dry Bath",
-      description: "Calm feline resting after organic foam bath and gentle nail trim.",
+      title: "Domestic Cat Towel Wrap & Rest",
+      description: "Calm feline resting comfortably in warm soft towel after gentle wash.",
       recommendedSize: "1200 x 900 px",
       aspectRatio: "4:3",
-      altText: "Domestic short hair cat relaxing after quiet nail trimming in Gurugram",
+      altText: "Domestic short hair cat relaxing after quiet grooming in Gurugram",
       filename: "cat-dry-bath-nail-trim.jpg",
+      imageUrl: "/images/cat-calm-dry-bath.jpg",
     },
     {
       id: "photo-cat-3",
       category: "Cats",
-      title: "Persian Summer Lion Cut",
-      description: "Cool summer body clip with neat mane and tail plume.",
+      title: "Persian Calm Grooming Finish",
+      description: "Quiet room gentle grooming session without sensory shock or noise.",
       recommendedSize: "1200 x 900 px",
       aspectRatio: "4:3",
-      altText: "Persian cat with a neat lion cut for summer heat relief in Gurugram",
+      altText: "Persian cat with silky fur resting peacefully after quiet feline groom",
       filename: "cat-lion-cut.jpg",
+      imageUrl: "/images/cat-grooming-hero.jpg",
     },
   ] as PhotoPlaceholderItem[],
 

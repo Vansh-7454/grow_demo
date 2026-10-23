@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteContent } from "@/data/siteContent";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import PackageCard from "@/components/PackageCard";
@@ -19,21 +20,53 @@ export default function DogGroomingPage() {
     <div className="bg-[#FBFBF9]">
       <FaqSchema faqs={dogFaqs} />
 
-      {/* Header & Breadcrumb Band */}
+      {/* Header & Breadcrumb Band with Real Photography Showcase */}
       <section className="border-b border-[#E2E6E2] bg-white pt-6 pb-12">
         <div className="site-container">
           <Breadcrumbs items={[{ label: "Dog Grooming" }]} />
 
-          <div className="max-w-[850px] mt-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#D97706] block mb-2">
-              Canine Grooming Studio · Gurugram
-            </span>
-            <h1 className="heading-h1 text-[#1E3A34] mb-4">
-              Gentle, breed-specific dog grooming in Gurugram.
-            </h1>
-            <p className="body-large text-[#57635E] max-readable">
-              From everyday warm hydro-baths to specialized breed styling and anti-tick treatments. Every dog receives 1-on-1 care with pet-friendly organic products and zero holding cages.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mt-6">
+            <div className="lg:col-span-7">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#D97706] block mb-2">
+                Canine Grooming Studio · Gurugram
+              </span>
+              <h1 className="heading-h1 text-[#1E3A34] mb-4">
+                Gentle, breed-specific dog grooming in Gurugram.
+              </h1>
+              <p className="body-large text-[#57635E] max-readable mb-6">
+                From everyday warm hydro-baths to specialized breed styling and anti-tick treatments. Every dog receives 1-on-1 care with pet-friendly organic products and zero holding cages.
+              </p>
+              <div className="flex flex-wrap gap-2 text-xs">
+                <span className="px-3 py-1.5 bg-[#EAF1ED] text-[#1E3A34] font-semibold rounded-lg border border-[#CBD3CC]">
+                  ✓ Zero Holding Cages
+                </span>
+                <span className="px-3 py-1.5 bg-[#EAF1ED] text-[#1E3A34] font-semibold rounded-lg border border-[#CBD3CC]">
+                  ✓ Organic Herbal Shampoos
+                </span>
+                <span className="px-3 py-1.5 bg-[#EAF1ED] text-[#1E3A34] font-semibold rounded-lg border border-[#CBD3CC]">
+                  ✓ Sector 54 Observation Window
+                </span>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#CBD3CC] shadow-md bg-[#EAF1ED]">
+                <Image
+                  src="/images/shih-tzu-cut.jpg"
+                  alt="Shih Tzu teddy bear scissor haircut at Paws & Claws Gurugram"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 440px"
+                  priority
+                  className="object-cover"
+                />
+                <div className="absolute top-3 left-3 bg-[#1E3A34]/90 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-md shadow-xs">
+                  📍 Gurugram Canine Suite
+                </div>
+                <div className="absolute bottom-3 right-3 bg-black/60 backdrop-blur-xs text-white text-[10px] font-mono px-2 py-0.5 rounded">
+                  Breed Scissor Cut
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

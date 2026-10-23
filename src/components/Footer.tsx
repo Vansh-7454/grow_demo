@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteContent } from "@/data/siteContent";
 
 export default function Footer() {
@@ -13,13 +14,24 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
           {/* Brand & Studio Description (Col 1-5) */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold tracking-tight text-white">
-                {siteContent.business.name}
-              </span>
-              <span className="text-sm text-[#CBD3CC] font-medium mt-1">
-                {siteContent.business.tagline}
-              </span>
+            <div className="flex items-center gap-3">
+              <div className="w-11 h-11 rounded-2xl overflow-hidden shadow-xs shrink-0">
+                <Image
+                  src="/images/logo.svg"
+                  alt="Paws & Claws Logo"
+                  width={44}
+                  height={44}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold tracking-tight text-white leading-tight">
+                  {siteContent.business.name}
+                </span>
+                <span className="text-xs text-[#CBD3CC] font-medium">
+                  {siteContent.business.tagline}
+                </span>
+              </div>
             </div>
             <p className="text-sm text-[#CBD3CC] leading-relaxed max-w-[45ch]">
               {siteContent.business.shortDescription}

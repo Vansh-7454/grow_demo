@@ -1,11 +1,11 @@
 <svg width="180" height="42" viewBox="0 0 180 42" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Friendly modern bold wordmark: paws & claws in coral red -->
-  <text x="0" y="30" font-family="Plus Jakarta Sans, Manrope, sans-serif" font-size="26" font-weight="800" letter-spacing="-0.04em" fill="#FF3B40">
+  <text x="0" y="30" font-family="Plus Jakarta Sans, Manrope, sans-serif" font-size="26" font-weight="800" letter-spacing="-0.04em" fill="#DE1B54">
     paws<tspan fill="#291817">&amp;</tspan>claws
   </text>
   <!-- Mini playful paw / heart sparkle above the ampersand -->
-  <circle cx="86" cy="7" r="2.2" fill="#FF3B40"/>
-  <circle cx="82" cy="10" r="1.8" fill="#FF3B40"/>
-  <circle cx="90" cy="10" r="1.8" fill="#FF3B40"/>
-  <ellipse cx="86" cy="14" rx="3.2" ry="2.2" fill="#FF3B40"/>
+  <circle cx="86" cy="7" r="2.2" fill="#DE1B54"/>
+  <circle cx="82" cy="10" r="1.8" fill="#DE1B54"/>
+  <circle cx="90" cy="10" r="1.8" fill="#DE1B54"/>
+  <ellipse cx="86" cy="14" rx="3.2" ry="2.2" fill="#DE1B54"/>
 </svg>

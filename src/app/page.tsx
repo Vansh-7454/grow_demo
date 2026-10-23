@@ -95,36 +95,41 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Column: 46% width on desktop with Organic Backdrop & Exactly 2 Floating Badges */}
+            {/* Right Column: 46% width on desktop with Organic Architectural Arch built into background */}
             <div className="w-full lg:w-[46%] relative flex items-center justify-center">
-              {/* Organic Soft Blush Circular Background Shape */}
+              {/* Organic Soft Blush Backdrop Aura */}
               <div
-                className="absolute w-[320px] h-[320px] sm:w-[440px] sm:h-[440px] rounded-full bg-[#FCEAE7] -z-0"
+                className="absolute w-[340px] h-[340px] sm:w-[460px] sm:h-[460px] rounded-full bg-[#FCEAE7]/80 -z-0 blur-[1px]"
                 aria-hidden="true"
               />
 
-              {/* Main Pet Image Frame (4:5 Aspect Ratio) */}
-              <div className="relative z-10 w-full max-w-[420px] aspect-[4/5] rounded-[36px] overflow-hidden border-2 border-white shadow-[0_20px_50px_rgba(41,24,23,0.10)] bg-[#FCEAE7]">
+              {/* Main Pet Image (Built naturally into background, no card frame or white borders) */}
+              <div className="relative z-10 w-full max-w-[440px] aspect-[4/5] rounded-t-[200px] sm:rounded-t-[240px] rounded-b-[40px] overflow-hidden bg-transparent">
                 <Image
-                  src="/images/hero-dog-parent.jpg"
-                  alt="Happy pet parent with smiling dog after gentle grooming session at Paws & Claws"
+                  src="/images/hero-pets-dog-cat.jpg"
+                  alt="Happy golden retriever dog and fluffy cat groomed together at Paws & Claws Pet Grooming Gurugram"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 420px"
+                  sizes="(max-width: 1024px) 100vw, 440px"
                   priority
                   className="object-cover"
                 />
+                {/* Seamless bottom fade into section background so pets naturally sit on the page */}
+                <div
+                  className="pointer-events-none absolute inset-x-0 bottom-0 h-16 sm:h-20 bg-gradient-to-t from-[#FFF8F6] via-[#FFF8F6]/30 to-transparent"
+                  aria-hidden="true"
+                />
               </div>
 
-              {/* Floating Decorative Card 1: Top (Small & Unobtrusive) */}
-              <div className="absolute top-4 right-2 sm:-right-2 z-20 bg-white/95 backdrop-blur-md border border-[#F2CECA] rounded-2xl px-3.5 py-2 shadow-[0_10px_25px_rgba(41,24,23,0.06)] flex items-center gap-1.5">
+              {/* Floating Decorative Card 1: Top Right */}
+              <div className="absolute top-4 right-1 sm:-right-3 z-20 bg-white/95 backdrop-blur-md border border-[#F2CECA] rounded-full px-4 py-2 shadow-[0_8px_20px_rgba(41,24,23,0.06)] flex items-center gap-1.5">
                 <span className="text-xs font-bold text-[#291817]">A little care, a lot of love</span>
                 <span className="text-sm text-[#FF3B40]">❤️</span>
               </div>
 
-              {/* Floating Decorative Card 2: Bottom (Small & Unobtrusive) */}
-              <div className="absolute bottom-4 left-2 sm:-left-2 z-20 bg-white/95 backdrop-blur-md border border-[#F2CECA] rounded-2xl px-3.5 py-2 shadow-[0_10px_25px_rgba(41,24,23,0.06)] flex items-center gap-1.5">
+              {/* Floating Decorative Card 2: Bottom Left */}
+              <div className="absolute bottom-4 left-1 sm:-left-3 z-20 bg-white/95 backdrop-blur-md border border-[#F2CECA] rounded-full px-4 py-2 shadow-[0_8px_20px_rgba(41,24,23,0.06)] flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-[#FF3B40]" aria-hidden="true" />
-                <span className="text-xs font-bold text-[#291817]">Personalized Pet Care</span>
+                <span className="text-xs font-bold text-[#291817]">Dog &amp; Cat Grooming</span>
                 <span className="text-sm">🐾</span>
               </div>
             </div>

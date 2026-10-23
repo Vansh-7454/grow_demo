@@ -63,7 +63,9 @@ export default function HomePage() {
                   className="min-h-[48px] px-6 py-3.5 text-base font-semibold text-white bg-[#1E3A34] hover:bg-[#142723] rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm"
                 >
                   <svg
-                    className="w-5 h-5 fill-current text-white"
+                    width={20}
+                    height={20}
+                    className="w-5 h-5 fill-current text-white shrink-0"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
                   >
@@ -94,7 +96,9 @@ export default function HomePage() {
                 <div className="relative aspect-[4/3] bg-[#EAF1ED] rounded-xl border border-[#CBD3CC] flex flex-col items-center justify-center p-6 text-center">
                   <div className="w-14 h-14 rounded-full bg-white border border-[#CBD3CC] flex items-center justify-center text-[#1E3A34] mb-3 shadow-xs">
                     <svg
-                      className="w-7 h-7"
+                      width={28}
+                      height={28}
+                      className="w-7 h-7 text-[#1E3A34] shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"

@@ -50,7 +50,9 @@ export default function FaqAccordion({
                 >
                   {isOpen ? (
                     <svg
-                      className="w-5 h-5"
+                      width={20}
+                      height={20}
+                      className="w-5 h-5 shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -64,7 +66,9 @@ export default function FaqAccordion({
                     </svg>
                   ) : (
                     <svg
-                      className="w-5 h-5"
+                      width={20}
+                      height={20}
+                      className="w-5 h-5 shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"

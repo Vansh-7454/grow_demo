@@ -18,7 +18,9 @@ export default function MobileCallBar() {
           className="flex-1 min-h-[44px] flex items-center justify-center gap-2 px-3 py-2 bg-white border border-[#CBD3CC] text-[#1E3A34] text-sm font-semibold rounded-lg hover:bg-[#F2F4F0] active:bg-[#EAF1ED] transition-colors"
         >
           <svg
-            className="w-4 h-4 text-[#1E3A34]"
+            width={16}
+            height={16}
+            className="w-4 h-4 text-[#1E3A34] shrink-0"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -42,7 +44,9 @@ export default function MobileCallBar() {
           className="flex-1 min-h-[44px] flex items-center justify-center gap-2 px-3 py-2 bg-[#1E3A34] text-white text-sm font-semibold rounded-lg hover:bg-[#142723] active:bg-[#142723] transition-colors"
         >
           <svg
-            className="w-4 h-4 fill-current text-white"
+            width={16}
+            height={16}
+            className="w-4 h-4 fill-current text-white shrink-0"
             viewBox="0 0 24 24"
             aria-hidden="true"
           >

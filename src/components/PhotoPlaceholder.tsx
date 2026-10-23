@@ -11,7 +11,9 @@ export default function PhotoPlaceholder({
       <div className="relative aspect-[4/3] bg-[#EAF1ED] flex flex-col items-center justify-center p-6 text-center border-b border-[#CBD3CC]">
         <div className="w-12 h-12 rounded-full bg-white border border-[#CBD3CC] flex items-center justify-center text-[#1E3A34] mb-3 shadow-xs">
           <svg
-            className="w-6 h-6"
+            width={24}
+            height={24}
+            className="w-6 h-6 text-[#1E3A34] shrink-0"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

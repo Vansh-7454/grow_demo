@@ -115,7 +115,9 @@ export default function Header() {
               title="Call studio directly"
             >
               <svg
-                className="w-4 h-4 text-[#1E3A34]"
+                width={16}
+                height={16}
+                className="w-4 h-4 text-[#1E3A34] shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -139,7 +141,9 @@ export default function Header() {
               title="Chat on WhatsApp to book slot"
             >
               <svg
-                className="w-4 h-4 fill-current text-white"
+                width={16}
+                height={16}
+                className="w-4 h-4 fill-current text-white shrink-0"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
               >
@@ -160,7 +164,9 @@ export default function Header() {
               className="min-h-[44px] min-w-[44px] p-2 flex items-center justify-center text-[#1E3A34] rounded-lg hover:bg-[#F2F4F0] focus-visible:outline-2 focus-visible:outline-[#1E3A34]"
             >
               <svg
-                className="w-6 h-6"
+                width={24}
+                height={24}
+                className="w-6 h-6 shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -205,7 +211,9 @@ export default function Header() {
               className="min-h-[44px] min-w-[44px] p-2 flex items-center justify-center text-[#1E3A34] rounded-lg hover:bg-[#F2F4F0] focus-visible:outline-2 focus-visible:outline-[#1E3A34]"
             >
               <svg
-                className="w-6 h-6"
+                width={24}
+                height={24}
+                className="w-6 h-6 shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -256,7 +264,9 @@ export default function Header() {
                 className="min-h-[48px] w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#1E3A34] text-white font-semibold rounded-lg text-base"
               >
                 <svg
-                  className="w-5 h-5 fill-current text-white"
+                  width={20}
+                  height={20}
+                  className="w-5 h-5 fill-current text-white shrink-0"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
                 >
@@ -270,7 +280,9 @@ export default function Header() {
                 className="min-h-[48px] w-full flex items-center justify-center gap-2 px-4 py-3 bg-white border border-[#CBD3CC] text-[#1E3A34] font-semibold rounded-lg text-base"
               >
                 <svg
-                  className="w-5 h-5 text-[#1E3A34]"
+                  width={20}
+                  height={20}
+                  className="w-5 h-5 text-[#1E3A34] shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

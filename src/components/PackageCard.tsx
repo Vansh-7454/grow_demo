@@ -68,7 +68,9 @@ export default function PackageCard({ pkg }: { pkg: ServicePackage }) {
             {pkg.whatsIncluded.map((item, idx) => (
               <li key={idx} className="flex items-start gap-2.5">
                 <svg
-                  className="w-4 h-4 text-[#1E3A34] flex-shrink-0 mt-0.5"
+                  width={16}
+                  height={16}
+                  className="w-4 h-4 text-[#1E3A34] shrink-0 mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -106,7 +108,9 @@ export default function PackageCard({ pkg }: { pkg: ServicePackage }) {
           className="w-full min-h-[48px] flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold rounded-lg text-white bg-[#1E3A34] hover:bg-[#142723] transition-colors shadow-sm"
         >
           <svg
-            className="w-4 h-4 fill-current"
+            width={16}
+            height={16}
+            className="w-4 h-4 fill-current shrink-0"
             viewBox="0 0 24 24"
             aria-hidden="true"
           >

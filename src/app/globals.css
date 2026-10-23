@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-brand-primary: #1e3a34;
+    --color-brand-primary-hover: #142723;
+    --color-brand-primary-light: #eaf1ed;
+    --color-brand-accent: #d97706;
+    --color-brand-accent-hover: #b45309;
+    --color-brand-accent-light: #fef3c7;
+    
+    --color-bg-base: #fbfbf9;
+    --color-bg-surface: #f2f4f0;
+    --color-bg-surface-elevated: #ffffff;
+    
+    --color-text-main: #1a201e;
+    --color-text-muted: #57635e;
+    --color-text-light: #7b8882;
+    
+    --color-border-subtle: #e2e6e2;
+    --color-border-strong: #cbd3cc;
+    
+    --shadow-card: 0 4px 20px -2px rgba(30, 58, 52, 0.05);
+  }
+
+  html {
+    scroll-behavior: auto; /* Static, no smooth scrolling */
+    background-color: var(--color-bg-base);
+    color: var(--color-text-main);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    background-color: var(--color-bg-base);
+    color: var(--color-text-main);
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Keyboard focus styles */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid #1e3a34;
+    outline-offset: 2px;
+  }
+}
+
+/* 8-point vertical padding utility classes */
+.section-pad {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+@media (min-width: 768px) {
+  .section-pad {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+}
+@media (min-width: 1024px) {
+  .section-pad {
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
+}
+
+.site-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 640px) {
+  .site-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .site-container {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+/* Typography scale rules */
+.heading-h1 {
+  font-size: 36px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+@media (min-width: 1024px) {
+  .heading-h1 {
+    font-size: 56px;
+  }
+}
+
+.heading-h2 {
+  font-size: 28px;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+}
+@media (min-width: 1024px) {
+  .heading-h2 {
+    font-size: 40px;
+  }
+}
+
+.heading-h3 {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+@media (min-width: 1024px) {
+  .heading-h3 {
+    font-size: 24px;
+  }
+}
+
+.body-large {
+  font-size: 16px;
+  line-height: 1.6;
+}
+@media (min-width: 1024px) {
+  .body-large {
+    font-size: 18px;
+  }
+}
+
+.body-small {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.max-readable {
+  max-width: 65ch;
+}

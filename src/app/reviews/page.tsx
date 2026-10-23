@@ -30,13 +30,13 @@ export default function ReviewsPage() {
       </section>
 
       {/* Google Business Profile Rating Banner */}
-      <section className="border-b border-[#F2CECA] bg-[#FCEAE7]/70 py-10">
+      <section className="border-b border-[#F2CECA] bg-[#FCEAE7]/50 py-6 sm:py-8">
         <div className="site-container">
-          <div className="bg-white border border-[#F2CECA] rounded-[28px] p-6 sm:p-8 max-w-[950px] mx-auto shadow-[0_8px_30px_rgba(41,24,23,0.05)] flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="bg-white border border-[#F2CECA] rounded-[24px] p-5 sm:p-6 max-w-[850px] mx-auto shadow-2xs flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
             <div className="flex flex-col sm:flex-row items-center sm:items-start md:items-center gap-4 text-center sm:text-left">
-              <div className="w-16 h-16 rounded-2xl bg-[#DE1B54] text-white flex flex-col items-center justify-center font-extrabold shrink-0 shadow-xs">
-                <span className="text-2xl leading-none">4.9</span>
-                <span className="text-[10px] uppercase tracking-wider mt-0.5 opacity-90">
+              <div className="w-14 h-14 rounded-2xl bg-[#DE1B54] text-white flex flex-col items-center justify-center font-extrabold shrink-0 shadow-xs">
+                <span className="text-xl sm:text-2xl leading-none">4.9</span>
+                <span className="text-[9px] uppercase tracking-wider mt-0.5 opacity-90">
                   Stars
                 </span>
               </div>
@@ -53,22 +53,15 @@ export default function ReviewsPage() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
-              <a
-                href={siteContent.business.googleReviewUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary text-xs w-full sm:w-auto text-center"
-              >
-                <span>Write a Review on Google →</span>
-              </a>
+            <div className="w-full sm:w-auto flex justify-center sm:justify-end shrink-0">
               <a
                 href={siteContent.business.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-secondary text-xs w-full sm:w-auto text-center"
+                className="btn-primary text-xs w-full sm:w-auto text-center inline-flex items-center justify-center gap-1.5 whitespace-nowrap shadow-2xs"
               >
                 <span>View Google Maps Listing</span>
+                <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>
@@ -187,12 +180,12 @@ export default function ReviewsPage() {
 
           <div className="text-center mt-8">
             <a
-              href={siteContent.business.googleReviewUrl}
+              href={siteContent.business.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary text-xs"
+              className="btn-primary text-xs inline-flex items-center justify-center gap-1.5 whitespace-nowrap shadow-2xs"
             >
-              <span>Open Google Review Window →</span>
+              <span>View on Google Maps →</span>
             </a>
           </div>
         </div>

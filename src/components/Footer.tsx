@@ -129,7 +129,7 @@ export default function Footer() {
 
             <div className="pt-2">
               <a
-                href={siteContent.business.googleReviewUrl}
+                href={siteContent.business.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-xs font-bold text-[#291817] bg-white border border-[#F2CECA] px-3.5 py-2 rounded-full hover:border-[#DE1B54] hover:bg-[#FCEAE7]/50 transition-colors shadow-2xs"

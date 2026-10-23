@@ -122,7 +122,7 @@ export const siteContent = {
     googleRating: "4.9 / 5.0",
     googleReviewCount: "140+ reviews",
     googleMapsUrl: "https://maps.google.com/?q=Paws+and+Claws+Pet+Grooming+Gurugram",
-    googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJPawsAndClawsGurugram",
+    googleReviewUrl: "https://maps.google.com/?q=Paws+and+Claws+Pet+Grooming+Gurugram",
     googleMapsPlaceholderNote: "Google Business Profile verified in Gurugram",
     hours: [
       { days: "Tuesday to Sunday", time: "10:00 AM – 7:30 PM" },

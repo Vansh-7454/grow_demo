@@ -4,7 +4,6 @@ import "./globals.css";
 import { siteContent } from "@/data/siteContent";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import MobileCallBar from "@/components/MobileCallBar";
 import { LocalBusinessSchema } from "@/components/SchemaOrg";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -67,16 +66,13 @@ export default function RootLayout({
         {/* Global Navigation Header */}
         <Header />
 
-        {/* Main Content Area - pb-24 on mobile/tablet ensures sticky bottom bar never overlaps page content */}
-        <main id="main-content" className="flex-1 pb-24 lg:pb-0">
+        {/* Main Content Area */}
+        <main id="main-content" className="flex-1">
           {children}
         </main>
 
         {/* Global Footer */}
         <Footer />
-
-        {/* Sticky Mobile Action Bar */}
-        <MobileCallBar />
       </body>
     </html>
   );

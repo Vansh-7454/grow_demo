@@ -24,6 +24,7 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  devIndicators: false,
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {

@@ -19,7 +19,12 @@ export default function Header() {
     setMounted(true);
   }, []);
 
-  // Esc key and focus trapping
+  // Close drawer on route change
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
+  // Esc key and focus trapping + Body attribute and event sync
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
       if (!isOpen) return;
@@ -56,6 +61,8 @@ export default function Header() {
     if (isOpen) {
       document.body.style.overflow = "hidden";
       document.documentElement.style.overflow = "hidden";
+      document.body.setAttribute("data-mobile-menu-open", "true");
+      window.dispatchEvent(new CustomEvent("mobile-menu-toggle", { detail: { isOpen: true } }));
       window.addEventListener("keydown", handleKeyDown);
       setTimeout(() => {
         closeButtonRef.current?.focus();
@@ -63,11 +70,15 @@ export default function Header() {
     } else {
       document.body.style.overflow = "";
       document.documentElement.style.overflow = "";
+      document.body.removeAttribute("data-mobile-menu-open");
+      window.dispatchEvent(new CustomEvent("mobile-menu-toggle", { detail: { isOpen: false } }));
     }
 
     return () => {
       document.body.style.overflow = "";
       document.documentElement.style.overflow = "";
+      document.body.removeAttribute("data-mobile-menu-open");
+      window.dispatchEvent(new CustomEvent("mobile-menu-toggle", { detail: { isOpen: false } }));
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isOpen]);

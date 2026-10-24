@@ -1,15 +1,65 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { siteContent } from "@/data/siteContent";
 
 export default function MobileCallBar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    // Check initial state
+    const checkState = () => {
+      if (typeof document !== "undefined") {
+        setIsMenuOpen(document.body.getAttribute("data-mobile-menu-open") === "true");
+      }
+    };
+    checkState();
+
+    const handleToggle = (e: Event) => {
+      const customEvent = e as CustomEvent<{ isOpen?: boolean }>;
+      if (customEvent.detail && typeof customEvent.detail.isOpen === "boolean") {
+        setIsMenuOpen(customEvent.detail.isOpen);
+      } else {
+        checkState();
+      }
+    };
+
+    window.addEventListener("mobile-menu-toggle", handleToggle);
+
+    // MutationObserver provides an immediate fallback if attribute changes
+    let observer: MutationObserver | null = null;
+    if (typeof MutationObserver !== "undefined" && document.body) {
+      observer = new MutationObserver(() => {
+        checkState();
+      });
+      observer.observe(document.body, {
+        attributes: true,
+        attributeFilter: ["data-mobile-menu-open"],
+      });
+    }
+
+    return () => {
+      window.removeEventListener("mobile-menu-toggle", handleToggle);
+      if (observer) {
+        observer.disconnect();
+      }
+    };
+  }, []);
+
   const whatsappHref = `https://wa.me/${siteContent.business.whatsappRaw}?text=${encodeURIComponent(
     siteContent.business.whatsappPrefill
   )}`;
 
+  if (isMenuOpen) {
+    return null;
+  }
+
   return (
     <div
+      id="mobile-call-bar"
       role="region"
       aria-label="Quick Mobile Contact"
-      className="fixed bottom-0 left-0 right-0 z-30 lg:hidden bg-[#FFF8F6]/95 backdrop-blur-md border-t border-[#F2CECA] px-4 py-2.5 shadow-[0_-4px_16px_rgba(41,24,23,0.06)]"
+      className="fixed bottom-0 left-0 right-0 z-30 lg:hidden bg-[#FFF8F6]/95 backdrop-blur-md border-t border-[#F2CECA] px-4 pt-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] shadow-[0_-4px_16px_rgba(41,24,23,0.06)] transition-all duration-200"
     >
       <div className="flex items-center gap-3 max-w-md mx-auto">
         {/* Direct Call Button */}
